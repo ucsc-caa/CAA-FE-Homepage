@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-header-top',
@@ -12,4 +12,16 @@ export class HeaderTopComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @HostListener("document:scroll") changeHeader(){
+    let headerTop = document.getElementById("header_top");
+    if(document.body.scrollTop>0||document.documentElement.scrollTop>0){
+      headerTop.style.height = "35px";
+      headerTop.style.lineHeight = "35px";
+
+    } else {
+      headerTop.style.height = "70px";
+      headerTop.style.lineHeight = "70px"
+    }
+    
+  }
 }
