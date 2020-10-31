@@ -1,11 +1,11 @@
-.container {
+/* .container {
     display: grid;
     grid-template-columns: 220px 1fr 220px;
     grid-template-rows: auto 1fr auto;
     grid-gap: 12px;
     grid-template-areas:
-    "header header header"
-    "content content content"
-    "footer footer footer";
+    "app-header app-header app-header"
+    "app-main app-main app-main"
+    "app-footer app-footer app-footer";
     height: 100vh;
-}
+} */
