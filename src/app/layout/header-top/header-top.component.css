@@ -1,0 +1,33 @@
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+.header_top{
+    width: 1440px;
+    height: 70px;
+    background-color: #ffffff;
+    line-height: 70px;
+    color: #003c6c;
+    font-family:"Source Han Sans CN";
+    font-weight: normal;
+}
+
+
+.header_top .hl li{
+    float: left;
+    font-size: 14pt;
+    padding: 0px 20px;
+}
+
+.header_top .hr li{
+    float: right;
+    font-size: 14pt;
+    padding: 0px 3px;
+}
+
+.header_top a{
+    text-decoration: none;
+    color: #003c6c;
+}

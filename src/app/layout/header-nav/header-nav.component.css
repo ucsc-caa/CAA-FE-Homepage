@@ -1,0 +1,46 @@
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+
+.Header-nav{
+    width: 1440px;
+    height: 80px;
+    background-color: #003c6c;
+    line-height: 80px;
+}
+
+
+.Header-nav .hl li{
+    float: left;
+    padding: 0px 25px;
+    font-size: 18px;
+    font-family:"Source Han Sans CN";
+}
+
+.Header-nav .hr li{
+    float: right;
+    padding: 0px 25px;
+    font-size: 18px;
+    font-family:"Source Han Sans CN";
+}
+
+.Header-nav a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.Header-nav .btn{
+    width: 90px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 60px;
+    vertical-align: middle;
+    background:#ffffff;
+    color: #003c6c;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+}
