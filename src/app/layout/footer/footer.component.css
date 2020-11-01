@@ -1,0 +1,128 @@
+.footer{
+    background: #003c6c;
+    color: #FFFFFF;
+    position: fixed;
+    font-family: Kievit;
+    font-size: 12pt;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer .footer-content{
+    display: flex;
+}
+
+
+
+.footer .footer-content .footer-image{
+    height: 130px;
+    width: 130px;
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 60px;
+}
+
+.footer .footer-content .footer-links{
+    font-size         : .7em;
+    margin-top: 50px;
+    }
+
+
+.footer .footer-content .footer-links ul a{
+    display: block;
+    color: #FFFFFF;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 2px 0; 
+}
+
+.footer .footer-content .footer-links ul a:hover{
+    text-decoration: underline
+    ;
+}
+
+/* .footer .footer-content .footer-links{
+    font-size         : .7em;
+    margin-top: 30px;
+    }
+
+    .footer .footer-content .footer-links ul {
+
+    list-style-type   : none;
+    display           : inline-block;
+    }
+
+    .footer .footer-content .footer-links ul a {
+    color: #FFFFFF;
+    padding           : .5em;
+    text-decoration   : none;
+    }
+
+    .footer .footer-content .footer-links ul a:hover {
+     text-decoration: underline;
+    }
+
+ */
+
+
+
+
+.footer .footer-content .footer-contact{
+    margin-left: 60px;
+}
+
+.footer .footer-content .footer-contact .contact-title{
+    margin-top: 60px;
+
+}
+
+.footer .footer-content .footer-special{
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #FFFFFF;
+  color: #003c6c;
+}
+
+.fa-twitter {
+  background: #FFFFFF;
+  color: #003c6c;
+}
+.fa-linkedin {
+  background: #FFFFFF;
+  color: #003c6c;
+}
+
+.fa-youtube {
+  background: #FFFFFF;
+  color: #003c6c;
+}
+
+.fa-instagram {
+  background: #FFFFFF;
+  color: #003c6c;
+}  
+
+
+.fa {
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+
+.footer .footer-bottom{
+    text-align: right;
+    margin-bottom: 100px;
+}
