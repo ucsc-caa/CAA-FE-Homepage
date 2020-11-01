@@ -1,12 +1,12 @@
 .footer{
     background: #003c6c;
     color: #FFFFFF;
-    position: fixed;
+    /* position: absolute; */
     font-family: Kievit;
     font-size: 12pt;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
 }
 
@@ -124,5 +124,6 @@
 
 .footer .footer-bottom{
     text-align: right;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    margin-bottom: 0px;
 }

@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 100%;
+	text-align:center;
+}
+
+.img_ucsc{
+	margin-top: 198px;
+	height: 628px;
+	width: 1118px;
+}
