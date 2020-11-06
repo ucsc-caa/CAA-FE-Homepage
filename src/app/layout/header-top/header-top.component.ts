@@ -13,7 +13,7 @@ export class HeaderTopComponent implements OnInit {
   }
 
   @HostListener("document:scroll") changeHeader(){
-    let headerTop = document.getElementById("header_top");
+    let headerTop = document.getElementById("headerTop");
     if(document.body.scrollTop>0||document.documentElement.scrollTop>0){
       headerTop.style.height = "35px";
       headerTop.style.lineHeight = "35px";
