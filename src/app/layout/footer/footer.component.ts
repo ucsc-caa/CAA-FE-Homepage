@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   }
 
   @HostListener("document:scroll") changeFooter(){
-    let footerNav = document.getElementById("footer-Nav");
+    let footerNav = document.getElementById("footerNav");
     if(document.body.scrollTop>0||document.documentElement.scrollTop>0){
       footerNav.style.height = "80px";
       footerNav.style.lineHeight = "80px";
