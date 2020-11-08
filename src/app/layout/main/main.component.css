@@ -9,8 +9,18 @@
 	text-align:center;
 }
 
-.img_ucsc{
+.homepageImg{
 	margin-top: 198px;
-	height: 628px;
+	height:30%;
+	width:90%;
+	/*height: 628px;
 	width: 1118px;
+	display: block;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.text{
+	margin-top: 2%;
+	margin-bottom: 3%;
 }
