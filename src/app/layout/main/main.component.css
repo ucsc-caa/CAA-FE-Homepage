@@ -10,9 +10,12 @@
 }
 
 .img_ucsc{
-	margin-top: 198px;
+	position: absolute;
+	margin-top: 30%;
+	/*margin-top: 198px;*/
 	height: 628px;
 	width: 1118px;
-	margin-left: 20%;
-	margin-right: 20%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
