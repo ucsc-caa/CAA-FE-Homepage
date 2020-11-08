@@ -9,7 +9,7 @@
     width: 198px;
     height: 198px;
     /* border: solid 1px red; */
-    transition: 1s;
+    transition: 0.8s;
     z-index: 1;
 }
 

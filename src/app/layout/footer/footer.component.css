@@ -12,6 +12,7 @@
 .footer .footerContent{
   display: flex;
   overflow: hidden;
+  height: 102px;
 }
 
 /* center the unordered list */
