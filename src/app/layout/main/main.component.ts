@@ -1,3 +1,12 @@
+/*
+* main.components.ts
+* 
+* This file provides main components
+*
+* @author: Holly Hao
+*
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

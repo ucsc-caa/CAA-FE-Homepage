@@ -4,7 +4,7 @@ ul{
     padding-top: 0px;
 }
 
-#header_top{
+#headerTop{
     top: 0;
     left: 0;
     width: 100%;
@@ -14,23 +14,36 @@ ul{
     color: #003c6c;
     font-family:"Source Han Sans CN";
     font-weight: normal;
-    transition: 1s;
+    transition: 0.8s;
 }
 
-
-#header_top .hl li{
-    float: left;
-    font-size: 14pt;
-    padding: 0px 20px;
+#headerTop .hl{
+    width: 45%;
+    position: absolute;
+    right: 65%;
 }
 
-#header_top .hr li{
+#headerTop .hr{
+    width: 45%;
+    position: absolute;
+    left: 67%;
+}
+
+#headerTop .hl li{
     float: right;
-    font-size: 14pt;
-    padding: 0px 3px;
+    font-size: 12pt;
+    padding-left:40px;
+    font-weight: 350;
 }
 
-#header_top a{
+#headerTop .hr li{
+    float: left;
+    font-size: 12pt;
+    padding: 0px 3px;
+    font-weight: 350;
+}
+
+#headerTop a{
     text-decoration: none;
     color: #003c6c;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  public picUrl = 'https://media-exp1.licdn.com/dms/image/C510BAQEIrV2s0A7o6w/company-logo_200_200/0?e=2159024400&v=beta&t=vMh56jL2BOYKMFZYHXigSCkQ6VfT8bVK3OcnFTiwwPU';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // @HostListener("document:scroll") changeFooter(){
+  //   let footerNav = document.getElementById("footerNav");
+  //   if(document.body.scrollTop>0||document.documentElement.scrollTop>0){
+  //     footerNav.style.height = "80px";
+  //     footerNav.style.lineHeight = "80px";
+
+  //   } else {
+  //     footerNav.style.height = "25px";
+  //     footerNav.style.lineHeight = "25px";
+
+  //   }
+    
+  // }
 }
