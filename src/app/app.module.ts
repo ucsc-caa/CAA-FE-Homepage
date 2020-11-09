@@ -8,6 +8,8 @@ import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderTopComponent } from './layout/header-top/header-top.component';
 import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
+import { ArticleComponent } from './pages/article/article.component';
+import { EventComponent } from './pages/event/event.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
     MainComponent,
     FooterComponent,
     HeaderTopComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
+    ArticleComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
