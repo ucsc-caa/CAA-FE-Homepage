@@ -1,5 +1,12 @@
 import { Component, OnInit, HostListener} from '@angular/core';
 
+/*
+* author : Peter Cai
+* date : 2020/11/8
+* Create headerTop and headerNav
+*/
+
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
