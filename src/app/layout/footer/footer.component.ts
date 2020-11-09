@@ -1,3 +1,10 @@
+/*
+ * footer.compoments.ts
+ * This file provides footer information.
+ * @author: Jiayin Liu
+ * Revised: 11/8/2020 add comments.
+ *
+ */
 import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
