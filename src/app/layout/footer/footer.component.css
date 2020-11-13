@@ -1,3 +1,10 @@
+/*
+ * footer.compoments.css
+ * This file provides footer style.
+ * @author: Jiayin Liu
+ * Revised: 11/8/2020 add comments.
+ *
+ */
 .footer{
   background-color: #003c6c;
   color: #FFFFFF;
@@ -9,17 +16,18 @@
   bottom: 0px;
 }
 
-.footer .footer-content{
+.footer .footerContent{
   display: flex;
   overflow: hidden;
+  padding-top: 10px;
 }
 
 /* center the unordered list */
-.footer .footer-content ul{
+.footer .footerContent ul{
   margin: auto;
 }
 
-.footer .footer-content ul a{
+.footer .footerContent ul a{
   float: left;
   display: block;
   color: #f5f1f1;
@@ -29,11 +37,11 @@
   list-style-type: none;
 }
 
-.footer .footer-content ul a:hover {
+.footer .footerContent ul a:hover {
 text-decoration: underline;
 }
 
-.footer .footer-bottom{
+.footer .footerBottom{
   text-align: right;
   margin-right: 60px;
   line-height: 40px;

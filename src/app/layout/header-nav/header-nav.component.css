@@ -11,19 +11,21 @@ ul{
     height: 80px;
     background-color: #003c6c;
     line-height: 80px;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 #headerNav .hl{
     width: 45%;
     position: absolute;
     right: 58%;
+    margin-right: 50px;
 }
 
 #headerNav .hr{
     width: 45%;
     position: absolute;
     left: 56%;
+    margin-left: 50px;
 }
 
 

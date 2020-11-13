@@ -1,3 +1,10 @@
+/*
+ * footer.compoment.scpe.ts
+ * This file provides footer information.
+ * @author: Jiayin Liu
+ * Revised: 11/8/2020 add comments.
+ *
+ */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
