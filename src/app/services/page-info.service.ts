@@ -7,6 +7,9 @@ import { Injectable } from '@angular/core';
  * @author: Yiyun Zheng
  * Revised: 11/8/2020 Create file and implement language and page type variable
  *
+ * @author: Jiayin Liu
+ * Revised: 11/13/2020 Create article class and 5 types of data
+ *
  */
 
 @Injectable({
@@ -15,6 +18,14 @@ import { Injectable } from '@angular/core';
 export class PageInfoService {
   language = 'CN';
   pageType = 'article';
+
+  article = {
+    title: '论法式饼干的历史',
+    author: '狗屁不通生成器',
+    date: '十一月七日2020',
+    content: '哈哈哈哈',
+    image: ''
+  }
   constructor() { }
 
   /*
