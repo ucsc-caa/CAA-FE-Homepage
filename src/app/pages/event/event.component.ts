@@ -1,5 +1,13 @@
+/*
+ * event.component.ts
+ *
+ * @author: Holly Hao
+ * Revised: 11/22/2020 modify import
+ *
+ */
+
 import { Component, OnInit } from '@angular/core';
-import {PageInfoService} from './services/page-info.service'
+import {PageInfoService} from '../../services/page-info.service';
 
 @Component({
   selector: 'app-event',
