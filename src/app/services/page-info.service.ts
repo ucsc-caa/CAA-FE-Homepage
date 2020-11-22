@@ -24,8 +24,8 @@ export class PageInfoService {
     author: '狗屁不通生成器',
     date: '十一月七日2020',
     content: '哈哈哈哈',
-    image: ''
-  }
+    image: 'https://image.shutterstock.com/image-photo/red-apple-on-white-background-600w-158989157.jpg'
+  } 
   constructor() { }
 
   /*
@@ -37,4 +37,10 @@ export class PageInfoService {
   getPageType(){
     return this.pageType;
   }
+
+  getData(){
+    return this.article;
+  }
+
 }
+ 

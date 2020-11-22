@@ -1,3 +1,39 @@
 #article {
     margin-top: 190px;
+    color:#003c6c;
 }
+#article .articleHeader{
+    text-align:left;
+}
+#article .articleHeader .line1{
+
+    font-size: 16pt;
+    line-height: 1.5em;
+}
+
+#article .articleHeader .line2{
+
+    font-size: 36pt;
+    line-height: 1.5em;
+}
+
+#article .articleHeader .line3{
+ 
+    font-size: 16pt;
+    line-height: 1.5em;
+}
+
+#article .articleText1{
+    text-align: left;
+    margin-top: 1.5em;
+}
+
+#article .articleImage{
+    margin-top: 15em;
+    margin-bottom: 15em;
+}
+
+#article .articleText2{
+    text-align: left;
+}
+

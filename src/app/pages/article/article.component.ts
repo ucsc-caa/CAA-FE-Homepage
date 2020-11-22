@@ -14,13 +14,16 @@ import {PageInfoService} from '../../services/page-info.service';
 })
 export class ArticleComponent implements OnInit {
 
-  pageType = 'article';
+
+  // public picUrl = 'https://image.shutterstock.com/image-photo/red-apple-on-white-background-600w-158989157.jpg';
+  article: { title: string; author: string; date: string; content: string; image: string; };
+
   constructor(
-     private pageInfoService: PageInfoService
+    private pageInfoService: PageInfoService
   ) {}
 
   ngOnInit(): void {
-    this.pageType = this.pageInfoService.getPageType();
+    this.article = this.pageInfoService.getData();
   }
 
 }
