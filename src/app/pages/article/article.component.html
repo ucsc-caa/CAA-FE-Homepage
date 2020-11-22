@@ -2,21 +2,13 @@
  * article.component.html
  *
  * @author: Jiayin Liu
- * Revised: 11/21/2020 
+ * Revised: 11/22/2020 
  * -->
-<!--  <div class="container">
 
-    <div [ngSwitch]='pageType'>
-        <app-article *ngSwitchCase="'article'">{{article.image}}</app-article>
-    </div>
-      
-
-</div> -->
 <div id ="article">
 
     <div class = "articleHeader">
         <div class = "line1">
-            <!-- <header>2020年11月22日</header> -->
             <header>{{article.date}}</header>
         </div>
         <div class = "line2">
@@ -26,18 +18,18 @@
             <header>{{article.author}}</header>
         </div>
   
-    
-
     </div>
 
     <div class = "articleText">
         <p>{{article.content}}</p>
-
-    </div>
+    </div> 
 
     <div class = "articleImage">
-        <img src={{article.image}} alt="Stickman" width="130" height="130">
+        <img src={{article.image}} class="center" width="100px" height="100px">
     </div> 
-    
+     
+    <div class = "articleImageTitle">
+        <p>{{article.imageTitle}}</p>
+    </div>
 
 </div>

@@ -4,7 +4,7 @@ import {PageInfoService} from '../../services/page-info.service';
  * article.component.ts
  *
  * @author: Jiayin Liu
- * Revised: 11/21/2020 modify import, constructor, ngOnInit()
+ * Revised: 11/22/2020 modify import, constructor, ngOnInit()
  *
  */
 @Component({
@@ -14,9 +14,7 @@ import {PageInfoService} from '../../services/page-info.service';
 })
 export class ArticleComponent implements OnInit {
 
-
-  // public picUrl = 'https://image.shutterstock.com/image-photo/red-apple-on-white-background-600w-158989157.jpg';
-  article: { title: string; author: string; date: string; content: string; image: string; };
+  article: { title: string; author: string; date: string; content: string; image: string; imageTitle: string;};
 
   constructor(
     private pageInfoService: PageInfoService

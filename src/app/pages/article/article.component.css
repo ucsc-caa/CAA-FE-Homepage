@@ -1,14 +1,26 @@
+/*
+ * article.component.css
+ *
+ * @author: Jiayin Liu
+ * Revised: 11/22/2020 
+ *
+ */
 #article {
     margin-top: 190px;
     color:#003c6c;
 }
 #article .articleHeader{
     text-align:left;
+    margin-left: 5em;
+    margin-right: 5em;
 }
+
 #article .articleHeader .line1{
 
     font-size: 16pt;
     line-height: 1.5em;
+    margin-top: 1.5em;
+
 }
 
 #article .articleHeader .line2{
@@ -23,17 +35,27 @@
     line-height: 1.5em;
 }
 
-#article .articleText1{
+#article .articleText{
     text-align: left;
     margin-top: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 #article .articleImage{
-    margin-top: 15em;
-    margin-bottom: 15em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
-#article .articleText2{
-    text-align: left;
-}
+#article .articleImage .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+#article .articleImageTitle{
+    font-size: 6pt;
+    text-align: center;
+}
