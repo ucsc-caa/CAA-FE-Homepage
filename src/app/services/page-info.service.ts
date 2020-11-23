@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
  *
  * This file provides page information for other files to communicate or generate pages.
  *
+ * @author: Holly Hao
+ * Revised: 11/12/2020 Create event class and three types of data
+ *
  * @author: Yiyun Zheng
  * Revised: 11/8/2020 Create file and implement language and page type variable
  *
@@ -20,7 +23,7 @@ import { Injectable } from '@angular/core';
 export class PageInfoService {
   language = 'CN';
   pageType = 'article';
-
+  
   article = {
     title: '论法式饼干的历史',
     author: '狗屁不通生成器',
@@ -29,6 +32,12 @@ export class PageInfoService {
     image: 'https://image.shutterstock.com/image-photo/red-apple-on-white-background-600w-158989157.jpg',
     imageTitle: '这不是一张法式饼干的照片'
   } 
+
+  event = {
+    image:'imgLink';
+    date:'CAA October.19 Event';
+    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore ...';
+  }
   constructor() { }
 
   /*
