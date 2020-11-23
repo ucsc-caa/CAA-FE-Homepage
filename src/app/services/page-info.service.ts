@@ -65,5 +65,15 @@ export class PageInfoService {
     return this.article;
   }
 
+    /*
+   * getData
+   * This method return data is created for event
+   * @param None
+   * @return data in event
+   */
+  getData2(){
+    return this.event;
+  }
+
 }
  

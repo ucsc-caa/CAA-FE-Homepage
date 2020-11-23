@@ -23,7 +23,7 @@ export class EventComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.event = this.pageInfoService.getData();
+    this.event = this.pageInfoService.getData2();
   }
 
 }
