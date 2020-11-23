@@ -2,6 +2,7 @@
  * event.component.ts
  *
  * @author: Holly Hao
+ * Revised: 11/23/2020 add contact in event
  * Revised: 11/22/2020 modify import
  *
  */

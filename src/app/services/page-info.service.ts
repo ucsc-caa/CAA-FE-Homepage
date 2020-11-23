@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
  * This file provides page information for other files to communicate or generate pages.
  *
  * @author: Holly Hao
- * Revised: 11/23/2020 Update content and image component and add contact component
+ * Revised: 11/23/2020 Update content and image component and add contact component. Meanwhile, create getData 2 function
  * Revised: 11/22/2020 Update event 
  *
  * @author: Jiayin Liu
@@ -68,7 +68,7 @@ export class PageInfoService {
   }
 
     /*
-   * getData
+   * getData2
    * This method return data is created for event
    * @param None
    * @return data in event
