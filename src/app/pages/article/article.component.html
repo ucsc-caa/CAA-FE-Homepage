@@ -1,3 +1,35 @@
+<!--
+ * article.component.html
+ *
+ * @author: Jiayin Liu
+ * Revised: 11/22/2020 
+ * -->
+
 <div id ="article">
-    <p>article works!</p>
+
+    <div class = "articleHeader">
+        <div class = "line1">
+            <header>{{article.date}}</header>
+        </div>
+        <div class = "line2">
+            <header>{{article.title}}</header>
+        </div>
+        <div class = "line3">
+            <header>{{article.author}}</header>
+        </div>
+  
+    </div>
+
+    <div class = "articleText">
+        <p>{{article.content}}</p>
+    </div> 
+
+    <div class = "articleImage">
+        <img src={{article.image}} class="center" width="100px" height="100px">
+    </div> 
+     
+    <div class = "articleImageTitle">
+        <p>{{article.imageTitle}}</p>
+    </div>
+
 </div>
