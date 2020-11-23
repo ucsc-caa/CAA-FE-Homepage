@@ -26,4 +26,9 @@ export class PageInfoService {
   getPageType(){
     return this.pageType;
   }
+
+  getLanguage(){
+    return this.language;
+  }
+
 }

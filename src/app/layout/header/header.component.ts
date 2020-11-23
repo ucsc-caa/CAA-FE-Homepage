@@ -51,6 +51,6 @@ export class HeaderComponent implements OnInit {
     }
     
   }
-  
 
+  public flag:number = 0
 }

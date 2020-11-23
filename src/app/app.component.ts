@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'homepage';
   pageType = 'event';
   constructor(
-    private pageInfoService: PageInfoService
+    private pageInfoService: PageInfoService,
   ){}
   ngOnInit(): void {
     this.pageType = this.pageInfoService.getPageType();
