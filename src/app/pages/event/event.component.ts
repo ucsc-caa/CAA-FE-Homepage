@@ -16,7 +16,7 @@ import {PageInfoService} from '../../services/page-info.service';
 })
 export class EventComponent implements OnInit {
 
-  event: {image: string; date: string; content: string};
+  event: {image: string; date: string; content: string;};
 
   constructor(
     private pageInfoService: PageInfoService
