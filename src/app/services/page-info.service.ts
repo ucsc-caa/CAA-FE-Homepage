@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
  * This file provides page information for other files to communicate or generate pages.
  *
  * @author: Holly Hao
+ * Revised: 11/23/2020 Update content and image component and add contact component
  * Revised: 11/22/2020 Update event 
  *
  * @author: Jiayin Liu
@@ -26,7 +27,7 @@ import { Injectable } from '@angular/core';
 })
 export class PageInfoService {
   language = 'CN';
-  pageType = 'article';
+  pageType = 'event';
   
   article = {
     title: '论法式饼干的历史',
@@ -38,9 +39,10 @@ export class PageInfoService {
   } 
 
   event = {
-    image:'https://image.shutterstock.com/image-photo/red-apple-on-white-background-600w-158989157.jpg',
+    image:'/assets/image/cover_art.png',
     date:'CAA October.19 Event',
-    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore ...'
+    contact: 'Join us @ McHenry Library',
+    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Lorem mollis aliquam ut porttitor leo a. Suspendisse potenti nullam ac tortor vitae purus'
   }
 
   constructor() { }

@@ -2,33 +2,47 @@
  * event.component.css
  *
  * @author: Holly Hao
+ * Revised: 11/23/2020 adjust the format
  * Revised: 11/22/2020 modify import
  *
  */
 
 #event {
     margin-top: 190px;
+    color:#003c6c;
 }
 
 #event .eventImage{
     margin-top: 5em;
-    margin-bottom: 5em;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#event .eventImage. .event .center{
+#event .eventImage .center{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#event .eventMiddle{
+#event .eventMiddle {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-#event .eventBottomHalf{
-    text-align: left;
+#event .eventMiddle .line1{
+    font-size: 14pt;
+    line-height: 1.5em;
+}
+
+#event .eventMiddle .line2{
+    font-size: 14pt;
+    line-height: 1.5em;
+}
+
+#event .eventText{
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
