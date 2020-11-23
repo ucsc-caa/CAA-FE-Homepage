@@ -16,12 +16,14 @@ import {PageInfoService} from '../../services/page-info.service';
 })
 export class EventComponent implements OnInit {
 
+  event: {image: string; date: string; content: string};
+
   constructor(
-  	private pageInfoService: PageInfoService
+    private pageInfoService: PageInfoService
   ) { }
 
   ngOnInit(): void {
-  	this.event = this.pageInfoService.event();
+    this.event = this.pageInfoService.getData();
   }
 
 }
