@@ -1,3 +1,28 @@
+/*
+ * event.component.css
+ *
+ * @author: Holly Hao
+ * Revised: 11/22/2020 modify import
+ *
+ */
+
 #event {
     margin-top: 190px;
 }
+
+#event .eventTopHalf{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event .eventMiddle{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event .eventBottomHalf{
+    text-align: left;
+}
+

@@ -1,4 +1,13 @@
+/*
+ * event.component.ts
+ *
+ * @author: Holly Hao
+ * Revised: 11/22/2020 modify import
+ *
+ */
+
 import { Component, OnInit } from '@angular/core';
+import {PageInfoService} from '../../services/page-info.service';
 
 @Component({
   selector: 'app-event',
@@ -7,9 +16,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  	private pageInfoService: PageInfoService
+  ) { }
 
   ngOnInit(): void {
+  	this.event = this.pageInfoService.event();
   }
 
 }
