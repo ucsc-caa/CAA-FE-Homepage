@@ -5,16 +5,21 @@ import { Injectable } from '@angular/core';
  * This file provides page information for other files to communicate or generate pages.
  *
  * @author: Holly Hao
+ * Revised: 11/23/2020 Update content and image component and add contact component. Meanwhile, create getData 2 function
+ * Revised: 11/22/2020 Update event 
+ *
+ * @author: Jiayin Liu
+ * Revised: 11/22/2020 Create getData function
+ *
+ * @author: Jiayin Liu
+ * Revised: 11/13/2020 Create article class and 5 types of data
+ *
+ * @author: Holly Hao
  * Revised: 11/12/2020 Create event class and three types of data
  *
  * @author: Yiyun Zheng
  * Revised: 11/8/2020 Create file and implement language and page type variable
  *
- * @author: Jiayin Liu
- * Revised: 11/13/2020 Create article class and 5 types of data
- *
- * @author: Jiayin Liu
- * Revised: 11/22/2020 Create getData function
  */
 
 @Injectable({
@@ -22,7 +27,7 @@ import { Injectable } from '@angular/core';
 })
 export class PageInfoService {
   language = 'CN';
-  pageType = 'article';
+  pageType = 'event';
   
   article = {
     title: '论法式饼干的历史',
@@ -34,10 +39,12 @@ export class PageInfoService {
   } 
 
   event = {
-    image:'imgLink';
-    date:'CAA October.19 Event';
-    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore ...';
+    image:'/assets/image/cover_art.png',
+    date:'CAA October.19 Event',
+    contact: 'Join us @ McHenry Library',
+    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Lorem mollis aliquam ut porttitor leo a. Suspendisse potenti nullam ac tortor vitae purus'
   }
+
   constructor() { }
 
   /*
@@ -58,6 +65,16 @@ export class PageInfoService {
    */
   getData(){
     return this.article;
+  }
+
+    /*
+   * getData2
+   * This method return data is created for event
+   * @param None
+   * @return data in event
+   */
+  getData2(){
+    return this.event;
   }
 
 }
