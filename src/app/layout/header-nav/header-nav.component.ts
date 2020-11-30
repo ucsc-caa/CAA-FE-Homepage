@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
-import {langFlag} from '../../models/header';
+import { text } from '../../models/text';
 
 @Component({
   selector: 'app-header-nav',
@@ -10,7 +10,7 @@ import {langFlag} from '../../models/header';
 export class HeaderNavComponent implements OnInit {
 
   //content = this.pageInfoService.getLanguage();
-
+  @Input() language:string;
   langs1:{};
   langs2:{};
   langs3:{};

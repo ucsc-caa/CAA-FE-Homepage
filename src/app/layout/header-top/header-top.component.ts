@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener,Input} from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
-import {langFlag} from '../../models/header';
+import { text } from '../../models/text';
 
 /* 
 *@author: Peter Cai
@@ -15,12 +15,10 @@ import {langFlag} from '../../models/header';
   styleUrls: ['./header-top.component.css']
 })
 export class HeaderTopComponent implements OnInit {
-
+  @Input() language:string;
   langs:{};
 
-  constructor(
-    private pageInfoService: PageInfoService
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {
     //this.CN = this.pageInfoService.getLanguage();
@@ -30,8 +28,4 @@ export class HeaderTopComponent implements OnInit {
       immigration:{CN:'新闻中心',EN:'Newscenter'},
     }
   }
-
-  //lang_cn(){
-    //this.CN = this.pageInfoService.getLanguage();
-  //}
 }

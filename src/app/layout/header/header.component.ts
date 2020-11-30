@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener} from '@angular/core';
+import { Component, OnInit, HostListener, Input} from '@angular/core';
 
 /*
 * author : Peter Cai
@@ -13,7 +13,7 @@ import { Component, OnInit, HostListener} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  @Input() language: string;
   constructor() { }
 
   ngOnInit(): void {

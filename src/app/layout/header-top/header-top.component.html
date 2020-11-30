@@ -1,7 +1,14 @@
 <div id="headerTop">
     <ul class="hl">
-        <li *ngFor="let lang of langs">
-            <a href="#">{{lang.CN}}</a>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['getinvolved']" [language]="language"></app-text>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['career']" [language]="language"></app-text>
+            </a>
         </li>
     </ul>
     

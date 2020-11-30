@@ -1,4 +1,4 @@
-export class langFlag {
+export class text {
     CN:string;
     EN:string;
 }

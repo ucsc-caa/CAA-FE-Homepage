@@ -10,6 +10,7 @@ import { HeaderTopComponent } from './layout/header-top/header-top.component';
 import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
+import { TextComponent } from './components/text/text.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EventComponent } from './pages/event/event.component';
     HeaderTopComponent,
     HeaderNavComponent,
     ArticleComponent,
-    EventComponent
+    EventComponent,
+    TextComponent
   ],
   imports: [
     BrowserModule,

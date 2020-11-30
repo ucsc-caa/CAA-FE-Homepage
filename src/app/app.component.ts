@@ -9,6 +9,7 @@ import {PageInfoService} from './services/page-info.service'
 export class AppComponent implements OnInit {
   title = 'homepage';
   pageType = 'event';
+  language = 'CN';
   constructor(
     private pageInfoService: PageInfoService,
   ){}
