@@ -1,23 +1,17 @@
 <div id="headerTop">
     <ul class="hl">
-        <li>
-            <a href="#">{{immigration[flag]}}</a>
-        </li>
-        <li>
-            <a href="#">{{career[flag]}}</a>
-        </li>
-        <li>
-            <a href="#">{{getinvolved[flag]}}</a>
+        <li *ngFor="let lang of langs">
+            <a href="#">{{lang.CN}}</a>
         </li>
     </ul>
     
     <ul class="hr">
         <li>
-            <a href="#" (click)="lang_en()">English</a>
+            <a href="#">English</a>
         </li>
         <li><span>|</span></li>
         <li>
-            <a href="#" (click)="lang_cn()">简体中文</a>
+            <a href="#">简体中文</a>
         </li>
     </ul>
-    </div>
+</div>

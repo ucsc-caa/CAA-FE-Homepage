@@ -1,4 +1,6 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
+import {PageInfoService} from '../../services/page-info.service';
+import {langFlag} from '../../models/header';
 
 @Component({
   selector: 'app-header-nav',
@@ -7,21 +9,37 @@ import { Component, OnInit, HostListener, Input } from '@angular/core';
 })
 export class HeaderNavComponent implements OnInit {
 
-  @Input() flag:any;
+  //content = this.pageInfoService.getLanguage();
+
+  langs1:{};
+  langs2:{};
+  langs3:{};
   
-
-
-  constructor() { }
+  constructor(
+    private pageInfoService: PageInfoService
+  ) {}
 
   ngOnInit(): void {
+    this.langs1 = {
+      give:{CN:'捐赠', EN:'Give'},
+      newscenter:{CN:'新闻中心',EN:'Newscenter'},
+      connect:{CN:'新闻中心',EN:'Newscenter'},
+      community:{CN:'新闻中心',EN:'Newscenter'},
+    }
+
+    this.langs2 = {
+      merchandise:{CN:'商品', EN:'Merchandise'},
+      membership:{CN:'会员',EN:'Membership'},
+      about:{CN:'关于',EN:'About'},
+    }
+
+    this.langs3 = 
+      {
+        CN:'加入',
+        EN:'Join',
+      }
   }
-  public give = ['捐赠','Give'];
-  public newscenter = ['新闻中心','Newscenter'];
-  public connect = ['校友联络','Connect'];
-  public community = ['校友社区','Community'];
-  public merchandise = ['商品','Merchandise'];
-  public membership = ['会员','Membership'];
-  public about = ['关于','About'];
-  public join = ['加入','Join'];
 
 }
+
+
