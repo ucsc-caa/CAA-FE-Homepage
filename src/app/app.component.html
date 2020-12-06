@@ -1,7 +1,8 @@
 <div class="container">
 
     <!-- Header -->
-  <app-header [language]='language'></app-header>
+  <app-header [language]='language' (setLang)="setLanguage($event)"></app-header>
+
 
   <!-- <nav> -->
     <!-- Nav Bar -->

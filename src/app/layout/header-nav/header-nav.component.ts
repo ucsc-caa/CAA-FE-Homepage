@@ -11,33 +11,23 @@ export class HeaderNavComponent implements OnInit {
 
   //content = this.pageInfoService.getLanguage();
   @Input() language:string;
-  langs1:{};
-  langs2:{};
-  langs3:{};
+  langs:{};
   
   constructor(
     private pageInfoService: PageInfoService
   ) {}
 
   ngOnInit(): void {
-    this.langs1 = {
+    this.langs = {
       give:{CN:'捐赠', EN:'Give'},
       newscenter:{CN:'新闻中心',EN:'Newscenter'},
-      connect:{CN:'新闻中心',EN:'Newscenter'},
-      community:{CN:'新闻中心',EN:'Newscenter'},
-    }
-
-    this.langs2 = {
+      connect:{CN:'校友联络',EN:'Connect'},
+      community:{CN:'校友社区',EN:'Community'},
       merchandise:{CN:'商品', EN:'Merchandise'},
       membership:{CN:'会员',EN:'Membership'},
       about:{CN:'关于',EN:'About'},
+      join:{CN:'加入',EN:'Join'}
     }
-
-    this.langs3 = 
-      {
-        CN:'加入',
-        EN:'Join',
-      }
   }
 
 }

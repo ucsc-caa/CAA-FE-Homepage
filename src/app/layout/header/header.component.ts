@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener, Input} from '@angular/core';
+import { viewClassName } from '@angular/compiler';
+import { Component, OnInit, HostListener, Input,ViewChild, EventEmitter, Output} from '@angular/core';
 
 /*
 * author : Peter Cai
@@ -14,6 +15,14 @@ import { Component, OnInit, HostListener, Input} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() language: string;
+  @Output() setLang = new EventEmitter<boolean>();
+  
+  
+  setLanguage(event) {
+    this.setLang.emit(event);
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -53,4 +62,5 @@ export class HeaderComponent implements OnInit {
   }
 
   public flag:number = 0
+
 }

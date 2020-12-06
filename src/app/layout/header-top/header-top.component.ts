@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener,Input} from '@angular/core';
+import { Component, OnInit, HostListener,Input,Output, EventEmitter} from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
 
@@ -6,7 +6,7 @@ import { text } from '../../models/text';
 *@author: Peter Cai
 *Revised:11/22/2020 modify import,constructor,ngOnInit()
 *
-*
+*Revised:12/6/2020 add setLanguage() function
 */
 
 @Component({
@@ -16,16 +16,28 @@ import { text } from '../../models/text';
 })
 export class HeaderTopComponent implements OnInit {
   @Input() language:string;
+  @Output() setLang = new EventEmitter<string>();
+
+
   langs:{};
 
   constructor() {}
 
   ngOnInit(): void {
-    //this.CN = this.pageInfoService.getLanguage();
     this.langs = {
-      getinvolved:{CN:'捐赠', EN:'Give'},
-      career:{CN:'新闻中心',EN:'Newscenter'},
-      immigration:{CN:'新闻中心',EN:'Newscenter'},
+      getinvolved:{CN:'志愿机会', EN:'Get Involved'},
+      career:{CN:'工作机会',EN:'Career'},
+      immigration:{CN:'移民咨询',EN:'Immigration'},
     }
+  }
+
+   /*
+   * setLanguage
+   * This method change language in app.component
+   * @param lang: value of Language in app.component
+   */
+
+  setLanguage(lang: string): void {
+    this.setLang.emit(lang);
   }
 }

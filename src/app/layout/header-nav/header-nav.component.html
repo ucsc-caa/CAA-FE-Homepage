@@ -1,16 +1,42 @@
 <div id="headerNav">
     <ul class="hl">
-        <!-- <li *ngFor="let lang of langs1">
-            <a href="#"></a>
-        </li> -->
+        <li>
+            <a href="#">
+                <app-text [text]="langs['give']" [language]="language"></app-text>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['newscenter']" [language]="language"></app-text>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['connect']" [language]="language"></app-text>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['community']" [language]="language"></app-text>
+            </a>
+        </li>
     </ul>
 
     <ul class="hr">
-        <!-- <li *ngFor="let lang of langs2">
-            <a href="#"></a>
-        </li> -->
         <li>
-            <a href="#" class="btn"></a>
+            <a href="#">
+                <app-text [text]="langs['merchandise']" [language]="language"></app-text>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['about']" [language]="language"></app-text>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="btn">
+                <app-text [text]="langs['join']" [language]="language"></app-text>
+            </a>
         </li>
     </ul>
 </div>

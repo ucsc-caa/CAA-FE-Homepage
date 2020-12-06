@@ -2,7 +2,7 @@
     <ul class="hl">
         <li>
             <a href="#">
-                <app-text [text]="langs['getinvolved']" [language]="language"></app-text>
+                <app-text [text]="langs['immigration']" [language]="language"></app-text>
             </a>
         </li>
         <li>
@@ -10,15 +10,19 @@
                 <app-text [text]="langs['career']" [language]="language"></app-text>
             </a>
         </li>
+        <li>
+            <a href="#">
+                <app-text [text]="langs['getinvolved']" [language]="language"></app-text>
+            </a>
+        </li>
     </ul>
-    
     <ul class="hr">
         <li>
-            <a href="#">English</a>
+            <a href="#" (click)='setLanguage("EN")'>English</a>
         </li>
         <li><span>|</span></li>
         <li>
-            <a href="#">简体中文</a>
+            <a href="#" (click)='setLanguage("CN")'>简体中文</a>
         </li>
-    </ul>
+      </ul>
 </div>
