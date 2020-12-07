@@ -84,6 +84,5 @@ export class PageInfoService {
 
 }
 
-}
  
 
