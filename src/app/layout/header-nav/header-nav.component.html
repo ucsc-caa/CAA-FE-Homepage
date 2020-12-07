@@ -7,33 +7,49 @@
 <div id="headerNav">
     <ul class="hl">
         <li>
-            <a href="#">捐赠</a>
+            <a href="#">
+                <app-text [text]="langs['give']" [language]="language"></app-text>
+            </a>
         </li>
         <li>
-            <a href="#">新闻中心</a>
+            <a href="#">
+                <app-text [text]="langs['newscenter']" [language]="language"></app-text>
+            </a>
         </li>
         <li>
-            <a href="#">校友联络</a>
+            <a href="#">
+                <app-text [text]="langs['connect']" [language]="language"></app-text>
+            </a>
         </li>
         <li>
-            <a href="#">校友社区</a>
+            <a href="#">
+                <app-text [text]="langs['community']" [language]="language"></app-text>
+            </a>
         </li>
     </ul>
 
     <ul class="hr">
         <li>
-            <a href="#">商品</a>
+            <a href="#">
+                <app-text [text]="langs['merchandise']" [language]="language"></app-text>
+            </a>
         </li>
         <li>
-            <a href="#">关于</a>
+            <a href="#">
+                <app-text [text]="langs['about']" [language]="language"></app-text>
+            </a>
         </li>
         <li>
-            <a href="#">会员</a>
+            <a href="#">
+                <app-text [text]="langs['membership']" [language]="language"></app-text>
+            </a>
         </li>
         <li>
-            <!-- <a href="#" class="btn">加入</a> -->
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">加入</button>
+            <a href="#" class="btn">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><app-text [text]="langs['join']" [language]="language"></app-text></button>
+            </a>
         </li>
+
     </ul>
 
 <!-- reference: w3schools -->

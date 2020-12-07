@@ -67,6 +67,10 @@ export class PageInfoService {
     return this.article;
   }
 
+
+
+
+      /*
     /*
    * getData2
    * This method return data is created for event
@@ -77,5 +81,8 @@ export class PageInfoService {
     return this.event;
   }
 
+
 }
+
  
+
