@@ -30,6 +30,13 @@ export class PageInfoService {
     imageTitle: '这不是一张法式饼干的照片'
   } 
 
+  event = {
+    image:'/assets/image/cover_art.png',
+    date:'CAA October.19 Event',
+    contact: 'Join us @ McHenry Library',
+    content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Lorem mollis aliquam ut porttitor leo a. Suspendisse potenti nullam ac tortor vitae purus'
+  }
+
   constructor() { }
 
   /*
@@ -52,5 +59,16 @@ export class PageInfoService {
     return this.article;
   }
 
+
+
+      /*
+   * getData2
+   * This method return data is created for event
+   * @param None
+   * @return data in event
+   */
+  getData2(){
+    return this.event;
+  }
 
 }
