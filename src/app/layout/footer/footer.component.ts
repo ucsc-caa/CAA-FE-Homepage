@@ -5,7 +5,9 @@
  * Revised: 11/8/2020 add comments.
  *
  */
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';//
+import {PageInfoService} from '../../services/page-info.service';//
+import { text } from '../../models/text';//
 
 @Component({
   selector: 'app-footer',
@@ -14,9 +16,24 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  @Input() language:string;//
+  langs:{};//
+
+  constructor(
+    private pageInfoService: PageInfoService//
+  ) { }
 
   ngOnInit(): void {
+
+    //--
+    this.langs = {
+      a:{CN:'关于', EN:'A'},
+      b:{CN:'CAA管理层',EN:'B'},
+      c:{CN:'新闻中心',EN:'C'},
+      d:{CN:'隐私政策',EN:'D'},
+      e:{CN:'使用条款', EN:'E'},
+    }
+    //--
   }
 
   // @HostListener("document:scroll") changeFooter(){
