@@ -1,3 +1,8 @@
+<!--  
+ * footer.compoments.html
+ * Revised by Jiayin Liu on 12/10/2020.
+ * Changing language
+ -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 
 <div id = "footerNav">
@@ -11,12 +16,15 @@
             <a href="#"><app-text [text]="langs['c']" [language]="language"></app-text></a>
             <a href="#"><app-text [text]="langs['d']" [language]="language"></app-text></a>
             <a href="#"><app-text [text]="langs['e']" [language]="language"></app-text></a>
+            <a href="#"><app-text [text]="langs['f']" [language]="language"></app-text></a>
             </ul>
     </div>
 
     <div class="footerBottom">
-        &copy; 2020 UCSC Chinese Alumni Association. 保留所有权利
-        <br>加州大学圣克鲁兹分校学生会是一个依赖学生、校友、大学捐赠的非营利性组织
+       <!--  &copy; 2020 UCSC Chinese Alumni Association. 保留所有权利 -->
+       <!-- <app-text [text]="langs['copyright']" [language]="language"></app-text> -->
+       &copy;<app-text [text]="langs['copyright']" [language]="language"></app-text>
+        <br><app-text [text]="langs['declare']" [language]="language"></app-text>
         
     </div>
     
