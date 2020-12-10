@@ -1,4 +1,6 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
+import {PageInfoService} from '../../services/page-info.service';
+import { text } from '../../models/text';
 
 @Component({
   selector: 'app-header-nav',
@@ -7,8 +9,27 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class HeaderNavComponent implements OnInit {
 
-  constructor() { }
+  //content = this.pageInfoService.getLanguage();
+  @Input() language:string;
+  langs:{};
+  
+  constructor(
+    private pageInfoService: PageInfoService
+  ) {}
 
   ngOnInit(): void {
+    this.langs = {
+      give:{CN:'捐赠', EN:'Give'},
+      newscenter:{CN:'新闻中心',EN:'Newscenter'},
+      connect:{CN:'校友联络',EN:'Connect'},
+      community:{CN:'校友社区',EN:'Community'},
+      merchandise:{CN:'商品', EN:'Merchandise'},
+      membership:{CN:'会员',EN:'Membership'},
+      about:{CN:'关于',EN:'About'},
+      join:{CN:'加入',EN:'Join'}
+    }
   }
+
 }
+
+
