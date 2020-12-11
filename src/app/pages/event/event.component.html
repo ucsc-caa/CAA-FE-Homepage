@@ -1,3 +1,30 @@
+<!--
+ * event.component.html
+ *
+ * @author: Holly Hao
+ * Revised: 11/23/2020 delete some useless code
+ * Revised: 11/22/2020 
+ *
+-->
+
 <div id ="event">
-    <p>event works!</p>
+
+    <div class="eventImage">
+            <img src={{event.image}} class="center">
+    </div>
+
+    <div class="eventMiddle">
+        <div class="line1">
+            <p>{{event.date}}</p>
+        </div>
+
+        <div class="line2">
+            <p>{{event.contact}}</p>
+        </div>
+    </div>
+
+    <div class="eventText">
+            <p>{{event.content}}</p>
+    </div>
+
 </div>
