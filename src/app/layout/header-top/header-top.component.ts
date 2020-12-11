@@ -17,6 +17,7 @@ import { text } from '../../models/text';
 export class HeaderTopComponent implements OnInit {
   @Input() language:string;
   @Output() setLang = new EventEmitter<string>();
+  @Output() setPage = new EventEmitter<string>();
 
 
   langs:{};
@@ -39,5 +40,15 @@ export class HeaderTopComponent implements OnInit {
 
   setLanguage(lang: string): void {
     this.setLang.emit(lang);
+  }
+
+     /*
+   * setPagetype
+   * This method change pageType in app.component
+   * @param page: value of pageType in app.component
+   */
+
+  setPagetype(page:string): void {
+    this.setPage.emit(page);
   }
 }
