@@ -1,6 +1,15 @@
-import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
+
+/*
+ * header-nav.component.ts
+ *
+ * This file provides header-nav component.
+ *
+ * @author: Peter Cai
+ * Revised: 12/11/2020 add setPagetype() function
+ */
 
 @Component({
   selector: 'app-header-nav',
@@ -9,8 +18,9 @@ import { text } from '../../models/text';
 })
 export class HeaderNavComponent implements OnInit {
 
-  //content = this.pageInfoService.getLanguage();
   @Input() language:string;
+  @Output() setPage = new EventEmitter<string>();
+
   langs:{};
   
   constructor(
@@ -28,6 +38,17 @@ export class HeaderNavComponent implements OnInit {
       about:{CN:'关于',EN:'About'},
       join:{CN:'加入',EN:'Join'}
     }
+  }
+
+
+   /*
+   * setPagetype
+   * This method change pageType in app.component
+   * @param page: value of pageType in app.component
+   */
+
+  setPagetype(page:string): void {
+    this.setPage.emit(page);
   }
 
 }

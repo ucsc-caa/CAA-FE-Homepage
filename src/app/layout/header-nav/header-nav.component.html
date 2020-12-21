@@ -3,26 +3,28 @@
     11.27 modifiy by Jiayin Liu
     add login page
     reference: w3schools
+    12.11 modified by Peter Cai
+    add PageType changing function
 -->
 <div id="headerNav">
     <ul class="hl">
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("give")'>
                 <app-text [text]="langs['give']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("newscenter")'>
                 <app-text [text]="langs['newscenter']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("connect")'>
                 <app-text [text]="langs['connect']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("community")'>
                 <app-text [text]="langs['community']" [language]="language"></app-text>
             </a>
         </li>
@@ -30,23 +32,23 @@
 
     <ul class="hr">
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("merchandise")'>
                 <app-text [text]="langs['merchandise']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("about")'>
                 <app-text [text]="langs['about']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("membership")'>
                 <app-text [text]="langs['membership']" [language]="language"></app-text>
             </a>
         </li>
         <li>
             <a href="#" class="btn">
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><app-text [text]="langs['join']" [language]="language"></app-text></button>
+                <button id="btn_join" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><app-text [text]="langs['join']" [language]="language"></app-text></button>
             </a>
         </li>
 
