@@ -2,6 +2,15 @@ import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@a
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
 
+/*
+ * header-nav.component.ts
+ *
+ * This file provides header-nav component.
+ *
+ * @author: Peter Cai
+ * Revised: 12/11/2020 add setPagetype() function
+ */
+
 @Component({
   selector: 'app-header-nav',
   templateUrl: './header-nav.component.html',

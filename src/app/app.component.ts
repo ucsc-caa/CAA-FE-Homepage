@@ -19,12 +19,11 @@ export class AppComponent implements OnInit{
     this.pageType = event;
   }
 
-
   constructor(
     private pageInfoService: PageInfoService,
+    
   ){}
   ngOnInit(): void {
     this.pageType = this.pageInfoService.getPageType();
   }
-
 }
