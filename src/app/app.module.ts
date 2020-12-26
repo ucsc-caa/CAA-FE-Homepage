@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
+import { LoginpageComponent } from './layout/loginpage/loginpage.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,11 @@ import { TextComponent } from './components/text/text.component';
     HeaderNavComponent,
     ArticleComponent,
     EventComponent,
-    TextComponent
+    TextComponent,
+    LoginpageComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

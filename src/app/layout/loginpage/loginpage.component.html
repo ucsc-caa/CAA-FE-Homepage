@@ -1,0 +1,42 @@
+<!--
+    loginpage.component.html
+    2020.12.23 Created by Peter Cai
+    modifiy by Jiayin Liu
+    add login page
+
+    2020.12.24 Add login control function
+    reference: w3schools
+-->
+
+<!-- reference: w3schools -->
+<!-- start -->
+
+<div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" [(ngModel)]="username" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit" (click)="login()">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" [(ngModel)]="remember" > Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span> 
+      </div>
+    </form>
+  </div>
+    
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <script src="./loginpage.component.js"></script>
