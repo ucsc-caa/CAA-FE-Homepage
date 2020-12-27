@@ -1,0 +1,9 @@
+:host-context(#headerNav) p{
+    line-height: 35px;
+    height: 35px;
+}
+
+:host-context(#headerTop) p{
+    line-height: 35px;
+    height: 35px;
+}

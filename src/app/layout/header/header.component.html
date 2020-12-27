@@ -1,10 +1,15 @@
+<!--
+    header.component.html
+    12.11 modified by Peter Cai
+    add PageType changing function
+-->
 <div id="header-container">
 
     <a href="https://alumni.ucsc.edu/stay-connected/alumni-affinity-groups/chinese-alumni-association.html" >
         <img id="logo" src="/assets/image/CN_logo.png" alt="CAAlogo">
     </a>
-    <app-header-top></app-header-top>
-    <app-header-nav></app-header-nav>
+    <app-header-top [language]='language' (setLang)="setLanguage($event)" (setPage)="setPagetype($event)"></app-header-top>
+    <app-header-nav [language]='language' (setPage)="setPagetype($event)"></app-header-nav>
 
 </div>
 
