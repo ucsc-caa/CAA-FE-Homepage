@@ -7,15 +7,11 @@ import { Injectable } from '@angular/core';
  * @author: Holly Hao
  * Revised: 11/23/2020 Update content and image component and add contact component. Meanwhile, create getData 2 function
  * Revised: 11/22/2020 Update event 
+ * Revised: 11/12/2020 Create event class and three types of data
  *
  * @author: Jiayin Liu
  * Revised: 11/22/2020 Create getData function
- *
- * @author: Jiayin Liu
  * Revised: 11/13/2020 Create article class and 5 types of data
- *
- * @author: Holly Hao
- * Revised: 11/12/2020 Create event class and three types of data
  *
  * @author: Yiyun Zheng
  * Revised: 11/8/2020 Create file and implement language and page type variable
@@ -27,7 +23,7 @@ import { Injectable } from '@angular/core';
 })
 export class PageInfoService {
   language = 'CN';
-  pageType = 'event';
+  pageType = 'article';
   
   article = {
     title: '论法式饼干的历史',
