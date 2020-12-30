@@ -16,10 +16,14 @@ import { Component, OnInit, HostListener, Input,ViewChild, EventEmitter, Output}
 export class HeaderComponent implements OnInit {
   @Input() language: string;
   @Output() setLang = new EventEmitter<boolean>();
-  
+  @Output() setPage = new EventEmitter<boolean>();
   
   setLanguage(event) {
     this.setLang.emit(event);
+  }
+
+  setPagetype(event) {
+    this.setPage.emit(event);
   }
 
 

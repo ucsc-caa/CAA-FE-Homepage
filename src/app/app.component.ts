@@ -15,13 +15,15 @@ export class AppComponent implements OnInit{
     this.language = event;
   }
 
+  setPagetype(event){
+    this.pageType = event;
+  }
 
   constructor(
     private pageInfoService: PageInfoService,
+    
   ){}
   ngOnInit(): void {
     this.pageType = this.pageInfoService.getPageType();
   }
-
-
 }

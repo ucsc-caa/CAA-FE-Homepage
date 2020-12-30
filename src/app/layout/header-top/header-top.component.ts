@@ -2,12 +2,18 @@ import { Component, OnInit, HostListener,Input,Output, EventEmitter} from '@angu
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
 
-/* 
-*@author: Peter Cai
-*Revised:11/22/2020 modify import,constructor,ngOnInit()
-*
-*Revised:12/6/2020 add setLanguage() function
-*/
+/*
+ * header-top.component.ts
+ *
+ * This file provides header-top component.
+ *
+ * @author: Peter Cai
+ * Revised:11/22/2020 modify import,constructor,ngOnInit()
+ *
+ * Revised:12/6/2020 add setLanguage() function
+ * 
+ * Revised: 12/11/2020 add setPagetype() function
+ */
 
 @Component({
   selector: 'app-header-top',
@@ -17,6 +23,7 @@ import { text } from '../../models/text';
 export class HeaderTopComponent implements OnInit {
   @Input() language:string;
   @Output() setLang = new EventEmitter<string>();
+  @Output() setPage = new EventEmitter<string>();
 
 
   langs:{};
@@ -39,5 +46,15 @@ export class HeaderTopComponent implements OnInit {
 
   setLanguage(lang: string): void {
     this.setLang.emit(lang);
+  }
+
+     /*
+   * setPagetype
+   * This method change pageType in app.component
+   * @param page: value of pageType in app.component
+   */
+
+  setPagetype(page:string): void {
+    this.setPage.emit(page);
   }
 }

@@ -1,17 +1,23 @@
+<!--
+    header-top.component.html
+    12.11 modified by Peter Cai
+    add PageType changing function
+-->
+
 <div id="headerTop">
     <ul class="hl">
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("immigration")'>
                 <app-text [text]="langs['immigration']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("career")'>
                 <app-text [text]="langs['career']" [language]="language"></app-text>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" (click)='setPagetype("getinvolved")'>
                 <app-text [text]="langs['getinvolved']" [language]="language"></app-text>
             </a>
         </li>
