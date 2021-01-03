@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import userInfo from './user-data.json';
@@ -17,10 +18,13 @@ import userInfo from './user-data.json';
 })
 export class UserInfoService {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
-  login() {
-    return of(userInfo);
+  login(email: string, password: string) {
+    return this.http.post('http://localhost:3010/v0/auth', {
+      email,
+      password
+    });
   }
 }

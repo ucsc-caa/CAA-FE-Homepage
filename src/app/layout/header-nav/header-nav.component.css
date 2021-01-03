@@ -71,9 +71,8 @@ ul{
 
 #headerNav button #join_btn{
 position: absolute;
-left: 10px;
-width: 40px;
-top: -6px;
+left: 15px;
+top: -20px;
 }
 
 /* reference: w3schools */
@@ -98,12 +97,19 @@ cursor: pointer;
 width: 100%;
 font-size: 18px;
 outline: none;
+border-radius: 50%;
 }
 
 #btn_join{
 position: absolute;
-height: 0px;
-width: 0;
+width: 60px;
+top: 14px;
+height: 30px;
+background-color: white;
+color: #003c6c;
+border-radius: 15px;
+text-align: center;
+vertical-align: top;
 }
 
 button:hover {
