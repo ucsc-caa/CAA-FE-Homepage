@@ -1,16 +1,25 @@
+/*
+header-top.component.css
+
+1/2 modified by Holly Hao
+Put the hl to the middle place and adjust the place
+
+*/
+
 ul{
     list-style-type: none;
-    margin: 0px;
-    padding-top: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #headerTop{
-    top: 0;
-    left: 0;
+    /*top: 0;
+    left: 0;*/
+    text-align: center;
     width: 100%;
-    height: 70px;
+    height: 5%;
     background-color: #ffffff;
-    line-height: 80px;
+    line-height: 18%;
     color: #003c6c;
     font-family:"Source Han Sans CN";
     font-weight: normal;
@@ -19,27 +28,29 @@ ul{
 
 #headerTop .hl{
     width: 45%;
-    position: absolute;
     right: 65%;
+    display: flex;
+    justify-content: center;
 }
 
 #headerTop .hr{
     width: 45%;
-    position: absolute;
     left: 67%;
+    top: 1%;
+    position: absolute;
 }
 
 #headerTop .hl li{
     float: right;
     font-size: 12pt;
-    padding-left:40px;
+    padding: 0 5%;
     font-weight: 350;
 }
 
 #headerTop .hr li{
     float: left;
     font-size: 12pt;
-    padding: 0px 3px;
+    padding: 0 0.5%;
     font-weight: 350;
 }
 
