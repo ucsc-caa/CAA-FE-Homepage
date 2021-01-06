@@ -2,6 +2,11 @@ import { viewClassName } from '@angular/compiler';
 import { Component, OnInit, HostListener, Input,ViewChild, EventEmitter, Output} from '@angular/core';
 
 /*
+* author: Holly Hao
+* Date Revised: 2021/1/5
+* Change the height and lineHeight of headerNav and headerTop
+*
+*
 * author : Peter Cai
 * date : 2020/11/8
 * Create headerTop and headerNav
@@ -46,21 +51,24 @@ export class HeaderComponent implements OnInit {
       logoContainer.style.top ="10%";
       logoContainer.style.height = "70px";
       logoContainer.style.width = "70px";
-      headerNav.style.height = "60px";
-      headerNav.style.lineHeight = "60px";
 
-      headerTop.style.height = "35px";
-      headerTop.style.lineHeight = "35px";
+      headerNav.style.height = "80px";
+      headerNav.style.lineHeight = "20px";
+
+      headerTop.style.height = "40px";
+      headerTop.style.lineHeight = "20px";
     } else {
       headerContainer.style.height = "198px";
       logoContainer.style.top ="0%";
       logoContainer.src = "/assets/image/CN_logo.png";
       logoContainer.style.height = "198px";
       logoContainer.style.width = "198px";
+
       headerNav.style.height = "80px";
-      headerNav.style.lineHeight = "80px";
+      headerNav.style.lineHeight = "20px";
+
       headerTop.style.height = "70px";
-      headerTop.style.lineHeight = "70px"
+      headerTop.style.lineHeight = "50px"
     }
     
   }
