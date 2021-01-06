@@ -44,10 +44,10 @@ export class SamplBackendService {
    * @param String
    * @return JSON 
    */
-  getSelectArticle(id:String):Observable<JSON> {
+/*   getSelectArticle(id:String):Observable<JSON> {
     console.log(id);
     return this.http.get<JSON>(this.hostRootUrl+'/article/'+id);
-  }
+  } */
 
   /*
    * postNewArticle
@@ -55,7 +55,7 @@ export class SamplBackendService {
    * @param None
    * @return JSON
    */
-  postNewArticle(newArticle):Observable<JSON> {
+/*   postNewArticle(newArticle):Observable<JSON> {
     return this.http.post<JSON>(this.hostRootUrl+'/article', newArticle);
-  }
+  } */
 }

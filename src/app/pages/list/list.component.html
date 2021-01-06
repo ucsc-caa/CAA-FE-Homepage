@@ -1,0 +1,17 @@
+
+<div id ="list">
+    <li *ngFor="let article of articles">
+    
+    <div class = "listImage"> 
+        <img src={{article.image}} class="center" width="100px" height="100px">
+    </div> 
+
+    <div class = "listText">
+        <p>{{article.title}}</p>
+        <p>{{article.posttime}}</p>
+    </div>  
+
+    </li>
+</div> 
+
+
