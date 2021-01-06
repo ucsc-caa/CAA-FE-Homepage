@@ -1,3 +1,10 @@
+/*
+ * list.component.ts
+ *
+ * @author: Jiayin Liu
+ * Created: 1/6/2020 create the list component
+ *
+ */
 import { Component, OnInit } from '@angular/core';
 import {SamplBackendService} from '../../services/sampl-backend.service';
 
@@ -9,8 +16,7 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
 export class ListComponent implements OnInit {
 
   articles: JSON[]
-  sampleId: String;
-  newArticle: any;
+
 
   constructor(private samplInfoService: SamplBackendService) { }
 

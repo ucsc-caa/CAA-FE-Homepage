@@ -1,8 +1,17 @@
+/* list.component.html
+ *
+ * @author: Jiayin Liu
+ * Created: 1/6/2021 
+ * Add css style
+ */
 
  .content {
     width: 100%;
-    font-size: 14px;
     color:#003c6c;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 190px;
+    font-size: 16px;
  } 
 
  .content .li {
@@ -13,12 +22,14 @@
       align-items: center;
       overflow: hidden;
       border: 1px solid #f1f1f1;
+      
  }
  .content .li .img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     width: 150px;
+  
 
 }
   
@@ -28,12 +39,13 @@
  
 .content .li .text .title {
           color: #999;
-          font-size: 20px;
+      
           margin: 15px;
  }
  
  .content .li .text .time {
           margin: 15px;
+          
   }
       
   
