@@ -1,34 +1,38 @@
 /* reference: w3schools */
 /* start */
 input[type=text]{
-    width: 300px;
+    width: 510px;
     padding: 12px 20px;
     display: block;
     border: 2px solid  #003c6c;
+    color: #003c6c;
     border-radius: 50px;
+    font-size: 20px;
     box-sizing: border-box;
     position: relative;
-    top: 10%;
-    text-align: center;
+    top: 13%;
+    text-align: left;
     margin:0 auto;
   }
 
 input[type=password]{
-  width:300px;
+  width:510px;
   padding: 12px 20px;
   display: block;
   border: 2px solid  #003c6c;
+  color: #003c6c;
+  font-size: 20px;
   border-radius: 50px;
   box-sizing: border-box;
   position: relative;
   margin:0 auto;
-  top: 15%;
-  text-align: center;
+  top: 17%;
+  text-align: left;
 }  
 
   .loginLabel{
     position: relative;
-    top: 25%;
+    top: 21%;
     width: 200px;
     display: block;
     margin: 0 25%;
@@ -41,13 +45,13 @@ input[type=password]{
     margin: 0 auto;
     border: none;
     cursor: pointer;
-    width: 100px;
+    width: 125px;
     font-size: 18px;
     outline: none;
     border-radius: 50px;
     text-align: center;
     position: relative;
-    top: 18%;
+    top: 15%;
     display: block;
   }
 
