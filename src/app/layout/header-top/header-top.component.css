@@ -18,13 +18,13 @@ ul{
 
 #headerTop{
     /*top: 0;
-    left: 0;*/
-    text-align: center;
+    left: 0;
+    text-align: center;*/
     width: 100%;
-    height: 20%;
+    /*height: 20%;
+    line-height: 18%;*/
     margin-top: 1%;
     background-color: #ffffff;
-    line-height: 18%;
     color: #003c6c;
     font-family:"Source Han Sans CN";
     font-weight: normal;

@@ -53,10 +53,10 @@ export class HeaderComponent implements OnInit {
       logoContainer.style.width = "70px";
 
       headerNav.style.height = "80px";
-      headerNav.style.lineHeight = "20px";
+      headerNav.style.lineHeight = "15px";
 
-      headerTop.style.height = "40px";
-      headerTop.style.lineHeight = "20px";
+      headerTop.style.height = "35px";
+      headerTop.style.lineHeight = "5px";
     } else {
       headerContainer.style.height = "198px";
       logoContainer.style.top ="0%";
@@ -64,11 +64,11 @@ export class HeaderComponent implements OnInit {
       logoContainer.style.height = "198px";
       logoContainer.style.width = "198px";
 
-      headerNav.style.height = "80px";
-      headerNav.style.lineHeight = "20px";
+      headerNav.style.height = "90px";
+      headerNav.style.lineHeight = "25px";
 
-      headerTop.style.height = "70px";
-      headerTop.style.lineHeight = "50px"
+      headerTop.style.height = "60px";
+      headerTop.style.lineHeight = "20px"
     }
     
   }
