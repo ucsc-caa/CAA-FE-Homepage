@@ -13,6 +13,9 @@ import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
 import { ListComponent } from './pages/list/list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { ListComponent } from './pages/list/list.component';
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
