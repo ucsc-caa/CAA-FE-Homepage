@@ -6,19 +6,26 @@
  *
  * Modified 1/11/2021
  * show "change page" when has more than 15 objects
+ * update card
 -->
 
 
- <ul class="content">
-    <li *ngFor="let article of articles">
-      <div class="img">
-        <img [src]="article.img" alt=""  style="width:150px"/>
-      </div>
-      <div class="text">
-        <p class="title">{{ article.title }}</p>
-        <p class="time">{{ article.posttime }}</p>
-      </div>
-    </li>
-   <!-- show "change page!" when the list has more than 15 objects -->
-    <div *ngIf="articles?.length > 15">change page!</div>
-  </ul>
+
+<mat-card class="card">
+  <li *ngFor="let article of articles">
+    <mat-card-content class="home-card-content">
+    <div mat-card-avatar class="cardImage">
+     
+        <img mat-card-image [src]="article.img"  alt="Photo of a Shiba Inu" style="width:150px; margin-left: 200px; border-radius: 4px;">
+       </div> 
+
+      <div> 
+        <h3>{{ article.title }}</h3>
+        <h4>{{ article.posttime }}</h4>
+     </div>
+    </mat-card-content>
+  </li>
+  <div *ngIf="articles?.length > 15">
+    <h1>change page!</h1>
+  </div>
+</mat-card> 
