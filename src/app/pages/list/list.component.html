@@ -4,6 +4,8 @@
  * @author: Jiayin Liu
  * Created: 1/6/2021 
  *
+ * Modified 1/11/2021
+ * show "change page" when has more than 15 objects
 -->
 
 
@@ -17,4 +19,6 @@
         <p class="time">{{ article.posttime }}</p>
       </div>
     </li>
+   <!-- show "change page!" when the list has more than 15 objects -->
+    <div *ngIf="articles?.length > 15">change page!</div>
   </ul>
