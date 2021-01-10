@@ -83,9 +83,10 @@ input[type=password]{
     padding: 0px;
     background-color: rgba(255,255,255,0.95);
     width: 99.9%;
-    height: 93%;
-    top:94px;
+    height: 90%;
+    top:197px;
     margin: 1px;
+    overflow-y: hidden;
   }
   
   span.psw {
@@ -106,6 +107,7 @@ input[type=password]{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(255,255,255,0);
     padding: 0%;
+    overflow-y: hidden;
   }
   
   /* Modal Content/Box */
@@ -121,7 +123,7 @@ input[type=password]{
   .close {
     position: absolute;
     left: 5%;
-    top: 8px;
+    top: 50px;
     color: #003c6c;
     font-size: 35px;
     font-weight: bold;
@@ -162,7 +164,7 @@ input[type=password]{
 
 .container_top{
   background-color: white;
-  height: 91px;
+  height: 194px;
   width: 100%;
   border-bottom: 2px solid #003c6c;
   border-top: 2px solid #003c6c;
@@ -175,7 +177,7 @@ input[type=password]{
   position: relative;
   display: block;
   margin: 0 auto;
-  height: 90px;
-  width: 90px;
+  height: 193px;
+  width: 193px;
   text-align: center;
 }
