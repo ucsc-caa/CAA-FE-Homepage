@@ -12,9 +12,8 @@ import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
-import { EmployeesComponent } from './pages/employees/employees.component';
 import { ListComponent } from './pages/list/list.component';
-import { ArticleCardsComponent } from './components/article-cards/article-cards.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { ArticleCardsComponent } from './components/article-cards/article-cards.
     ArticleComponent,
     EventComponent,
     TextComponent,
-    EmployeesComponent,
     ListComponent
   ],
   imports: [
