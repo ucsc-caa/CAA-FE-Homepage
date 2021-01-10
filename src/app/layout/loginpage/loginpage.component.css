@@ -175,9 +175,10 @@ input[type=password]{
 
 .login_logo{
   position: relative;
+  top: 52px;
   display: block;
   margin: 0 auto;
-  height: 193px;
-  width: 193px;
+  height: 90px;
+  width: 90px;
   text-align: center;
 }
