@@ -8,15 +8,17 @@
  * Modify style
  */
 
+#list{
+        margin-top: 190px;
+}
  .card {
-        width: 100%;
+        
+        margin-left: 100px;
+        margin-right: 100px;
         color:#003c6c;
         text-align: center;
         list-style-type: none;
-        margin-top: 190px;
         font-size: 16px;
-        border-radius: 4px;
+        height: 100px;
 
 }
-      
-  
