@@ -10,15 +10,29 @@
 
 #list{
         margin-top: 190px;
+        position: relative;
+        z-index: -10;
+        /* list-style-type: none; */
 }
- .card {
-        
-        margin-left: 100px;
-        margin-right: 100px;
-        color:#003c6c;
-        text-align: center;
-        list-style-type: none;
-        font-size: 16px;
-        height: 100px;
 
+.card {
+        
+        margin-left: 200px;
+        margin-right: 200px;
+        color:#003c6c;
+        font-size: 16px;
+} 
+
+ .image{
+         width: 100px;
+         height: 100px;
+         margin-left: 100px;
+         display: inline-block;
+         vertical-align: middle;     
+ } 
+
+.card .text{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 100px;
 }
