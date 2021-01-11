@@ -17,6 +17,10 @@ export class ListComponent implements OnInit {
 
   articles: JSON[]
 
+  // return article's id when clicked
+  public returnId(article: any){
+    console.log(article.id);
+  }
 
   constructor(private samplInfoService: SamplBackendService) { }
 
