@@ -108,6 +108,7 @@ input[type=password]{
     background-color: rgba(255,255,255,0);
     padding: 0%;
     overflow-y: hidden;
+    z-index: 999999;
   }
   
   /* Modal Content/Box */
