@@ -45,14 +45,6 @@ export class ArticleComponent implements OnInit {
       console.log('All news');
       console.log(this.articles)
     })
-    this.samplInfoService.getSelectArticle(this.sampleId).subscribe(sampleArticle => {
-      console.log('Select Article');
-      console.log(sampleArticle);
-    })
-    this.samplInfoService.postNewArticle(this.newArticle).subscribe(sampleArticle => {
-      console.log('New Article');
-      console.log(sampleArticle);
-    })
   }
 
 }
