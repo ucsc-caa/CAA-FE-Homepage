@@ -13,7 +13,7 @@
 
 <div id="list">
   <li  *ngFor="let article of articles">
-    <mat-card class="card">
+    <mat-card (click)="returnId(article)" class="card">
       <mat-card-content class="cardContent">
         <div mat-card-avatar class="cardImage">
      
@@ -21,7 +21,8 @@
         </div> 
 
         <div class = "text"> 
-          <button value={{article.id}}>{{article.title}}</button>
+          
+          <h4>{{ article.title }}</h4>
           <h4>{{ article.posttime }}</h4>
         </div>
 
