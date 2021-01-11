@@ -9,30 +9,21 @@
  * update card
 -->
 
-
-
 <div id="list">
-  <li  *ngFor="let article of articles">
-    <mat-card (click)="returnId(article)" class="card">
-      <mat-card-content class="cardContent">
-        <div mat-card-avatar class="cardImage">
-     
-          <img mat-card-image [src]="article.img"  alt="Photo of a Shiba Inu" style="width:150px; margin-left: 200px; border-radius: 4px;">
-        </div> 
 
-        <div class = "text"> 
-          
-          <h4>{{ article.title }}</h4>
-          <h4>{{ article.posttime }}</h4>
-        </div>
+<li *ngFor="let article of articles" (click)="returnId(article)">
+  <mat-card class="card">
+    <img mat-card-image class="image" [src]="article.img" alt="Photo of a Shiba Inu">
+    <mat-card-content class="text" >
+      <p>{{article.title}}</p>
+     <p>{{article.posttime}}</p>
+    </mat-card-content>
+  </mat-card>
+</li>
 
-      </mat-card-content>
-
-    </mat-card> 
-  </li>
-  <mat-paginator [length]="articles?.length"
-              [pageSize]="15"
-              [pageSizeOptions]="[15]">
+<mat-paginator [length]="articles?.length"
+  [pageSize]="15"
+  [pageSizeOptions]="[15]">
 </mat-paginator>
-</div>
 
+</div>
