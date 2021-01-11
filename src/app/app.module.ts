@@ -12,6 +12,7 @@ import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TextComponent } from './components/text/text.component';
     HeaderNavComponent,
     ArticleComponent,
     EventComponent,
-    TextComponent
+    TextComponent,
+    PageNotFoundComponent
   ],
   imports: [
     HttpClientModule,
