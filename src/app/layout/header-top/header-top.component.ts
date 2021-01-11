@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener,Input,Output, EventEmitter} from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
+import { Router } from '@angular/router';
 
 /*
  * header-top.component.ts
@@ -28,7 +29,7 @@ export class HeaderTopComponent implements OnInit {
 
   langs:{};
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.langs = {
@@ -55,6 +56,8 @@ export class HeaderTopComponent implements OnInit {
    */
 
   setPagetype(page:string): void {
-    this.setPage.emit(page);
+    // alert(page);
+    this.router.navigate(['/'+page]);
+    // this.setPage.emit(page);
   }
 }
