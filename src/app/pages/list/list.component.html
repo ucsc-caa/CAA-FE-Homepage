@@ -11,21 +11,27 @@
 
 
 
-<mat-card class="card">
-  <li *ngFor="let article of articles">
-    <mat-card-content class="home-card-content">
-    <div mat-card-avatar class="cardImage">
+<div id="list">
+  <li  *ngFor="let article of articles">
+    <mat-card class="card">
+      <mat-card-content class="cardContent">
+        <div mat-card-avatar class="cardImage">
      
-        <img mat-card-image [src]="article.img"  alt="Photo of a Shiba Inu" style="width:150px; margin-left: 200px; border-radius: 4px;">
-       </div> 
+          <img mat-card-image [src]="article.img"  alt="Photo of a Shiba Inu" style="width:150px; margin-left: 200px; border-radius: 4px;">
+        </div> 
 
-      <div> 
-        <h3>{{ article.title }}</h3>
-        <h4>{{ article.posttime }}</h4>
-     </div>
-    </mat-card-content>
+        <div class = "text"> 
+          <button value={{article.id}}>{{article.title}}</button>
+          <h4>{{ article.posttime }}</h4>
+        </div>
+
+      </mat-card-content>
+
+    </mat-card> 
   </li>
-  <div *ngIf="articles?.length > 15">
-    <h1>change page!</h1>
-  </div>
-</mat-card> 
+  <mat-paginator [length]="articles?.length"
+              [pageSize]="15"
+              [pageSizeOptions]="[15]">
+</mat-paginator>
+</div>
+
