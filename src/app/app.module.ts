@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { LoginpageComponent } from './layout/loginpage/loginpage.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     EventComponent,
     TextComponent,
     ListComponent
+    LoginpageComponent
   ],
   imports: [
-    HttpClientModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -41,6 +43,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatButtonModule,
     MatGridListModule,
     MatPaginatorModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
