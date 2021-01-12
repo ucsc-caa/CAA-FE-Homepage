@@ -18,6 +18,12 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+
+    /*
+     * Revised by Jiayin Liu on 12/27/2020
+     * Using 'resolvejsonmodule' to import article-data.json
+     */
+    "resolveJsonModule": true
   }
 }

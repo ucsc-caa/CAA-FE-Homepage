@@ -12,6 +12,12 @@ import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
+import { ListComponent } from './pages/list/list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoginpageComponent } from './layout/loginpage/loginpage.component';
 
 @NgModule({
@@ -25,11 +31,18 @@ import { LoginpageComponent } from './layout/loginpage/loginpage.component';
     ArticleComponent,
     EventComponent,
     TextComponent,
+    ListComponent
     LoginpageComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatPaginatorModule
     HttpClientModule,
     AppRoutingModule
   ],
