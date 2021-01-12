@@ -1,0 +1,185 @@
+/* reference: w3schools */
+/* start */
+input[type=text]{
+    width: 510px;
+    padding: 12px 20px;
+    display: block;
+    border: 2px solid  #003c6c;
+    color: #003c6c;
+    border-radius: 50px;
+    font-size: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: 13%;
+    text-align: left;
+    margin:0 auto;
+  }
+
+input[type=password]{
+  width:510px;
+  padding: 12px 20px;
+  display: block;
+  border: 2px solid  #003c6c;
+  color: #003c6c;
+  font-size: 20px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  position: relative;
+  margin:0 auto;
+  top: 17%;
+  text-align: left;
+}  
+
+  .loginLabel{
+    position: relative;
+    top: 21%;
+    width: 200px;
+    display: block;
+    margin: 0 25%;
+  }
+  /* Set a style for all buttons */
+  button[type=submit] {
+    background-color:#003c6c;
+    color:white;
+    padding: 14px 20px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    width: 125px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    top: 15%;
+    display: block;
+  }
+
+  .login{
+    width: 100px;
+    border-radius: 50px;
+    border-color: #003c6c;
+  }
+
+  .password{
+    border-radius: 50px;
+    border-color: #003c6c;
+  }
+
+  #btn_join{
+    position: absolute;
+    height: 0px;
+    width: 0;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+
+  .container {
+    position: absolute;
+    padding: 0px;
+    background-color: rgba(255,255,255,0.95);
+    width: 99.9%;
+    height: 90%;
+    top:197px;
+    margin: 1px;
+    overflow-y: hidden;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255,255,255,0);
+    padding: 0%;
+    overflow-y: hidden;
+    z-index: 999999;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: rgba(red, green, blue, 0.2);
+    margin: 0px; /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid #003c6c;
+    width: 100%; /* Could be more or less, depending on screen size */
+    height: 100%;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    left: 5%;
+    top: 50px;
+    color: #003c6c;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+
+    }
+
+  }
+/* end of reference */
+
+.container_top{
+  background-color: white;
+  height: 194px;
+  width: 100%;
+  border-bottom: 2px solid #003c6c;
+  border-top: 2px solid #003c6c;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+}
+
+.login_logo{
+  position: relative;
+  top: 52px;
+  display: block;
+  margin: 0 auto;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+}
