@@ -64,7 +64,7 @@ ul{
   color:#ffffff;
 }
 
-#headerNav li .btn{
+/* #headerNav li .btn{
   width: 90px;
   height: 35px;
   display: inline-block;
@@ -75,13 +75,8 @@ ul{
   line-height: 35px;
   text-align: center;
   font-size: 18px;
-}
+} */
 
-#headerNav button #join_btn{
-position: absolute;
-left: 15px;
-top: -20px;
-}
 
 /* reference: w3schools */
 /* start */
@@ -96,7 +91,7 @@ box-sizing: border-box;
 
 
 /* Set a style for all buttons */
-button {
+/* button {
 background-color:#003c6c;
 color:white;
 padding: 14px 20px;
@@ -107,12 +102,12 @@ width: 100%;
 font-size: 18px;
 outline: none;
 border-radius: 50%;
-}
+} */
 
 #btn_join{
 position: absolute;
 width: 60px;
-top: 14px;
+top: 25%;
 height: 30px;
 background-color: white;
 color: #003c6c;
