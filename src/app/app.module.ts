@@ -31,8 +31,8 @@ import { LoginpageComponent } from './layout/loginpage/loginpage.component';
     ArticleComponent,
     EventComponent,
     TextComponent,
-    ListComponent
-    LoginpageComponent
+    ListComponent,
+    LoginpageComponent,
   ],
   imports: [
     FormsModule,
@@ -42,9 +42,9 @@ import { LoginpageComponent } from './layout/loginpage/loginpage.component';
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    MatPaginatorModule
+    MatPaginatorModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
