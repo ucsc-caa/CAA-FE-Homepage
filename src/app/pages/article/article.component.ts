@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {PageInfoService} from '../../services/page-info.service';
 import {SamplBackendService} from '../../services/sampl-backend.service';
 /*
@@ -17,33 +18,20 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+  id: String;
+  article: JSON;
 
-  article: { title: string; author: string; date: string; content: string; image: string; imageTitle: string;};
-  articles: JSON[]
-  sampleId: String = '959e1741-a7c3-4ad1-9d0f-5bc0bc349939'
-  newArticle= {
-    'title': "Test Post",
-    "content": "IDK",
-    "img": "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
-    "author": "Alex Zheng",
-    "category": "news"
-  }
   constructor(
     private pageInfoService: PageInfoService,
-    private samplInfoService: SamplBackendService
+    private samplInfoService: SamplBackendService,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
-    this.article = this.pageInfoService.getData();
-    this.samplInfoService.getArticleList().subscribe(articles => {
-      this.articles = articles;
-      console.log('All Article');
-      console.log(this.articles);
-    })
-    this.samplInfoService.getSelectArticleList('event').subscribe(articles => {
-      this.articles = articles;
-      console.log('All news');
-      console.log(this.articles)
+    this.id = this.route.snapshot.paramMap.get('id');
+    // this.article = this.pageInfoService.getData();
+    this.samplInfoService.getSelectArticle(this.id).subscribe(article => {
+      this.article = article;
     })
   }
 

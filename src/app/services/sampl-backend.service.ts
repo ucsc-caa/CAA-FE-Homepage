@@ -44,10 +44,10 @@ export class SamplBackendService {
    * @param String
    * @return JSON 
    */
-/*   getSelectArticle(id:String):Observable<JSON> {
+  getSelectArticle(id:String):Observable<JSON> {
     console.log(id);
     return this.http.get<JSON>(this.hostRootUrl+'/article/'+id);
-  } */
+  }
 
   /*
    * postNewArticle

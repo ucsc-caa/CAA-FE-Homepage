@@ -20,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoginpageComponent } from './layout/loginpage/loginpage.component';
+import { ArticleListComponent } from './pages/article-list/article-list.component';
+import { RecentArticleComponent } from './pages/recent-article/recent-article.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,11 @@ import { LoginpageComponent } from './layout/loginpage/loginpage.component';
     ArticleComponent,
     EventComponent,
     TextComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
     ListComponent,
     LoginpageComponent,
+    ArticleListComponent,
+    RecentArticleComponent,
   ],
   imports: [
     FormsModule,
