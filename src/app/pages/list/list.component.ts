@@ -6,6 +6,7 @@
  *
  */
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {SamplBackendService} from '../../services/sampl-backend.service';
 
 @Component({
@@ -15,34 +16,29 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
 })
 export class ListComponent implements OnInit {
 
-  articles: JSON[]
+  articles: JSON[];
+  pageType: String;
 
-  // return article's id when clicked
-  public returnId(article: any){
-    console.log(article.id);
-  }
-
-  constructor(private samplInfoService: SamplBackendService) { }
+  constructor(
+    private samplInfoService: SamplBackendService, 
+    private route: ActivatedRoute,
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
-    // return all articles
-    this.samplInfoService.getArticleList().subscribe(articles => {
-      this.articles = articles;
-      console.log('All Article');
-      console.log(this.articles);
-    })
+    // Get which type of article we need from url.
+    this.pageType = this.route.snapshot.parent.url[0].path;
     // return all events
-    this.samplInfoService.getSelectArticleList('event').subscribe(articles => {
+    this.samplInfoService.getSelectArticleList(this.pageType).subscribe(articles => {
       this.articles = articles;
-      console.log('All event');
+      console.log('All'+this.pageType);
       console.log(this.articles)
     })
-    // return all news
-    this.samplInfoService.getSelectArticleList('news').subscribe(articles => {
-      this.articles = articles;
-      console.log('All news');
-      console.log(this.articles)
-    })
+  }
+
+  // return article's id when clicked
+  printId(articleId:string) {
+    this.router.navigate(['/content', articleId]);
   }
 
 }

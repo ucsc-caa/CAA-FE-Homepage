@@ -11,15 +11,18 @@
 
 <div id="list">
 
-<li *ngFor="let article of articles" (click)="returnId(article)">
-  <mat-card class="card">
-    <img mat-card-image class="image" [src]="article.img" alt="Photo of a Shiba Inu">
-    <mat-card-content class="text" >
-      <p>{{article.title}}</p>
-     <p>{{article.posttime}}</p>
-    </mat-card-content>
-  </mat-card>
-</li>
+  <li *ngFor="let article of articles" (click)="printId(article.id)" >
+
+    <mat-card class="card" >
+      <img mat-card-image class="image" [src]="article.img" alt="Photo of a Shiba Inu">
+      <mat-card-content class="text" >
+        <p>{{article.title}}</p>
+       <p>{{article.posttime}}</p>
+      </mat-card-content>
+    </mat-card>
+  </li>
+
+
 
 <mat-paginator [length]="articles?.length"
   [pageSize]="15"

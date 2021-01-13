@@ -12,6 +12,7 @@ import { HeaderNavComponent } from './layout/header-nav/header-nav.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ListComponent } from './pages/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -19,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoginpageComponent } from './layout/loginpage/loginpage.component';
+import { ArticleListComponent } from './pages/article-list/article-list.component';
+import { RecentArticleComponent } from './pages/recent-article/recent-article.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +34,11 @@ import { LoginpageComponent } from './layout/loginpage/loginpage.component';
     ArticleComponent,
     EventComponent,
     TextComponent,
+    PageNotFoundComponent,
     ListComponent,
     LoginpageComponent,
+    ArticleListComponent,
+    RecentArticleComponent,
   ],
   imports: [
     FormsModule,
