@@ -5,6 +5,7 @@
 /*:host-context(#headerNav) p{
     line-height: 35px;
     height: 35px;
+    text-align: center;
 }
 
 :host-context(#headerTop) p{

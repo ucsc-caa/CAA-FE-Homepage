@@ -1,0 +1,16 @@
+[
+    {
+        "id": 101,
+        "firstName": "Jiayin",
+        "lastName": "Liu",
+        "salary": 100,
+        "dob": "10/05/2000"
+    },
+    {
+        "id": 102,
+        "firstName": "Lucy",
+        "lastName": "Liu",
+        "salary": 1111,
+        "dob": "9/15/1990"        
+    }
+]
