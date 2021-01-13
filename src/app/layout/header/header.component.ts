@@ -52,8 +52,8 @@ export class HeaderComponent implements OnInit {
       logoContainer.style.height = "70px";
       logoContainer.style.width = "70px";
 
-      headerNav.style.height = "80px";
-      headerNav.style.lineHeight = "15px";
+      headerNav.style.height = "60px";
+      headerNav.style.lineHeight = "60px";
 
       headerTop.style.height = "35px";
       headerTop.style.lineHeight = "5px";
@@ -65,7 +65,7 @@ export class HeaderComponent implements OnInit {
       logoContainer.style.width = "198px";
 
       headerNav.style.height = "90px";
-      headerNav.style.lineHeight = "25px";
+      headerNav.style.lineHeight = "90px";
 
       headerTop.style.height = "60px";
       headerTop.style.lineHeight = "20px"

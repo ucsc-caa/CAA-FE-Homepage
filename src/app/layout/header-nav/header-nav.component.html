@@ -5,6 +5,8 @@
     reference: w3schools
     12.11 modified by Peter Cai
     add PageType changing function
+    1.3 modified by Peter Cai
+    changed style
 -->
 <div id="headerNav">
     <ul class="hl">
@@ -14,7 +16,7 @@
             </a>
         </li>
         <li>
-            <a href="#" (click)='setPagetype("newscenter")'>
+            <a href="#" (click)='setPagetype("article")'>
                 <app-text [text]="langs['newscenter']" [language]="language"></app-text>
             </a>
         </li>
@@ -24,7 +26,7 @@
             </a>
         </li>
         <li>
-            <a href="#" (click)='setPagetype("community")'>
+            <a href="#" (click)='setPagetype("event")'>
                 <app-text [text]="langs['community']" [language]="language"></app-text>
             </a>
         </li>
@@ -47,53 +49,13 @@
             </a>
         </li>
         <li>
-            <a href="#" class="btn">
-                <button id="btn_join" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><app-text [text]="langs['join']" [language]="language"></app-text></button>
-            </a>
+                <button id="btn_join" onclick="document.getElementById('id01').style.display='block'">
+                    <app-text id="join_btn" [text]="langs['join']" [language]="language"></app-text>
+                </button>
         </li>
 
     </ul>
 
-<!-- reference: w3schools -->
-<!-- start -->
+    <app-loginpage></app-loginpage>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span> 
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-<!-- end of reference-->
 </div>

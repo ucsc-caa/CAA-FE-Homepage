@@ -1,0 +1,38 @@
+/* list.component.css
+ *
+ * @author: Jiayin Liu
+ * Created: 1/6/2021 
+ * Add css style
+ * 
+ * Revised: 1/11/2020
+ * Modify style
+ */
+
+#list{
+        margin-top: 190px;
+        position: relative;
+        z-index: -10;
+        /* list-style-type: none; */
+}
+
+.card {
+        
+        margin-left: 200px;
+        margin-right: 200px;
+        color:#003c6c;
+        font-size: 16px;
+} 
+
+ .image{
+         width: 100px;
+         height: 100px;
+         margin-left: 100px;
+         display: inline-block;
+         vertical-align: middle;     
+ } 
+
+.card .text{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 100px;
+}
