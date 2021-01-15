@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { article } from 'src/app/models/article';
 import {PageInfoService} from '../../services/page-info.service';
 import {SamplBackendService} from '../../services/sampl-backend.service';
 /*
@@ -10,6 +11,7 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
  *
  * @author: Yiyun Zheng
  * Revised: 11/22/2020 add http call sample code
+ * Revised: 1/14/2020 Using article data type
  * 
  */
 @Component({
@@ -19,7 +21,7 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
 })
 export class ArticleComponent implements OnInit {
   id: String;
-  article: JSON;
+  article: article;
 
   constructor(
     private pageInfoService: PageInfoService,

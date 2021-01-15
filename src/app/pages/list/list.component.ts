@@ -3,10 +3,14 @@
  *
  * @author: Jiayin Liu
  * Created: 1/6/2020 create the list component
+ * 
+ * @author: Yiyun Zheng
+ * Revised: 1/14/2020 add article data type
  *
  */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { article } from 'src/app/models/article';
 import {SamplBackendService} from '../../services/sampl-backend.service';
 
 @Component({
@@ -16,7 +20,7 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
 })
 export class ListComponent implements OnInit {
 
-  articles: JSON[];
+  articles: article[];
   pageType: String;
 
   constructor(

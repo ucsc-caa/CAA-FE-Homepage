@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
+import { article } from '../models/article';
 
 /*
  * sampl-backend.service.ts
  *
  * @author: Yiyun Zheng
  * Revised: 11/27/2020 get, post sample code
+ * Revised: 1/14/2020 create article data type
  * 
  */
 
@@ -24,8 +26,8 @@ export class SamplBackendService {
    * @param None
    * @return JSON[]
    */
-  getArticleList():Observable<JSON[]> {
-    return this.http.get<JSON[]>(this.hostRootUrl+'/article');
+  getArticleList():Observable<article[]> {
+    return this.http.get<article[]>(this.hostRootUrl+'/article');
   }
 
   /*
@@ -34,8 +36,8 @@ export class SamplBackendService {
    * @param String
    * @return JSON[]
    */
-  getSelectArticleList(category):Observable<JSON[]> {
-    return this.http.get<JSON[]>(this.hostRootUrl+'/article?category='+category);
+  getSelectArticleList(category):Observable<article[]> {
+    return this.http.get<article[]>(this.hostRootUrl+'/article?category='+category);
   }
 
   /*
@@ -44,9 +46,9 @@ export class SamplBackendService {
    * @param String
    * @return JSON 
    */
-  getSelectArticle(id:String):Observable<JSON> {
+  getSelectArticle(id:String):Observable<article> {
     console.log(id);
-    return this.http.get<JSON>(this.hostRootUrl+'/article/'+id);
+    return this.http.get<article>(this.hostRootUrl+'/article/'+id);
   }
 
   /*
