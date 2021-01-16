@@ -1,3 +1,7 @@
+<!-- 
+Modified by Jiayin Liu 
+1/17/2021
+ -->
 <br>
 <br>
 <br>
@@ -10,5 +14,19 @@
 <br>
 <br>
 <br>
-<p>article-list works!</p>
+
+<div class = "aParent">
+
+<div class= "button1" style="margin-top: 5px">
+    <input type = "button" class="gotoRecentButton" (click)="gotoRecent()" value="Latest Article"/>
+</div> 
+
+
+<div class= "button2" style="margin-top: 5px">
+    <input type = "button" class="gotoListButton" (click)="gotoList()" value="All Articles"/>
+</div>
+
+</div>
+
 <router-outlet></router-outlet>
+

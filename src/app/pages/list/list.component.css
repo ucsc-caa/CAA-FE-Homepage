@@ -6,12 +6,16 @@
  * 
  * Revised: 1/11/2020
  * Modify style
+
+ * Revised 1/17/2021
+ * By Jiayin Liu
+ * Update z-index
  */
 
 #list{
         margin-top: 190px;
         position: relative;
-        z-index: 0;
+        z-index: 1;
         /* list-style-type: none; */
 }
 
