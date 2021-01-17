@@ -54,7 +54,7 @@ export class HeaderTopComponent implements OnInit {
    * @param page: value of pageType in app.component
    */
 
-  setPagetype(page:string): void {
-    this.setPage.emit(page);
-  }
+  // setPagetype(page:string): void {
+  //   this.setPage.emit(page);
+  // }
 }

@@ -13,6 +13,7 @@ import { ArticleComponent } from './pages/article/article.component';
 import { EventComponent } from './pages/event/event.component';
 import { TextComponent } from './components/text/text.component';
 import { LoginpageComponent } from './layout/loginpage/loginpage.component';
+import {RouterModule, Routes} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LoginpageComponent } from './layout/loginpage/loginpage.component';
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

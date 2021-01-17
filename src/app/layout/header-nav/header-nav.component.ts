@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
+import {ActivatedRoute} from '@angular/router'
 
 /*
  * header-nav.component.ts
@@ -24,7 +25,8 @@ export class HeaderNavComponent implements OnInit {
   langs:{};
   
   constructor(
-    private pageInfoService: PageInfoService
+    private pageInfoService: PageInfoService,
+    public route:ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -47,10 +49,8 @@ export class HeaderNavComponent implements OnInit {
    * @param page: value of pageType in app.component
    */
 
-  setPagetype(page:string): void {
-    this.setPage.emit(page);
-  }
+  // setPagetype(page:string): void {
+  //   this.setPage.emit(page);
+  // }
 
 }
-
-
