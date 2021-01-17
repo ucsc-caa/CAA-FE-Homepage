@@ -1,13 +1,21 @@
 /*
 header-nav.component.css
+
+1/5 modified by Holly Hao
+Add margin to headerNav
+
+1/2 modified by Holly Hao
+revised "加入" component
+
 11.27 modifiy by Jiayin Liu
 add login page
 reference: w3schools
 */
 ul{
-  list-style-type: none;
-  margin: 0px;
-  padding-top: 0px;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -85,6 +93,7 @@ display: inline-block;
 border: 1px solid #ccc;
 box-sizing: border-box;
 }
+
 
 /* Set a style for all buttons */
 button {
