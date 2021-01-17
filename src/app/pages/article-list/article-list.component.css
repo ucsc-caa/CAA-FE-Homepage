@@ -12,7 +12,8 @@ Modified by Jiayin Liu
     margin-left: 200px;
 }
 
-  .button1 .gotoRecentButton:hover{
+
+  .button1 .gotoRecentButton:focus{
     background-color: #003C6C;
     color: #FFFFFF;
     
@@ -38,7 +39,7 @@ Modified by Jiayin Liu
 }
 
 
-  .button2 .gotoListButton:hover{
+  .button2 .gotoListButton:focus{
     background-color: #003C6C;
     color: #FFFFFF;
     

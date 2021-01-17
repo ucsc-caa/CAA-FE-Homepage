@@ -16,8 +16,8 @@
     <mat-card class="card" >
       <img mat-card-image class="image" [src]="article.img" alt="Photo of a Shiba Inu">
       <mat-card-content class="text" >
-        <p>{{article.title}}</p>
-       <p>{{article.posttime}}</p>
+        <div class="title"><p>{{article.title}}</p></div>
+        <div class="posttime"><p>{{article.posttime}}</p></div>
       </mat-card-content>
     </mat-card>
   </li>

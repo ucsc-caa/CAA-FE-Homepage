@@ -24,7 +24,7 @@
         margin-left: 200px;
         margin-right: 200px;
         color:#003c6c;
-        font-size: 16px;
+        /* font-size: 16px; */
 } 
 
  .image{
@@ -39,4 +39,12 @@
         display: inline-block;
         vertical-align: middle;
         margin-left: 100px;
+}
+
+.card .text .title{
+        font-size: 15px;
+}
+
+.card .text .posttime{
+        font-size: 10px;
 }
