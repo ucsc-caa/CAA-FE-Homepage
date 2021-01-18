@@ -1,0 +1,54 @@
+/* <!-- 
+    Modified by Jiayin Liu
+    1/15/2021
+ --> */
+#recentArticle {
+    margin-top: 190px;
+    color:#003c6c;
+}
+#recentArticle .articleHeader{
+    text-align:left;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+#recentArticle .articleHeader .line1{
+
+    font-size: 16pt;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+
+}
+
+#recentArticle .articleHeader .line2{
+
+    font-size: 36pt;
+    line-height: 1.5em;
+}
+
+#recentArticle .articleHeader .line3{
+ 
+    font-size: 16pt;
+    line-height: 1.5em;
+}
+
+#recentArticle .articleText{
+    text-align: left;
+    margin-top: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+#recentArticle .articleImage{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+#recentArticle .articleImage .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
