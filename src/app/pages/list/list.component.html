@@ -4,9 +4,13 @@
  * @author: Jiayin Liu
  * Created: 1/6/2021 
  *
- * Modified 1/11/2021
+ * Modified 1/11/2021 by Jiayin
  * show "change page" when has more than 15 objects
  * update card
+
+ * Modified 1/19/2021
+ * By Jiayin
+ * Update paginator
 -->
 
 <div id="list">
@@ -23,10 +27,11 @@
   </li>
 
 
-
+<div *ngIf="articles?.length > 15">
 <mat-paginator [length]="articles?.length"
   [pageSize]="15"
   [pageSizeOptions]="[15]">
 </mat-paginator>
+</div>
 
 </div>

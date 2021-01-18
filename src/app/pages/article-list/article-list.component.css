@@ -8,18 +8,20 @@ Modified by Jiayin Liu
     clear: none;  
 }
 
+
+
 .button1{
-    margin-left: 200px;
+    margin-left: 150px;
+
 }
 
-
-  .button1 .gotoRecentButton:focus{
+.button1 .gotoRecentButton:focus{
     background-color: #003C6C;
     color: #FFFFFF;
-    
-  }
+    /* z-index = 1; */
+}
 
-  .button1 .gotoRecentButton{
+.button1 .gotoRecentButton{
     display: inline-block;
     padding: 15px 25px;
     font-size: 14px;
@@ -31,21 +33,23 @@ Modified by Jiayin Liu
     background-color: #FFFFFF;
     border-color: #003C6C;
     border-radius: 50px;
-  }
+ 
+}
 
 
-  .button2{
+.button2{
     margin-left: -25px;
 }
 
 
-  .button2 .gotoListButton:focus{
+
+.button2 .gotoListButton:focus{
     background-color: #003C6C;
     color: #FFFFFF;
-    
-  }
+    /* z-index = 1; */
+}
 
-  .button2 .gotoListButton{
+.button2 .gotoListButton{
     display: inline-block;
     padding: 15px 25px;
     font-size: 14px;
@@ -57,4 +61,5 @@ Modified by Jiayin Liu
     background-color: #FFFFFF;
     border-color: #003C6C;
     border-radius: 50px;
-  }
+  
+}
