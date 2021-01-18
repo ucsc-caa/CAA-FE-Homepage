@@ -1,0 +1,32 @@
+<!--
+ * list.component.html
+ *
+ * @author: Jiayin Liu
+ * Created: 1/6/2021 
+ *
+ * Modified 1/11/2021
+ * show "change page" when has more than 15 objects
+ * update card
+-->
+
+<div id="list">
+
+  <li *ngFor="let article of articles" (click)="printId(article.id)" >
+
+    <mat-card class="card" >
+      <img mat-card-image class="image" [src]="article.img" alt="Photo of a Shiba Inu">
+      <mat-card-content class="text" >
+        <p>{{article.title}}</p>
+       <p>{{article.posttime}}</p>
+      </mat-card-content>
+    </mat-card>
+  </li>
+
+
+
+<mat-paginator [length]="articles?.length"
+  [pageSize]="15"
+  [pageSizeOptions]="[15]">
+</mat-paginator>
+
+</div>
