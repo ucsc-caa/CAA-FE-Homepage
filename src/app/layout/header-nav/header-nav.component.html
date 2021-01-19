@@ -10,22 +10,22 @@
 -->
 <div id="headerNav">
     <ul class="hl">
-        <li>
-            <a href="/article" >
+        <li [class.active]="activeUrl === '/article'">
+            <a href="/article">
                 <app-text [text]="langs['give']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
+        <li [class.active]="activeUrl === '/newscenter'">
             <a href="/newscenter" >
                 <app-text [text]="langs['newscenter']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
+        <li [class.active]="activeUrl === '/connect'">
             <a href="/connect" >
                 <app-text [text]="langs['connect']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
+        <li [class.active]="activeUrl === '/community'">
             <a href="/community" >
                 <app-text [text]="langs['community']" [language]="language"></app-text>
             </a>
@@ -33,17 +33,17 @@
     </ul>
 
     <ul class="hr">
-        <li>
+        <li [class.active]="activeUrl === '/merchandise'">
             <a href="/merchandise" >
                 <app-text [text]="langs['merchandise']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
+        <li [class.active]="activeUrl === '/about'">
             <a href="/about" >
                 <app-text [text]="langs['about']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
+        <li [class.active]="activeUrl === '/membership'">
             <a href="/membership" >
                 <app-text [text]="langs['membership']" [language]="language"></app-text>
             </a>

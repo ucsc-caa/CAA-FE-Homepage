@@ -42,6 +42,18 @@ ul{
   margin-left: 50px;
 }
 
+#headerNav li.active {
+  background-color: #FFFFFF;
+  width: auto;
+  height: 70px;
+  padding: 0px;
+}
+
+#headerNav li.active a {
+  color: #003c6c;
+
+}
+
 
 #headerNav .hl li{
   float: right;
