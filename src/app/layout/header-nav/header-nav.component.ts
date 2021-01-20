@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
+import {ActivatedRoute, NavigationStart, Router} from '@angular/router'
+import {RouterLinkActive} from '@angular/router'
 
 /*
  * header-nav.component.ts
@@ -9,6 +11,7 @@ import { text } from '../../models/text';
  *
  * @author: Peter Cai
  * Revised: 12/11/2020 add setPagetype() function
+ * Revised: 01/20/2021 add activeUrl and changed header-nav styled
  */
 
 @Component({
@@ -20,12 +23,21 @@ export class HeaderNavComponent implements OnInit {
 
   @Input() language:string;
   @Output() setPage = new EventEmitter<string>();
+  activeUrl: string;
 
   langs:{};
   
   constructor(
-    private pageInfoService: PageInfoService
-  ) {}
+    private pageInfoService: PageInfoService,
+    public route:ActivatedRoute,
+    public router: Router
+  ) {
+    router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.activeUrl = event.url;
+      }
+    })
+  }
 
   ngOnInit(): void {
     this.langs = {
@@ -47,9 +59,9 @@ export class HeaderNavComponent implements OnInit {
    * @param page: value of pageType in app.component
    */
 
-  setPagetype(page:string): void {
-    this.setPage.emit(page);
-  }
+  // setPagetype(page:string): void {
+  //   this.setPage.emit(page);
+  // }
 
 }
 

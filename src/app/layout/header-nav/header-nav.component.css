@@ -7,6 +7,9 @@ Add margin to headerNav
 1/2 modified by Holly Hao
 revised "加入" component
 
+1/20 modified by Peter Cai
+revised line height and activeUrl style
+
 11.27 modifiy by Jiayin Liu
 add login page
 reference: w3schools
@@ -24,7 +27,7 @@ ul{
   width: 100%;
   height: 80px;
   background-color: #003c6c;
-  line-height: 80px;
+  line-height: 45px;
   transition: 0.8s;
 }
 
@@ -45,7 +48,8 @@ ul{
 
 #headerNav .hl li{
   float: right;
-  padding-left: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-size: 18px;
   font-weight: 300;
   font-family:"Source Han Sans CN";
@@ -53,7 +57,8 @@ ul{
 
 #headerNav .hr li{
   float: left;
-  padding-right: 50px;
+  padding-right: 25px;
+  padding-left: 25px;
   font-size: 18px;
   font-weight: 300;
   font-family:"Source Han Sans CN";
@@ -106,16 +111,34 @@ border-radius: 50%;
 
 #btn_join{
 position: absolute;
-width: 60px;
-top: 25%;
-height: 30px;
+width: 65px;
+top: 30%;
+height: 35px;
 background-color: white;
 color: #003c6c;
-border-radius: 15px;
+border-radius: 50px;
 text-align: center;
-vertical-align: top;
+line-height: 0px;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 18px;
+display: block;
 }
 
 button:hover {
 opacity: 0.8;
+}
+
+
+#headerNav li.active {
+  background-color: #FFFFFF;
+  width: auto;
+  height: 70px;
+  padding: 0px;
+}
+
+#headerNav li.active a {
+  color: #003c6c;
+
 }

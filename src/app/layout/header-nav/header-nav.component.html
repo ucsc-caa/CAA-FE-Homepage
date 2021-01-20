@@ -10,41 +10,41 @@
 -->
 <div id="headerNav">
     <ul class="hl">
-        <li>
-            <a href="#" (click)='setPagetype("give")'>
+        <li [class.active]="activeUrl === '/give'">
+            <a href="/give">
                 <app-text [text]="langs['give']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
-            <a href="/article" (click)='setPagetype("article")'>
+        <li  [class.active]="activeUrl === '/newscenter'">
+            <a href="/newscenter">
                 <app-text [text]="langs['newscenter']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
-            <a href="#" (click)='setPagetype("connect")'>
+        <li  [class.active]="activeUrl === '/article'">
+            <a href="/article">
                 <app-text [text]="langs['connect']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
-            <a href="/event" (click)='setPagetype("event")'>
+        <li  [class.active]="activeUrl === '/event'">
+            <a href="/event">
                 <app-text [text]="langs['community']" [language]="language"></app-text>
             </a>
         </li>
     </ul>
 
     <ul class="hr">
-        <li>
-            <a href="#" (click)='setPagetype("merchandise")'>
+        <li [class.active]="activeUrl === '/merchandise'">
+            <a href="/merchandise">
                 <app-text [text]="langs['merchandise']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
-            <a href="#" (click)='setPagetype("about")'>
+        <li [class.active]="activeUrl === '/about'">
+            <a href="/about">
                 <app-text [text]="langs['about']" [language]="language"></app-text>
             </a>
         </li>
-        <li>
-            <a href="#" (click)='setPagetype("membership")'>
+        <li [class.active]="activeUrl === '/membership'">
+            <a href="/membership">
                 <app-text [text]="langs['membership']" [language]="language"></app-text>
             </a>
         </li>
