@@ -1,6 +1,8 @@
 /* 
-Modified by Jiayin Liu 
-1/17/2021
+Modified by Jiayin Liu on 1/17/2021
+
+Modified by Jiayin on 1/21/2021 fix button overlap
+
 */
 
 .aParent div {
@@ -12,13 +14,13 @@ Modified by Jiayin Liu
 
 .button1{
     margin-left: 150px;
-
 }
 
 .button1 .gotoRecentButton:focus{
     background-color: #003C6C;
     color: #FFFFFF;
-    /* z-index = 1; */
+    position: relative;
+    z-index: 2;
 }
 
 .button1 .gotoRecentButton{
@@ -33,7 +35,6 @@ Modified by Jiayin Liu
     background-color: #FFFFFF;
     border-color: #003C6C;
     border-radius: 50px;
- 
 }
 
 
@@ -46,7 +47,8 @@ Modified by Jiayin Liu
 .button2 .gotoListButton:focus{
     background-color: #003C6C;
     color: #FFFFFF;
-    /* z-index = 1; */
+    position: relative;
+    z-index: 2;
 }
 
 .button2 .gotoListButton{
@@ -60,6 +62,5 @@ Modified by Jiayin Liu
     color: #003C6C;
     background-color: #FFFFFF;
     border-color: #003C6C;
-    border-radius: 50px;
-  
+    border-radius: 50px;  
 }
