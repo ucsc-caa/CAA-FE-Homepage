@@ -49,13 +49,24 @@
             </a>
         </li>
         <li>
-                <button id="btn_join" onclick="document.getElementById('id01').style.display='block'">
+            <ng-template #btnJoin>
+                <button id="btn_join"  (click)="showLoginForm = true">
                     <app-text id="join_btn" [text]="langs['join']" [language]="language"></app-text>
                 </button>
+            </ng-template>  
+        </li>
+
+        <li>
+        <button *ngIf="currentUser else btnJoin" id="btn_user" mat-button [matMenuTriggerFor]="menu"><app-text [text]="langs['user']" [language]="language"></app-text>
+            <mat-menu #menu="matMenu">
+                <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" [language]="language"></app-text></button>
+                <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" [language]="language"></app-text></button>
+            </mat-menu>
+        </button>
         </li>
 
     </ul>
 
-    <app-loginpage></app-loginpage>
+    <app-loginpage *ngIf="showLoginForm" (close)="showLoginForm = false" (loginSuccess)="currentUser = $event"></app-loginpage>
 
 </div>

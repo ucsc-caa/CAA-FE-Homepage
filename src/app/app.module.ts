@@ -22,6 +22,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoginpageComponent } from './layout/loginpage/loginpage.component';
 import { ArticleListComponent } from './pages/article-list/article-list.component';
 import { RecentArticleComponent } from './pages/recent-article/recent-article.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { RecentArticleComponent } from './pages/recent-article/recent-article.co
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatMenuModule,
     MatButtonModule,
     MatGridListModule,
     MatPaginatorModule,
