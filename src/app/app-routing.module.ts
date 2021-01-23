@@ -7,6 +7,7 @@ import { EventComponent } from './pages/event/event.component';
 import { ListComponent } from './pages/list/list.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { RecentArticleComponent } from './pages/recent-article/recent-article.component';
+import { StaffComponent } from './pages/staff/staff.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
@@ -29,6 +30,7 @@ const routes: Routes = [
   ]
   },
   {path:'content/:id', component:ArticleComponent},
+  {path: 'staff', component: StaffComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

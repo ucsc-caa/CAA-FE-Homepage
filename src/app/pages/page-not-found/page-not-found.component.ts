@@ -14,6 +14,14 @@ export class PageNotFoundComponent implements OnInit {
     this._router.navigate(['/home']);
   }
 
+  gotoTeam(): void{
+    this._router.navigate(['/team']);
+  }
+
+  gotoStaff(): void{
+    this._router.navigate(['/staff']);
+  }
+
   ngOnInit(): void {
   }
 
