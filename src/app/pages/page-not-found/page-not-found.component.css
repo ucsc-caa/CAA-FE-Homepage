@@ -1,0 +1,26 @@
+.msg {
+    font-size: 20pt;
+    text-align: center;
+    margin-top: 400px;
+    color: #003C6C;
+}
+
+.button .gotoHome{
+    margin-top: 20px;
+    margin-bottom: 200px;
+    margin-left: 570px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #003C6C;
+    background-color: #FFFFFF;
+    border:none;
+}
+
+.slugImg{
+    height: 10%;
+    width: 10%;
+    margin-bottom: -5px;
+}
