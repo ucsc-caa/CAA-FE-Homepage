@@ -1,0 +1,66 @@
+/* 
+Modified by Jiayin Liu on 1/17/2021
+
+Modified by Jiayin on 1/21/2021 fix button overlap
+
+*/
+
+.aParent div {
+    float: left;
+    clear: none;  
+}
+
+
+
+.button1{
+    margin-left: 150px;
+}
+
+.button1 .gotoRecentButton:focus{
+    background-color: #003C6C;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+
+.button1 .gotoRecentButton{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #003C6C;
+    background-color: #FFFFFF;
+    border-color: #003C6C;
+    border-radius: 50px;
+}
+
+
+.button2{
+    margin-left: -25px;
+}
+
+
+
+.button2 .gotoListButton:focus{
+    background-color: #003C6C;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+
+.button2 .gotoListButton{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #003C6C;
+    background-color: #FFFFFF;
+    border-color: #003C6C;
+    border-radius: 50px;  
+}
