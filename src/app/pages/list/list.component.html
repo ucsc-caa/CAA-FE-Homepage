@@ -1,0 +1,37 @@
+<!--
+ * list.component.html
+ *
+ * @author: Jiayin Liu
+ * Created: 1/6/2021 
+ *
+ * Modified 1/11/2021 by Jiayin
+ * show "change page" when has more than 15 objects
+ * update card
+
+ * Modified 1/19/2021
+ * By Jiayin
+ * Update paginator
+-->
+
+<div id="list">
+
+  <li *ngFor="let article of articles" (click)="printId(article.id)" >
+
+    <mat-card class="card" >
+      <img mat-card-image class="image" [src]="article.img" alt="Photo of a Shiba Inu">
+      <mat-card-content class="text" >
+        <div class="title"><p>{{article.title}}</p></div>
+        <div class="posttime"><p>{{article.posttime}}</p></div>
+      </mat-card-content>
+    </mat-card>
+  </li>
+
+
+<div *ngIf="articles?.length > 15">
+<mat-paginator [length]="articles?.length"
+  [pageSize]="15"
+  [pageSizeOptions]="[15]">
+</mat-paginator>
+</div>
+
+</div>

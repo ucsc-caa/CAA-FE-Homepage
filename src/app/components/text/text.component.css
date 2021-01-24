@@ -1,9 +1,14 @@
-:host-context(#headerNav) p{
+/*
+1/3 Deleted by Holly Hao in the group meeting
+*/
+
+/*:host-context(#headerNav) p{
     line-height: 35px;
     height: 35px;
+    text-align: center;
 }
 
 :host-context(#headerTop) p{
     line-height: 35px;
     height: 35px;
-}
+}*/

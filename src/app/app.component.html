@@ -7,11 +7,12 @@
   <!-- <nav> -->
     <!-- Nav Bar -->
   <!-- </nav> -->
-    <div [ngSwitch]='pageType'>
+  <router-outlet></router-outlet>
+    <!-- <div [ngSwitch]='pageType'>
       <app-article *ngSwitchCase="'article'"></app-article>
       <app-event *ngSwitchCase="'event'"></app-event>
       <app-main *ngSwitchDefault></app-main>
-    </div>
+    </div> -->
 
 
   <!-- <aside> -->

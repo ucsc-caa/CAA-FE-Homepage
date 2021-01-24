@@ -1,0 +1,56 @@
+{
+    "article": {
+
+    "events":[
+        {"id": " 1 ", "date": " 10/5/2020 ", "type": " workshop "},
+        {"id": " 2 ", "date": " 10/1/2020 ", "type": " sponsorship "},
+        {"id": " 3 ", "date": " 12/15/2020 ", "type": " speaker "},
+        {"id": " 4 ", "date": " 8/1/2020 ", "type": " conference "},
+        {"id": " 5 ", "date": " 9/30/2020 ", "type": " workshop "},
+        {"id": " 6 ", "date": " 10/1/2020 ", "type": " speaker "},
+        {"id": " 7 ", "date": " 9/30/2020 ", "type": " conference "},
+        {"id": " 8 ", "date": " 9/30/2020 ", "type": " speaker "},
+        {"id": " 9 ", "date": " 10/5/2020 ", "type": " sponsorship "},
+        {"id": " 10 ", "date": " 10/5/2020 ", "type": " conference "}
+    ],
+
+    "news":[
+        {"id": " 1 ", "date": " 10/5/2020 ", "topic": " notice "},
+        {"id": " 2 ", "date": " 10/1/2020 ", "topic": " notice "},
+        {"id": " 3 ", "date": " 9/30/2020 ", "topic": " achievement "},
+        {"id": " 4 ", "date": " 9/30/2020 ", "topic": " notice "},
+        {"id": " 5 ", "date": " 12/15/2020 ", "topic": " achievement "},
+        {"id": " 6 ", "date": " 8/1/2020 ", "topic": " achievement "},
+        {"id": " 7 ", "date": " 8/1/2020 ", "topic": " activity "},
+        {"id": " 8 ", "date": " 9/30/2020 ", "topic": " activity "},
+        {"id": " 9 ", "date": " 10/1/2020 ", "topic": " achievement "},
+        {"id": " 10 ", "date": " 10/1/2020 ", "topic": " notice "},
+        {"id": " 11 ", "date": " 8/1/2020 ", "topic": " notice "},
+        {"id": " 12 ", "date": " 10/1/2020 ", "topic": " achievement "},
+        {"id": " 13 ", "date": " 10/5/2020 ", "topic": " activity "},
+        {"id": " 14 ", "date": " 10/5/2020 ", "topic": " notice "},
+        {"id": " 15 ", "date": " 12/15/2020 ", "topic": " notice "},
+        {"id": " 16 ", "date": " 8/1/2020 ", "topic": " achievement "},
+        {"id": " 17 ", "date": " 10/1/2020 ", "topic": " achievement "},
+        {"id": " 18 ", "date": " 8/1/2020 ", "topic": " achievement "},
+        {"id": " 19 ", "date": " 8/1/2020 ", "topic": " activity "},
+        {"id": " 20 ", "date": " 9/30/2020 ", "topic": " activity "},
+        {"id": " 21 ", "date": " 10/1/2020 ", "topic": " activity "},
+        {"id": " 22 ", "date": " 12/15/2020 ", "topic": " activity "},
+        {"id": " 23 ", "date": " 10/1/2020 ", "topic": " achievement "},
+        {"id": " 24 ", "date": " 9/30/2020 ", "topic": " activity "},
+        {"id": " 25 ", "date": " 10/5/2020 ", "topic": " notice "},
+        {"id": " 26 ", "date": " 8/1/2020 ", "topic": " achievement "},
+        {"id": " 27 ", "date": " 8/1/2020 ", "topic": " notice "},
+        {"id": " 28 ", "date": " 10/1/2020 ", "topic": " notice "},
+        {"id": " 29 ", "date": " 10/5/2020 ", "topic": " activity "},
+        {"id": " 30 ", "date": " 12/15/2020 ", "topic": " achievement "},
+        {"id": " 31 ", "date": " 12/15/2020 ", "topic": " activity "},
+        {"id": " 32 ", "date": " 10/5/2020 ", "topic": " activity "},
+        {"id": " 33 ", "date": " 8/1/2020 ", "topic": " activity "},
+        {"id": " 34 ", "date": " 10/1/2020 ", "topic": " notice "},
+        {"id": " 35 ", "date": " 10/5/2020 ", "topic": " achievement "}
+    ]
+
+    }
+}

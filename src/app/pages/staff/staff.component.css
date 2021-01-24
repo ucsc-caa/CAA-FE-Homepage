@@ -1,0 +1,73 @@
+/* By Jiayin Liu
+1/24/2021
+staff css style */
+.title{
+    color: #003c6c;
+    margin-top: 250px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+.body{
+    margin-top: 50px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    color: #003c6c;
+    font-size: 14pt;
+}
+
+.body .position{
+    padding: 30px;
+    font-weight: bold;
+}
+
+
+.body .people{
+    padding: 30px;
+}
+
+.body .people .a{
+    margin-bottom: 2em;
+}
+
+.body .people .b{
+    margin-bottom: 2em;
+}
+
+.body .people .c{
+    margin-bottom: 2em;
+}
+
+.body .people .d{
+    margin-bottom: 2em;
+}
+
+.body .people .e{
+    margin-bottom: 2em;
+}
+
+.body .people .f{
+    margin-bottom: 2em;
+}
+
+.body .position .a{
+    margin-bottom: 2em;
+}
+
+.body .position .b{
+    margin-bottom: 2em;
+}
+
+.body .position .c{
+    margin-bottom: 3.6em;
+}
+
+.body .position .d{
+    margin-bottom: 3.8em;
+}
+
+.body .position .e{
+    margin-bottom: 5.5em;
+}
+
