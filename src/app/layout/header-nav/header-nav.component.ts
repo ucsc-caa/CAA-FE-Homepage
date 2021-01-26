@@ -1,6 +1,9 @@
 import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import { text } from '../../models/text';
+import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
+import {RouterLinkActive} from '@angular/router';
+import {MatMenuModule} from '@angular/material/menu';
 
 /*
  * header-nav.component.ts
@@ -9,6 +12,8 @@ import { text } from '../../models/text';
  *
  * @author: Peter Cai
  * Revised: 12/11/2020 add setPagetype() function
+ * Revised: 01/20/2021 add activeUrl and changed header-nav styled
+ * Revised: 01/26/2021 delete setPagetype() function
  */
 
 @Component({
@@ -20,12 +25,27 @@ export class HeaderNavComponent implements OnInit {
 
   @Input() language:string;
   @Output() setPage = new EventEmitter<string>();
+  showLoginForm = false;
+  activeUrl: string;
+  currentUser;
 
   langs:{};
   
   constructor(
-    private pageInfoService: PageInfoService
-  ) {}
+    private pageInfoService: PageInfoService,
+    public route:ActivatedRoute,
+    public router: Router,
+  ) {
+    router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.activeUrl = event.url;
+      }
+      const currentUser = localStorage.getItem('currentUser');
+      if (currentUser) {
+        this.currentUser = JSON.parse(currentUser);
+      }
+    })
+  }
 
   ngOnInit(): void {
     this.langs = {
@@ -36,21 +56,17 @@ export class HeaderNavComponent implements OnInit {
       merchandise:{CN:'商品', EN:'Merchandise'},
       membership:{CN:'会员',EN:'Membership'},
       about:{CN:'关于',EN:'About'},
-      join:{CN:'加入',EN:'Join'}
+      join:{CN:'加入',EN:'Join'},
+      user:{CN:'用户',EN:'User'},
+      myinfo:{CN:'我的信息',EN:'My infomation'},
+      logout:{CN:'登出',EN:'Log out'},
     }
   }
 
-
-   /*
-   * setPagetype
-   * This method change pageType in app.component
-   * @param page: value of pageType in app.component
-   */
-
-  setPagetype(page:string): void {
-    this.setPage.emit(page);
+  logout(): void  {
+    this.currentUser = null;
+    localStorage.removeItem('currentUser');
   }
-
 }
 
 

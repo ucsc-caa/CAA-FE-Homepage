@@ -1,5 +1,5 @@
 import { UserInfoService } from './../../services/user-info.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 /*
  * loginpage.component.ts
@@ -17,6 +17,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loginpage.component.css']
 })
 export class LoginpageComponent implements OnInit {
+  @Output() close = new EventEmitter(); 
+  @Output() loginSuccess = new EventEmitter();
+
   email = '';
   password = '';
   remember = false;
@@ -42,7 +45,7 @@ export class LoginpageComponent implements OnInit {
   }
 
   login(): void {
-    this.userInfoService.login(this.email, this.password).subscribe((res: any) => {              
+    this.userInfoService.login(this.email, this.password).subscribe((res: any) => {
       if (res.id) {
         // login success
         console.log("success")
@@ -51,6 +54,9 @@ export class LoginpageComponent implements OnInit {
           isRemember: this.remember
         }
         localStorage.setItem('RememberUser', JSON.stringify(rememberUser));
+        localStorage.setItem('currentUser', JSON.stringify(rememberUser));
+        this.loginSuccess.emit(rememberUser);
+        this.close.emit();
       } else {
         // login fail
         console.log("fail")
