@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
  * Revised:12/6/2020 add setLanguage() function
  * 
  * Revised: 12/11/2020 add setPagetype() function
+ * 
+ * Revised: 01/26/2021 delete setPagetype() function
  */
 
 @Component({
@@ -47,17 +49,5 @@ export class HeaderTopComponent implements OnInit {
 
   setLanguage(lang: string): void {
     this.setLang.emit(lang);
-  }
-
-     /*
-   * setPagetype
-   * This method change pageType in app.component
-   * @param page: value of pageType in app.component
-   */
-
-  setPagetype(page:string): void {
-    // alert(page);
-    this.router.navigate(['/'+page]);
-    // this.setPage.emit(page);
   }
 }
