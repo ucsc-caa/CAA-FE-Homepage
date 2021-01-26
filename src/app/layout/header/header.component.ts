@@ -25,15 +25,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Input() language: string;
   @Output() setLang = new EventEmitter<boolean>();
-  @Output() setPage = new EventEmitter<boolean>();
-  pageType:String;
   
   setLanguage(event) {
     this.setLang.emit(event);
-  }
-
-  setPagetype(event) {
-    this.setPage.emit(event);
   }
 
 

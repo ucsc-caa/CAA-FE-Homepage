@@ -13,6 +13,7 @@ import {MatMenuModule} from '@angular/material/menu';
  * @author: Peter Cai
  * Revised: 12/11/2020 add setPagetype() function
  * Revised: 01/20/2021 add activeUrl and changed header-nav styled
+ * Revised: 01/26/2021 delete setPagetype() function
  */
 
 @Component({
@@ -66,18 +67,6 @@ export class HeaderNavComponent implements OnInit {
     this.currentUser = null;
     localStorage.removeItem('currentUser');
   }
-
-
-   /*
-   * setPagetype
-   * This method change pageType in app.component
-   * @param page: value of pageType in app.component
-   */
-
-  // setPagetype(page:string): void {
-  //   this.setPage.emit(page);
-  // }
-
 }
 
 
