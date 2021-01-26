@@ -13,10 +13,10 @@
 <div id="headerNav">
     <ul class="hl">
         <li [class.active]="activeUrl === '/give'">
-            <app-text [text]="langs['give']" (click)="navigation('/home')"></app-text>
+            <app-text [text]="langs['give']" (click)="navigation('/give')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/newscenter'">
-            <app-text [text]="langs['newscenter']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['newscenter']" (click)="navigation('/newscenter')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/article'">
             <app-text [text]="langs['connect']" (click)="navigation('/article')"></app-text>
@@ -28,20 +28,20 @@
 
     <ul class="hr">
         <li [class.active]="activeUrl === '/merchandise'">
-            <app-text [text]="langs['merchandise']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['merchandise']" (click)="navigation('/merchandise')"></app-text>
         </li>
         <li [class.active]="activeUrl === '/about'">
-            <app-text [text]="langs['about']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['about']" (click)="navigation('/about')"></app-text>
         </li>
         <li [class.active]="activeUrl === '/membership'">
-            <app-text [text]="langs['membership']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
         <li>
             <ng-template #btnJoin>
                 <button id="btn_join"  (click)="showLoginForm = true">
                     <app-text id="join_btn" [text]="langs['join']" ></app-text>
                 </button>
-            </ng-template>  
+            </ng-template>
         </li>
 
         <li>

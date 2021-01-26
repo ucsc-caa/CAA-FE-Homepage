@@ -66,11 +66,7 @@ input[type=password]{
     border-color: #003c6c;
   }
 
-  #btn_join{
-    position: absolute;
-    height: 0px;
-    width: 0;
-  }
+
 
   button:hover {
     opacity: 0.8;
