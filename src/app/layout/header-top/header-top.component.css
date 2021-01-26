@@ -86,7 +86,7 @@ ul{
     font-weight: 350;
 }
 
-#headerTop a{
+#headerTop app-text{
     text-decoration: none;
     color: #003c6c;
 }

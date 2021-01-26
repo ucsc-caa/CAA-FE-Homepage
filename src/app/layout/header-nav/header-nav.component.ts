@@ -23,8 +23,6 @@ import {MatMenuModule} from '@angular/material/menu';
 })
 export class HeaderNavComponent implements OnInit {
 
-  @Input() language:string;
-  @Output() setPage = new EventEmitter<string>();
   showLoginForm = false;
   activeUrl: string;
   currentUser;
@@ -66,6 +64,10 @@ export class HeaderNavComponent implements OnInit {
   logout(): void  {
     this.currentUser = null;
     localStorage.removeItem('currentUser');
+  }
+
+  navigation(path: string): void{
+    this.router.navigate([path]);
   }
 }
 

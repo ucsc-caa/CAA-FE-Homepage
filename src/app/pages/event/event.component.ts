@@ -20,11 +20,9 @@ export class EventComponent implements OnInit {
   event: {image: string; date: string; contact: string; content: string;};
 
   constructor(
-    private pageInfoService: PageInfoService
   ) { }
 
   ngOnInit(): void {
-    this.event = this.pageInfoService.getData2();
   }
 
 }

@@ -64,7 +64,7 @@ ul{
   font-family:"Source Han Sans CN";
 }
 
-#headerNav a{
+#headerNav app-text{
   text-decoration: none;
   color:#ffffff;
 }
@@ -138,7 +138,7 @@ opacity: 0.8;
   padding: 0px;
 }
 
-#headerNav li.active a {
+#headerNav li.active app-text {
   color: #003c6c;
 }
 

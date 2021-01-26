@@ -7,19 +7,13 @@
 <div id="headerTop">
     <ul class="hl">
         <li>
-            <a href="#">
-                <app-text [text]="langs['immigration']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['immigration']" (click)="navigation('/home')"></app-text>
         </li>
         <li>
-            <a href="#">
-                <app-text [text]="langs['career']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['career']" (click)="navigation('/home')"></app-text>
         </li>
         <li>
-            <a href="#">
-                <app-text [text]="langs['getinvolved']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['getinvolved']" (click)="navigation('/home')"></app-text>
         </li>
     </ul>
     <ul class="hr">
