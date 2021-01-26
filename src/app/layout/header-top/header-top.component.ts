@@ -24,14 +24,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header-top.component.css']
 })
 export class HeaderTopComponent implements OnInit {
-  @Input() language:string;
-  @Output() setLang = new EventEmitter<string>();
-  @Output() setPage = new EventEmitter<string>();
-
-
   langs:{};
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private pageInfoService: PageInfoService) {}
 
   ngOnInit(): void {
     this.langs = {
@@ -48,6 +43,10 @@ export class HeaderTopComponent implements OnInit {
    */
 
   setLanguage(lang: string): void {
-    this.setLang.emit(lang);
+    this.pageInfoService.setLanguage(lang);
+  }
+
+  navigation(path: string): void{
+    this.router.navigate([path]);
   }
 }

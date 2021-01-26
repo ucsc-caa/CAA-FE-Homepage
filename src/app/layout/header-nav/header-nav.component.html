@@ -13,47 +13,33 @@
 <div id="headerNav">
     <ul class="hl">
         <li [class.active]="activeUrl === '/give'">
-            <a href="/give">
-                <app-text [text]="langs['give']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['give']" (click)="navigation('/home')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/newscenter'">
-            <a href="/newscenter">
-                <app-text [text]="langs['newscenter']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['newscenter']" (click)="navigation('/IDK')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/article'">
-            <a href="/article">
-                <app-text [text]="langs['connect']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['connect']" (click)="navigation('/article')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/event'">
-            <a href="/event">
-                <app-text [text]="langs['community']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['community']" (click)="navigation('/event')"></app-text>
         </li>
     </ul>
 
     <ul class="hr">
         <li [class.active]="activeUrl === '/merchandise'">
-            <a href="/merchandise">
-                <app-text [text]="langs['merchandise']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['merchandise']" (click)="navigation('/IDK')"></app-text>
         </li>
         <li [class.active]="activeUrl === '/about'">
-            <a href="/about">
-                <app-text [text]="langs['about']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['about']" (click)="navigation('/IDK')"></app-text>
         </li>
         <li [class.active]="activeUrl === '/membership'">
-            <a href="/membership">
-                <app-text [text]="langs['membership']" [language]="language"></app-text>
-            </a>
+            <app-text [text]="langs['membership']" (click)="navigation('/IDK')"></app-text>
         </li>
         <li>
             <ng-template #btnJoin>
                 <button id="btn_join"  (click)="showLoginForm = true">
-                    <app-text id="join_btn" [text]="langs['join']" [language]="language"></app-text>
+                    <app-text id="join_btn" [text]="langs['join']" ></app-text>
                 </button>
             </ng-template>  
         </li>
@@ -61,8 +47,8 @@
         <li>
         <button *ngIf="currentUser else btnJoin" id="btn_user" mat-button [matMenuTriggerFor]="menu"><app-text [text]="langs['user']" [language]="language"></app-text>
             <mat-menu #menu="matMenu">
-                <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" [language]="language"></app-text></button>
-                <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" [language]="language"></app-text></button>
+                <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
+                <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
             </mat-menu>
         </button>
         </li>
