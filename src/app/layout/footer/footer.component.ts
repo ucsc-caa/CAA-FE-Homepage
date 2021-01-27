@@ -20,7 +20,6 @@ import { text } from '../../models/text';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() language:string;//
   langs:{};//
 
   constructor(

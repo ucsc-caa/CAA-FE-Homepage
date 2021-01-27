@@ -4,6 +4,8 @@ header.component.css
 1/2 modified by Holly Hao
 Add a background color to the header-container
 
+1/17 Modified by Jiayin Liu
+Adjust z-index
 */
 
 #logo{
@@ -11,14 +13,14 @@ Add a background color to the header-container
     position: absolute;
     background-color: white;
     display: block;
-    top:0%;
+    top:10%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 198px;
-    height: 198px;
+    width: 70px;
+    height: 70px;
     /* border: solid 1px red; */
     transition: 0.8s;
-    z-index: 1;
+    z-index: 3;
 }
 
 #header-container{
@@ -28,6 +30,7 @@ Add a background color to the header-container
     border:solid, 2px black;
     background-color: white;
     width: 100%;
-    height: 150px;
+    height: 110px;
     transition: 1s;
+    z-index: 2;
 }

@@ -7,55 +7,54 @@
     add PageType changing function
     1.3 modified by Peter Cai
     changed style
+    1.26 modified by Peter Cai
+    Delete PageType changing function
 -->
 <div id="headerNav">
     <ul class="hl">
-        <li>
-            <a href="#" (click)='setPagetype("give")'>
-                <app-text [text]="langs['give']" [language]="language"></app-text>
-            </a>
+        <li [class.active]="activeUrl === '/give'">
+            <app-text [text]="langs['give']" (click)="navigation('/home')"></app-text>
         </li>
-        <li>
-            <a href="/article" (click)='setPagetype("article")'>
-                <app-text [text]="langs['newscenter']" [language]="language"></app-text>
-            </a>
+        <li  [class.active]="activeUrl === '/newscenter'">
+            <app-text [text]="langs['newscenter']" (click)="navigation('/IDK')"></app-text>
         </li>
-        <li>
-            <a href="#" (click)='setPagetype("connect")'>
-                <app-text [text]="langs['connect']" [language]="language"></app-text>
-            </a>
+        <li  [class.active]="activeUrl === '/article'">
+            <app-text [text]="langs['connect']" (click)="navigation('/article')"></app-text>
         </li>
-        <li>
-            <a href="/event" (click)='setPagetype("event")'>
-                <app-text [text]="langs['community']" [language]="language"></app-text>
-            </a>
+        <li  [class.active]="activeUrl === '/event'">
+            <app-text [text]="langs['community']" (click)="navigation('/event')"></app-text>
         </li>
     </ul>
 
     <ul class="hr">
-        <li>
-            <a href="#" (click)='setPagetype("merchandise")'>
-                <app-text [text]="langs['merchandise']" [language]="language"></app-text>
-            </a>
+        <li [class.active]="activeUrl === '/merchandise'">
+            <app-text [text]="langs['merchandise']" (click)="navigation('/IDK')"></app-text>
+        </li>
+        <li [class.active]="activeUrl === '/about'">
+            <app-text [text]="langs['about']" (click)="navigation('/IDK')"></app-text>
+        </li>
+        <li [class.active]="activeUrl === '/membership'">
+            <app-text [text]="langs['membership']" (click)="navigation('/IDK')"></app-text>
         </li>
         <li>
-            <a href="#" (click)='setPagetype("about")'>
-                <app-text [text]="langs['about']" [language]="language"></app-text>
-            </a>
-        </li>
-        <li>
-            <a href="#" (click)='setPagetype("membership")'>
-                <app-text [text]="langs['membership']" [language]="language"></app-text>
-            </a>
-        </li>
-        <li>
-                <button id="btn_join" onclick="document.getElementById('id01').style.display='block'">
-                    <app-text id="join_btn" [text]="langs['join']" [language]="language"></app-text>
+            <ng-template #btnJoin>
+                <button id="btn_join"  (click)="showLoginForm = true">
+                    <app-text id="join_btn" [text]="langs['join']" ></app-text>
                 </button>
+            </ng-template>  
+        </li>
+
+        <li>
+        <button *ngIf="currentUser else btnJoin" id="btn_user" mat-button [matMenuTriggerFor]="menu"><app-text [text]="langs['user']" [language]="language"></app-text>
+            <mat-menu #menu="matMenu">
+                <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
+                <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
+            </mat-menu>
+        </button>
         </li>
 
     </ul>
 
-    <app-loginpage></app-loginpage>
+    <app-loginpage *ngIf="showLoginForm" (close)="showLoginForm = false" (loginSuccess)="currentUser = $event"></app-loginpage>
 
 </div>
