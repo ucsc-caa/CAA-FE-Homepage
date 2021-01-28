@@ -3,6 +3,7 @@ Modified by Jiayin Liu on 1/17/2021
 
 Modified by Jiayin on 1/21/2021 fix button overlap
 
+Modified by Jiayin on 1/28/2021 fix z-index and button switch language
 */
 
 .aParent div {
@@ -12,7 +13,7 @@ Modified by Jiayin on 1/21/2021 fix button overlap
 
 
 
-.button1{
+div.button1{
     margin-left: 150px;
 }
 
@@ -20,12 +21,12 @@ Modified by Jiayin on 1/21/2021 fix button overlap
     background-color: #003C6C;
     color: #FFFFFF;
     position: relative;
-    z-index: 2;
+    z-index: 1.5;
 }
 
 .button1 .gotoRecentButton{
     display: inline-block;
-    padding: 15px 25px;
+    padding: 10px 25px;
     font-size: 14px;
     cursor: pointer;
     text-align: center;
@@ -38,7 +39,7 @@ Modified by Jiayin on 1/21/2021 fix button overlap
 }
 
 
-.button2{
+div.button2{
     margin-left: -25px;
 }
 
@@ -48,12 +49,12 @@ Modified by Jiayin on 1/21/2021 fix button overlap
     background-color: #003C6C;
     color: #FFFFFF;
     position: relative;
-    z-index: 2;
+    z-index: 1.5;
 }
 
 .button2 .gotoListButton{
-    display: inline-block;
-    padding: 15px 25px;
+    display: block;
+    padding: 10px 25px;
     font-size: 14px;
     cursor: pointer;
     text-align: center;
