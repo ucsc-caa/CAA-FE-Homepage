@@ -11,7 +11,8 @@
     Delete PageType changing function
 -->
 <div id="headerNav">
-    <ul class="hl">
+    <button fxShow="true" fxHide.gt-md="true">Toggle drawer</button>
+    <ul fxShow.gt-md="true" fxHide="true" class="hl">
         <li [class.active]="activeUrl === '/give'">
             <app-text [text]="langs['give']" (click)="navigation('/home')"></app-text>
         </li>
@@ -26,7 +27,7 @@
         </li>
     </ul>
 
-    <ul class="hr">
+    <ul fxShow.gt-md="true" fxHide="true" class="hr">
         <li [class.active]="activeUrl === '/merchandise'">
             <app-text [text]="langs['merchandise']" (click)="navigation('/IDK')"></app-text>
         </li>
@@ -36,24 +37,18 @@
         <li [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/IDK')"></app-text>
         </li>
-        <li>
-            <ng-template #btnJoin>
-                <button id="btn_join"  (click)="showLoginForm = true">
-                    <app-text id="join_btn" [text]="langs['join']" ></app-text>
-                </button>
-            </ng-template>  
-        </li>
-
-        <li>
-        <button *ngIf="currentUser else btnJoin" id="btn_user" mat-button [matMenuTriggerFor]="menu"><app-text [text]="langs['user']" [language]="language"></app-text>
-            <mat-menu #menu="matMenu">
-                <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
-                <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
-            </mat-menu>
-        </button>
-        </li>
-
     </ul>
+    <ng-template #btnJoin>
+        <button id="btn_join"  (click)="showLoginForm = true">
+            <app-text id="join_btn" [text]="langs['join']" ></app-text>
+        </button>
+    </ng-template>  
+    <button *ngIf="currentUser else btnJoin" id="btn_user" mat-button [matMenuTriggerFor]="menu"><app-text [text]="langs['user']" [language]="language"></app-text>
+        <mat-menu #menu="matMenu">
+            <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
+            <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
+        </mat-menu>
+    </button>
 
     <app-loginpage *ngIf="showLoginForm" (close)="showLoginForm = false" (loginSuccess)="currentUser = $event"></app-loginpage>
 
