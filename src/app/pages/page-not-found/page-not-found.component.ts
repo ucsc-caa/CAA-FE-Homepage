@@ -27,7 +27,7 @@ export class PageNotFoundComponent implements OnInit {
   ngOnInit(): void {
     this.langs = {
       a:{CN:'404 很抱歉，您查找的页面不存在', EN:'404 Sorry, the page does not exist'},
-      b:{CN:'返回首页>', EN:'Go to Home>'}, 
+      b:{CN:'返回首页>', EN:'Go to Homepage>'}, 
     }
   }
 
