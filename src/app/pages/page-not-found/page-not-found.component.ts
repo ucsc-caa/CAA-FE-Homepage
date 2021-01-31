@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
+import { text } from '../../models/text';
 
 @Component({
   selector: 'app-page-not-found',
@@ -7,6 +8,7 @@ import { ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./page-not-found.component.css']
 })
 export class PageNotFoundComponent implements OnInit {
+  langs:{};
 
   constructor(private _router: Router) { }
 
@@ -23,6 +25,10 @@ export class PageNotFoundComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.langs = {
+      a:{CN:'404 很抱歉，您查找的页面不存在', EN:'404 Sorry, the page does not exist'},
+      b:{CN:'返回首页>', EN:'Go to Home>'}, 
+    }
   }
 
 }
