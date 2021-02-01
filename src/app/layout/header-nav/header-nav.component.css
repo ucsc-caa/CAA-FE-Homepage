@@ -110,6 +110,7 @@ border-radius: 50%;
 } */
 
 #btn_join{
+right: 15%;
 position: absolute;
 width: 65px;
 top: 30%;
@@ -157,4 +158,9 @@ opacity: 0.8;
   cursor: pointer;
   font-size: 18px;
   display: block;
+}
+
+.nav-btn {
+  left: 1%;
+  color:white;
 }

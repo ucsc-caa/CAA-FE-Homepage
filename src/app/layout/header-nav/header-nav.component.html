@@ -11,7 +11,9 @@
     Delete PageType changing function
 -->
 <div id="headerNav">
-    <button fxShow="true" fxHide.gt-md="true">Toggle drawer</button>
+    <button mat-icon-button xShow="true" fxHide.gt-md="true" class='nav-btn' (click)='toggleMenu()'>
+        <mat-icon>menu</mat-icon>
+      </button> 
     <ul fxShow.gt-md="true" fxHide="true" class="hl">
         <li [class.active]="activeUrl === '/give'">
             <app-text [text]="langs['give']" (click)="navigation('/home')"></app-text>

@@ -1,5 +1,6 @@
 import { Component, OnChanges, OnInit,ViewChild} from '@angular/core';
 import {PageInfoService} from './services/page-info.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,13 @@ import {PageInfoService} from './services/page-info.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
-  constructor(
-  ){}
+  openNav: Boolean = false;
+  subscription: Subscription;
+  constructor(private pageInfoService: PageInfoService){
+    this.subscription = this.pageInfoService.getNav().subscribe(navStatus => {
+      this.openNav = navStatus;
+    });
+  }
   ngOnInit(): void {
   }
 }

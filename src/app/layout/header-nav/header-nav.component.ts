@@ -69,6 +69,10 @@ export class HeaderNavComponent implements OnInit {
   navigation(path: string): void{
     this.router.navigate([path]);
   }
+
+  toggleMenu():void {
+    this.pageInfoService.toggleNav();
+  }
 }
 
 

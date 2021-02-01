@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarDrawComponent } from './sidebar-draw.component';
+import { NavigaterComponent } from './navigater.component';
 
-describe('SidebarDrawComponent', () => {
-  let component: SidebarDrawComponent;
-  let fixture: ComponentFixture<SidebarDrawComponent>;
+describe('NavigaterComponent', () => {
+  let component: NavigaterComponent;
+  let fixture: ComponentFixture<NavigaterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SidebarDrawComponent ]
+      declarations: [ NavigaterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarDrawComponent);
+    fixture = TestBed.createComponent(NavigaterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

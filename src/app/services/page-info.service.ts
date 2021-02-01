@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from "rxjs";
+import { Observable, Subject, BehaviorSubject } from "rxjs";
 import * as articleListInfo from './article-data.json';//
 /*
  * page-info.service.ts
@@ -25,11 +25,9 @@ import * as articleListInfo from './article-data.json';//
 })
 export class PageInfoService { 
   private langeuage = new Subject<String>();
-  private pageSize = new Subject<String>();
+  private openNav = new BehaviorSubject<Boolean>(false);
   constructor() {
-    console.log('reload');
-
-   }
+  }
 
    setLanguage(newLang: string) {
      this.langeuage.next( newLang );
@@ -39,12 +37,16 @@ export class PageInfoService {
        return this.langeuage.asObservable();
    }
 
-    setPageSize(newSize: string) {
-       this.pageSize.next( newSize );
+   setNav(newStatus: Boolean) {
+     this.openNav.next( newStatus );
    }
 
-   getPageSize(): Observable<any> {
-       return this.pageSize.asObservable();
+   toggleNav() {
+     this.openNav.next( !this.openNav.value );
+   }
+
+   getNav(): Observable<any> {
+      return this.openNav.asObservable();
    }
 
 

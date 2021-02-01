@@ -1,0 +1,57 @@
+.mainNav {
+    margin-top:100px;
+    width: 100%;
+    height: 500px;
+
+}
+
+
+.immigration{
+    margin-left: 35%;
+    margin-right: 65%;
+    margin-top: 150px;
+    color:#003c6c;
+
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    display: absolute;
+
+}
+
+.career{    
+    margin-left: 47%;
+    margin-right: 63%;
+    margin-top: -30px;
+    text-align: center;
+    color:#003c6c;
+    height: 30px;
+    width: 100px;
+    display: absolute;
+
+
+}
+
+.getinvolved{    
+    margin-top: -30px;
+    margin-left: 60%;
+    margin-right: 40%;
+    text-align: center;
+    color:#003c6c;
+    height: 30px;
+    width: 100px;
+    display: absolute;
+}
+
+
+
+.headerNav {
+    color:#003c6c;
+    position: relative;
+    list-style: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    text-align: center;
+}

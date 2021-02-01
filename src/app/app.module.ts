@@ -25,9 +25,10 @@ import { RecentArticleComponent } from './pages/recent-article/recent-article.co
 import { StaffComponent } from './pages/staff/staff.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SidebarDrawComponent } from './components/sidebar-draw/sidebar-draw.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { NavigaterComponent } from './pages/navigater/navigater.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,7 @@ import {MatListModule} from '@angular/material/list';
     ArticleListComponent,
     RecentArticleComponent,
     StaffComponent,
-    SidebarDrawComponent,
+    NavigaterComponent,
   ],
   imports: [
     FormsModule,
@@ -62,6 +63,7 @@ import {MatListModule} from '@angular/material/list';
     FlexLayoutModule,
     MatSidenavModule,
     MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

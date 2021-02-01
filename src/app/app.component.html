@@ -7,14 +7,19 @@
   <!-- <nav> -->
     <!-- Nav Bar -->
   <!-- </nav> -->
-  <router-outlet></router-outlet>
+  <div *ngIf="openNav; else router">
+    <app-navigater></app-navigater>
+  </div>
+  <ng-template #router>
+    <router-outlet></router-outlet>
+  </ng-template>
+  
     <!-- <div [ngSwitch]='pageType'>
       <app-article *ngSwitchCase="'article'"></app-article>
       <app-event *ngSwitchCase="'event'"></app-event>
       <app-main *ngSwitchDefault></app-main>
     </div> -->
 
-    <app-sidebar-draw></app-sidebar-draw>
 
   
 
