@@ -4,53 +4,114 @@
  * Created: 1/6/2021 
  * Add css style
  * 
- * Revised: 1/11/2020
+ * Revised on 1/11/2020
  * Modify style
 
- * Revised 1/17/2021
+ * Revised on 1/17/2021
  * By Jiayin Liu
  * Update z-index
 
- * Revised 1/19/2021
+ * Revised on 1/19/2021
    By Jiayin Liu
    Update css style
+
+   Revised on 1/31/2021
+   By Jiayin Liu
+   Modified cards border and display on mobile
  */
 
-#list{
-        margin-top: 120px;
-        margin-bottom: 50px;
-        position: relative;
-        z-index: 1;
-        list-style-type: none;
-}
+@media screen and (max-width: 2000px) {
+      
+        #list{
+                margin-top: 80px;
+                margin-bottom: 50px;
+                position: relative;
+                z-index: 1;
+                list-style-type: none;
+                border: none;
+        }
 
-.card {
-        
-        margin-left: 150px;
-        margin-right: 150px;
-        color:#003c6c;
-        /* font-size: 16px; */
-} 
+        .card {
+                
+                margin-left: 150px;
+                margin-right: 150px;
+                color:#003c6c;
+                display: flex; 
+                border-bottom: 1px solid #003c6c; 
+                box-shadow: none;
+        } 
 
- .image{
-         width: 200px;
-         height: 150px;
-         margin-left: -15px;
-         display: inline-block;
-         vertical-align: middle;     
- } 
+        .image{
+                width: 200px;
+                height: 150px;
+                padding-top: 20px;
+                margin-left: -15px;
+                display: inline-block;
+                 
+        } 
 
-.card .text{
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 50px;
-}
+        .card .text{
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 50px;
+                padding-top: 20px;
+        }
 
-.card .text .title{
-        font-size: 20px;
-        margin-bottom: 60px;
-}
+        .card .text .title{
+                font-size: 20px;
+                margin-bottom: 60px;
+        }
 
-.card .text .posttime{
-        font-size: 10px;
-}
+        .card .text .posttime{
+                font-size: 10px;
+        }
+
+ }
+
+ @media screen and (max-width: 1000px) {
+      
+        #list{
+                margin-top: 120px;
+                margin-bottom: 50px;
+                position: relative;
+                z-index: 1;
+                list-style-type: none;
+        }
+
+        .card {
+                
+                margin-left: 50px;
+                margin-right: 50px;
+                color:#003c6c;
+                display: flex;
+                border-bottom: 1px solid #003c6c; 
+                box-shadow: none;
+                
+        } 
+
+        .image{
+                width: 150px;
+                height: 100px;
+                margin-left: -15px;
+                padding-top: 30px;
+                display: table-cell;
+          
+        } 
+
+        .card .text{
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 50px;
+        }
+
+        .card .text .title{
+                font-size: 14px;
+                margin-bottom: 30px;
+        }
+
+        .card .text .posttime{
+                font-size: 8px;
+        }
+
+      
+ }

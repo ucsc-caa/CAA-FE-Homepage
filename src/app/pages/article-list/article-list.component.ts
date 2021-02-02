@@ -9,6 +9,7 @@ import text
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
+import { text } from '../../models/text';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-
+  langs:{};
 
 
   constructor(
@@ -32,7 +33,11 @@ export class ArticleListComponent implements OnInit {
     this._router.navigate(['/event/recent']);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.langs = {
+      a:{CN:'最新文章', EN:'Latest Article'},
+      b:{CN:'全部文章', EN:'All Articles'}, 
+    }
+  }
   
-
 }
