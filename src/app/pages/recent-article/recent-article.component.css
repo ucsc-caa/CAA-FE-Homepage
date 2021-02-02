@@ -5,60 +5,125 @@
     Modified by Jiayin Liu
     Update recent article css
     1/19/2021
+
+    Modified by Jiayin Liu
+    Update style on mobile
+    1/31/2021
  --> */
-#recentArticle {
-    margin-top: 100px;
-    color:#003c6c;
-    position: relative;
-    margin-left: 130px;
-    margin-right: 130px;
+@media screen and (max-width: 2000px){ 
+    #recentArticle {
+        margin-top: 100px;
+        color:#003c6c;
+        position: relative;
+        margin-left: 130px;
+        margin-right: 130px;
+        
+    }
+    #recentArticle .articleHeader{
+        text-align:left;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #recentArticle .articleHeader .line1{
+
+        font-size: 13pt;
+        line-height: 1.5em;
+        margin-top: 1.5em;
+
+    }
+
+    #recentArticle .articleHeader .line2{
+
+        font-size: 24pt;
+        line-height: 1.5em;
+    }
+
+    #recentArticle .articleHeader .line3{
     
-}
-#recentArticle .articleHeader{
-    text-align:left;
-    margin-left: 5em;
-    margin-right: 5em;
-}
+        font-size: 13pt;
+        line-height: 1.5em;
+    }
 
-#recentArticle .articleHeader .line1{
+    #recentArticle .articleText{
+        text-align: left;
+        margin-top: 1.5em;
+        margin-left: 5em;
+        margin-right: 5em;
+        font-size: 14pt;
+        line-height: 150%;
+    }
 
-    font-size: 13pt;
-    line-height: 1.5em;
-    margin-top: 1.5em;
+    #recentArticle .articleImage{
+        margin-top: 5em;
+        margin-bottom: 5em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 
-}
+    #recentArticle .articleImage .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-#recentArticle .articleHeader .line2{
-
-    font-size: 24pt;
-    line-height: 1.5em;
-}
-
-#recentArticle .articleHeader .line3{
- 
-    font-size: 13pt;
-    line-height: 1.5em;
-}
-
-#recentArticle .articleText{
-    text-align: left;
-    margin-top: 1.5em;
-    margin-left: 5em;
-    margin-right: 5em;
-    font-size: 14pt;
-    line-height: 150%;
 }
 
-#recentArticle .articleImage{
-    margin-top: 5em;
-    margin-bottom: 5em;
-    margin-left: 5em;
-    margin-right: 5em;
+@media screen and (max-width: 1000px){ 
+    #recentArticle {
+        margin-top: 100px;
+        color:#003c6c;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+    #recentArticle .articleHeader{
+        text-align:left;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #recentArticle .articleHeader .line1{
+
+        font-size: 9pt;
+        line-height: 1.5em;
+        margin-top: 1.5em;
+
+    }
+
+    #recentArticle .articleHeader .line2{
+
+        font-size: 15pt;
+        line-height: 1.5em;
+    }
+
+    #recentArticle .articleHeader .line3{
+    
+        font-size: 9pt;
+        line-height: 1.5em;
+    }
+
+    #recentArticle .articleText{
+        text-align: left;
+        margin-top: 1.5em;
+        margin-left: 5em;
+        margin-right: 5em;
+        font-size: 12pt;
+        line-height: 150%;
+    }
+
+    #recentArticle .articleImage{
+        margin-top: 5em;
+        margin-bottom: 5em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #recentArticle .articleImage .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
-
-#recentArticle .articleImage .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-

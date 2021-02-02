@@ -29,6 +29,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { NavigaterComponent } from './pages/navigater/navigater.component';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,7 @@ import { NavigaterComponent } from './pages/navigater/navigater.component';
     NavigaterComponent,
   ],
   imports: [
+    CommonModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
