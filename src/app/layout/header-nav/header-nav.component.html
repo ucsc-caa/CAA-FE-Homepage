@@ -13,10 +13,10 @@
 <div id="headerNav">
     <ul class="hl">
         <li [class.active]="activeUrl === '/give'">
-            <app-text [text]="langs['give']" (click)="navigation('/home')"></app-text>
+            <app-text [text]="langs['give']" (click)="navigation('/give')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/newscenter'">
-            <app-text [text]="langs['newscenter']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['newscenter']" (click)="navigation('/newscenter')"></app-text>
         </li>
         <li  [class.active]="activeUrl === '/article'">
             <app-text [text]="langs['connect']" (click)="navigation('/article')"></app-text>
@@ -28,33 +28,63 @@
 
     <ul class="hr">
         <li [class.active]="activeUrl === '/merchandise'">
-            <app-text [text]="langs['merchandise']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['merchandise']" (click)="navigation('/merchandise')"></app-text>
         </li>
         <li [class.active]="activeUrl === '/about'">
-            <app-text [text]="langs['about']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['about']" (click)="navigation('/about')"></app-text>
         </li>
         <li [class.active]="activeUrl === '/membership'">
-            <app-text [text]="langs['membership']" (click)="navigation('/IDK')"></app-text>
+            <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
-        <li>
-            <ng-template #btnJoin>
-                <button id="btn_join"  (click)="showLoginForm = true">
-                    <app-text id="join_btn" [text]="langs['join']" ></app-text>
+        <li *ngIf="!currentUser;else userTemplate">
+            <button id="btn_join"  (click)="showLoginForm = true">
+                <app-text id="join_btn" [text]="langs['join']" ></app-text>
+            </button>
+        </li>
+        <ng-template #userTemplate>
+            <li *ngIf="!closeToggle; else closeTemplate">
+                <button id="btn_user" mat-button (click)="closeToggle = !closeToggle">
+                    <img id="accounticon" src="/assets/image/account_icon.png" alt=""><app-text [text]="langs['user']"></app-text>  
+                    <!-- <mat-menu #menu="matMenu">
+                        <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
+                        <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
+                    </mat-menu> -->
                 </button>
-            </ng-template>  
-        </li>
-
-        <li>
-        <button *ngIf="currentUser else btnJoin" id="btn_user" mat-button [matMenuTriggerFor]="menu"><app-text [text]="langs['user']" [language]="language"></app-text>
-            <mat-menu #menu="matMenu">
-                <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
-                <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
-            </mat-menu>
-        </button>
-        </li>
-
+            </li>
+        </ng-template>
+        <ng-template #closeTemplate>
+            <li>
+                <button id="xMark" #xMark (click)="closeToggle = !closeToggle">
+                    <img id="xMarkicon" src="/assets/image/Xmark.png" alt="">
+                </button>
+            </li>
+        </ng-template>
     </ul>
 
     <app-loginpage *ngIf="showLoginForm" (close)="showLoginForm = false" (loginSuccess)="currentUser = $event"></app-loginpage>
 
+</div>
+
+<div *ngIf="closeToggle && currentUser" id="usermenu">   
+    <ul class="info">
+        <li><img id="accounticonring" src="/assets/image/account_icon_ring.png" alt=""></li>
+        <ul class="topinfo">
+            <li><app-text [text]="langs['welcome']"></app-text></li>
+            <li>Username</li>
+        </ul>
+
+        <ul class="subinfo">
+            <li>email</li>
+            <li>|</li>
+            <li>ID:</li>
+            <li>idnumber</li>
+        </ul>
+    </ul>
+
+    <ul class="control">
+        <li>OPT</li>
+        <li><app-text [text]="langs['help']" ></app-text></li>
+        <li>|</li>
+        <li (click)="logout()"><app-text [text]="langs['logout']" ></app-text></li>
+    </ul>
 </div>

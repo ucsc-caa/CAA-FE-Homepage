@@ -24,6 +24,7 @@ import { ArticleListComponent } from './pages/article-list/article-list.componen
 import { RecentArticleComponent } from './pages/recent-article/recent-article.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {MatMenuModule} from '@angular/material/menu';
     StaffComponent,
   ],
   imports: [
+    CommonModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

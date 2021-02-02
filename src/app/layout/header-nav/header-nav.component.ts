@@ -26,6 +26,9 @@ export class HeaderNavComponent implements OnInit {
   showLoginForm = false;
   activeUrl: string;
   currentUser;
+  showxMark = false;
+  closeToggle = false;
+
 
   langs:{};
   
@@ -55,15 +58,18 @@ export class HeaderNavComponent implements OnInit {
       membership:{CN:'会员',EN:'Membership'},
       about:{CN:'关于',EN:'About'},
       join:{CN:'加入',EN:'Join'},
-      user:{CN:'用户',EN:'User'},
+      user:{CN:'账户',EN:'User'},
       myinfo:{CN:'我的信息',EN:'My infomation'},
       logout:{CN:'登出',EN:'Log out'},
+      welcome:{CN:'欢迎,',EN:'Welcome,'},
+      help:{CN:'帮助',EN:'Help'},
     }
   }
 
   logout(): void  {
     this.currentUser = null;
     localStorage.removeItem('currentUser');
+    this.closeToggle = !this.closeToggle
   }
 
   navigation(path: string): void{
