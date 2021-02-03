@@ -1,15 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from "rxjs";
+import { Observable, Subject, BehaviorSubject } from "rxjs";
 import * as articleListInfo from './article-data.json';//
 /*
  * page-info.service.ts
  *
  * This file provides page information for other files to communicate or generate pages.
- *
- * @author: Holly Hao
- * Revised: 11/23/2020 Update content and image component and add contact component. Meanwhile, create getData 2 function
- * Revised: 11/22/2020 Update event 
- * Revised: 11/12/2020 Create event class and three types of data
  *
  * @author: Jiayin Liu
  * Revised: 11/22/2020 Create getData function
@@ -17,34 +12,107 @@ import * as articleListInfo from './article-data.json';//
  *
  * @author: Yiyun Zheng
  * Revised: 11/8/2020 Create file and implement language and page type variable
- *
+ * Revised: 2/1/2021 Add attribute and function of language, nav and screen size 
  */
 
 @Injectable({
   providedIn: 'root'
 })
 export class PageInfoService { 
-  private langeuage = new Subject<String>();
-  private pageSize = new Subject<String>();
+  private langeuage = new BehaviorSubject<String>('CN');
+  private openNav = new BehaviorSubject<Boolean>(false);
+  private screenSize = new BehaviorSubject<String>('xs');
   constructor() {
-    console.log('reload');
+  }
 
-   }
-
+  /*
+   * setLanguage
+   * Update language
+   * @param String
+   * @return none
+   */
    setLanguage(newLang: string) {
      this.langeuage.next( newLang );
    }
 
+  /*
+   * getLanguage
+   * Return current language when language change
+   * @param none
+   * @return Observable
+   */
    getLanguage(): Observable<any> {
        return this.langeuage.asObservable();
    }
 
-    setPageSize(newSize: string) {
-       this.pageSize.next( newSize );
+  /*
+   * getCurLanguage
+   * Return current language
+   * @param none
+   * @return String
+   */
+   getCurLanguage(): String {
+    return this.langeuage.value;
    }
 
-   getPageSize(): Observable<any> {
-       return this.pageSize.asObservable();
+  /*
+   * setNav
+   * Update Nav Status
+   * @param Boolean
+   * @return none
+   */
+   setNav(newStatus: Boolean) {
+     this.openNav.next( newStatus );
+   }
+
+  /*
+   * toggleNav
+   * Change Nav Status
+   * @param none
+   * @return none
+   */
+   toggleNav() {
+     this.openNav.next( !this.openNav.value );
+   }
+
+  /*
+   * getNav
+   * Return current nav status when status change
+   * @param none
+   * @return Observable
+   */
+   getNav(): Observable<any> {
+      return this.openNav.asObservable();
+   }
+
+  /*
+   * getNowNav
+   * Return current nav status
+   * @param none
+   * @return Boolean
+   */
+   getNowNav(): Boolean {
+    return this.openNav.value;
+ }
+
+  /*
+   * setScreenSize
+   * Update Screen Size
+   * @param String
+   * @return none
+   */
+   setScreenSize(newSize: string) {
+    this.screenSize.next( newSize );
+   }
+
+  /*
+   * getScreenSize
+   * Return current screen size when size change
+   * @param none
+   * @return Observable
+   */
+   getScreenSize(): Observable<any> {
+      return this.screenSize.asObservable();
    }
 
 

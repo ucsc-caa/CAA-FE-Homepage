@@ -1,3 +1,8 @@
+<!--
+    app.component.html
+    2.1 modified by Yiyun Zheng
+    Add navigater
+-->
 <div class="container">
 
     <!-- Header -->
@@ -7,7 +12,14 @@
   <!-- <nav> -->
     <!-- Nav Bar -->
   <!-- </nav> -->
-  <router-outlet></router-outlet>
+  <div *ngIf="openNav; else router">
+    <app-navigater></app-navigater>
+  </div>
+  <ng-template #router>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </ng-template>
+  
     <!-- <div [ngSwitch]='pageType'>
       <app-article *ngSwitchCase="'article'"></app-article>
       <app-event *ngSwitchCase="'event'"></app-event>
@@ -15,9 +27,12 @@
     </div> -->
 
 
+  
+
+
   <!-- <aside> -->
     <!-- Sidebar -->
   <!-- </aside> -->
 
-  <app-footer></app-footer>
+
 </div>

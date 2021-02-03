@@ -12,7 +12,9 @@ revised line height and activeUrl style
 
 11.27 modifiy by Jiayin Liu
 add login page
-reference: w3schools
+
+2.1 modifiy by Yiyun Zheng
+add nav btn
 */
 ul{
     list-style-type: none;
@@ -107,6 +109,9 @@ border-radius: 50%;
 } */
 
 #btn_join{
+right: 5%;
+position: absolute;
+top: 30%;
 width: 85px;
 height: 35px;
 background-color: white;
@@ -121,6 +126,9 @@ font-size: 18px;
 }
 
 #btn_user{
+  right: 5%;
+  position: absolute;
+  top: 30%;
   width: 85px;
   height: 35px;
   background-color: white;
@@ -262,8 +270,14 @@ margin: 0px;
 #usermenu .control li{
   font-family:"Source Han Sans CN";
   font-size: 18px;
+  display: block;
   font-weight: 350;
   color: #003c6c;
   float: left;
   padding: 10px;
+}
+
+.nav-btn {
+  left: 1%;
+  color:white;
 }

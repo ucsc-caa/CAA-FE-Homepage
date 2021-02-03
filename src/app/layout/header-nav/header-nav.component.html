@@ -9,9 +9,22 @@
     changed style
     1.26 modified by Peter Cai
     Delete PageType changing function
+    2.1 modified by Yiyun Zheng
+    Add nav btn, modify user btn
 -->
-<div id="headerNav">
-    <ul class="hl">
+<div id="headerNav"  >
+    <div class='nav-btn'>
+        <button *ngIf= 'openNav; else closeBtn' mat-icon-button fxShow="true" fxHide.gt-sm="true" (click)='toggleMenu()'>
+            <mat-icon>close</mat-icon>
+        </button> 
+        <ng-template #closeBtn>
+            <button mat-icon-button fxShow="true" fxHide.gt-sm="true" (click)='toggleMenu()'>
+                <mat-icon>menu</mat-icon>
+            </button> 
+        </ng-template>
+    </div>
+
+    <ul fxShow.gt-sm="true" fxHide="true" class="hl">
         <li [class.active]="activeUrl === '/give'">
             <app-text [text]="langs['give']" (click)="navigation('/give')"></app-text>
         </li>
@@ -26,7 +39,7 @@
         </li>
     </ul>
 
-    <ul class="hr">
+    <ul fxShow.gt-sm="true" fxHide="true" class="hr">
         <li [class.active]="activeUrl === '/merchandise'">
             <app-text [text]="langs['merchandise']" (click)="navigation('/merchandise')"></app-text>
         </li>
@@ -36,30 +49,28 @@
         <li [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
-        <li *ngIf="!currentUser;else userTemplate">
-            <button id="btn_join"  (click)="showLoginForm = true">
-                <app-text id="join_btn" [text]="langs['join']" ></app-text>
-            </button>
-        </li>
-        <ng-template #userTemplate>
-            <li *ngIf="!closeToggle; else closeTemplate">
-                <button id="btn_user" mat-button (click)="closeToggle = !closeToggle">
-                    <img id="accounticon" src="/assets/image/account_icon.png" alt=""><app-text [text]="langs['user']"></app-text>  
-                    <!-- <mat-menu #menu="matMenu">
-                        <button id="menu" mat-menu-item><app-text [text]="langs['myinfo']" ></app-text></button>
-                        <button id="menu" mat-menu-item (click)="logout()"><app-text [text]="langs['logout']" ></app-text></button>
-                    </mat-menu> -->
-                </button>
-            </li>
-        </ng-template>
-        <ng-template #closeTemplate>
-            <li>
-                <button id="xMark" #xMark (click)="closeToggle = !closeToggle">
-                    <img id="xMarkicon" src="/assets/image/Xmark.png" alt="">
-                </button>
-            </li>
-        </ng-template>
     </ul>
+    <div *ngIf="!currentUser;else userTemplate">
+        <button id="btn_join"  (click)="showLoginForm = true">
+            <app-text id="join_btn" [text]="langs['join']" ></app-text>
+        </button>
+
+    </div>
+
+    <ng-template #userTemplate>
+        <div *ngIf="!closeToggle; else closeTemplate">
+            <button id="btn_user" mat-button (click)="closeToggle = !closeToggle">
+                <img id="accounticon" src="/assets/image/account_icon.png" alt=""><app-text [text]="langs['user']"></app-text>  
+            </button>
+        </div>
+    </ng-template>
+
+
+    <ng-template #closeTemplate>
+        <button id="xMark" #xMark (click)="closeToggle = !closeToggle">
+            <img id="xMarkicon" src="/assets/image/Xmark.png" alt="">
+        </button>
+    </ng-template>
 
     <app-loginpage *ngIf="showLoginForm" (close)="showLoginForm = false" (loginSuccess)="currentUser = $event"></app-loginpage>
 

@@ -24,6 +24,11 @@ import { ArticleListComponent } from './pages/article-list/article-list.componen
 import { RecentArticleComponent } from './pages/recent-article/recent-article.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { NavigaterComponent } from './pages/navigater/navigater.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -43,6 +48,7 @@ import { CommonModule } from '@angular/common';
     ArticleListComponent,
     RecentArticleComponent,
     StaffComponent,
+    NavigaterComponent,
   ],
   imports: [
     CommonModule,
@@ -57,6 +63,10 @@ import { CommonModule } from '@angular/common';
     MatPaginatorModule,
     HttpClientModule,
     AppRoutingModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
