@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
-import { text } from '../../models/text';
 import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {RouterLinkActive} from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
@@ -28,6 +27,7 @@ export class HeaderNavComponent implements OnInit {
   currentUser;
   showxMark = false;
   closeToggle = false;
+  openNav:Boolean = this.pageInfoService.getNowNav();
 
 
   langs:{};
@@ -36,7 +36,12 @@ export class HeaderNavComponent implements OnInit {
     private pageInfoService: PageInfoService,
     public route:ActivatedRoute,
     public router: Router,
+    
   ) {
+    console.log(this.openNav);
+    this.pageInfoService.getNav().subscribe(navStatus => {
+      this.openNav = navStatus;
+    });
     router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.activeUrl = event.url;

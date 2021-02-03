@@ -1,3 +1,11 @@
+/*
+ * navigater.component.ts
+ *
+ * Navgator for small screen
+ *
+ * @author: Yiyun Zheng
+ * Revised: 2/1/2020 Create file
+ */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PageInfoService } from 'src/app/services/page-info.service';

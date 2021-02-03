@@ -9,12 +9,22 @@
     changed style
     1.26 modified by Peter Cai
     Delete PageType changing function
+    2.1 modified by Yiyun Zheng
+    Add nav btn, modify user btn
 -->
-<div id="headerNav">
-    <button mat-icon-button xShow="true" fxHide.gt-md="true" class='nav-btn' (click)='toggleMenu()'>
-        <mat-icon>menu</mat-icon>
-      </button> 
-    <ul fxShow.gt-md="true" fxHide="true" class="hl">
+<div id="headerNav"  >
+    <div class='nav-btn'>
+        <button *ngIf= 'openNav; else closeBtn' mat-icon-button fxShow="true" fxHide.gt-sm="true" (click)='toggleMenu()'>
+            <mat-icon>close</mat-icon>
+        </button> 
+        <ng-template #closeBtn>
+            <button mat-icon-button fxShow="true" fxHide.gt-sm="true" (click)='toggleMenu()'>
+                <mat-icon>menu</mat-icon>
+            </button> 
+        </ng-template>
+    </div>
+
+    <ul fxShow.gt-sm="true" fxHide="true" class="hl">
         <li [class.active]="activeUrl === '/give'">
             <app-text [text]="langs['give']" (click)="navigation('/give')"></app-text>
         </li>
@@ -29,7 +39,7 @@
         </li>
     </ul>
 
-    <ul fxShow.gt-md="true" fxHide="true" class="hr">
+    <ul fxShow.gt-sm="true" fxHide="true" class="hr">
         <li [class.active]="activeUrl === '/merchandise'">
             <app-text [text]="langs['merchandise']" (click)="navigation('/merchandise')"></app-text>
         </li>
