@@ -2,18 +2,20 @@
     header-top.component.html
     12.11 modified by Peter Cai
     add PageType changing function
+    12.11 modified by Yiyun Zheng
+    Add hide btn logic
 -->
 
 <div id="headerTop">
-    <ul class="hl">
+    <ul fxShow.gt-sm="true" fxHide="true" class="hl">
         <li>
-            <app-text [text]="langs['immigration']" (click)="navigation('/home')"></app-text>
+            <a><app-text [text]="langs['immigration']" (click)="navigation('/home')"></app-text></a>
         </li>
         <li>
-            <app-text [text]="langs['career']" (click)="navigation('/home')"></app-text>
+            <a><app-text [text]="langs['career']" (click)="navigation('/home')"></app-text></a>
         </li>
         <li>
-            <app-text [text]="langs['getinvolved']" (click)="navigation('/home')"></app-text>
+            <a><app-text [text]="langs['getinvolved']" (click)="navigation('/home')"></app-text></a>
         </li>
     </ul>
     <ul class="hr">

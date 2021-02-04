@@ -12,10 +12,11 @@ revised line height and activeUrl style
 
 11.27 modifiy by Jiayin Liu
 add login page
-reference: w3schools
+
+2.1 modifiy by Yiyun Zheng
+add nav btn
 */
 ul{
-
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -25,9 +26,7 @@ ul{
 #headerNav{
   position: relative;
   width: 100%;
-  height: 60px;
   background-color: #003c6c;
-  line-height: 60px;
   transition: 0.8s;
 }
 
@@ -110,20 +109,77 @@ border-radius: 50%;
 } */
 
 #btn_join{
+right: 5%;
 position: absolute;
-width: 65px;
 top: 30%;
+width: 85px;
 height: 35px;
 background-color: white;
 color: #003c6c;
 border-radius: 50px;
 text-align: center;
-line-height: 0px;
+line-height: 35px;
 border: none;
 outline: none;
 cursor: pointer;
 font-size: 18px;
-display: block;
+}
+
+#btn_user{
+  right: 5%;
+  position: absolute;
+  top: 30%;
+  width: 85px;
+  height: 35px;
+  background-color: white;
+  color: #003c6c;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#xMark{
+  width: 30px;
+  height: 30px;
+  background-color: #003c6c;
+  color:white;
+  text-align: center;
+  line-height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+
+#headerNav #btn_join app-text{
+  text-decoration: none;
+  color:#003c6c;
+}
+
+#headerNav #btn_user app-text{
+  text-decoration: none;
+  color:#003c6c;
+  font-size: 16px;
+  position: relative;
+  left: 10%;
+}
+
+#accounticon{
+  height: 16px;
+  position: relative;
+  float: left;
+  top: 27%;
+}
+
+#xMarkicon{
+  height: 25px;
+  position: relative;
+  top: 20%;
 }
 
 button:hover {
@@ -134,7 +190,7 @@ opacity: 0.8;
 #headerNav li.active {
   background-color: #FFFFFF;
   width: auto;
-  height: 70px;
+  height: 60px;
   padding: 0px;
 }
 
@@ -142,19 +198,86 @@ opacity: 0.8;
   color: #003c6c;
 }
 
-#btn_user{
-  position: absolute;
-  width: 65px;
-  top: 30%;
-  height: 35px;
+
+
+#headerNav li /deep/ app-text p{
+margin: 0px;
+}
+
+
+/* userpage */
+#usermenu{
   background-color: white;
+  height: 60px;
+  border-bottom: #003c6c solid 1px;
+  display: block;
+}
+
+#usermenu /deep/ app-text p{
+  margin: 0px;
   color: #003c6c;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 0px;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  }
+
+#usermenu .info{
+  width: 25%;
+  position: relative;
+  float: right;
+  right: 51%;
+}
+
+#usermenu .subinfo{
+  position: absolute;
+  top: 32px;
+  left: 60px;
+}
+
+#usermenu .topinfo{
+  position: absolute;
+  top: 6px;
+  left: 60px;
+}
+
+#usermenu .control{
+  position: relative;
+  top: 8px;
+  float: left;
+  left: 62%;
+}
+
+#usermenu .info li{
+  font-family:"Source Han Sans CN";
+  font-size: 20px;
+  font-weight: 550;
+  color: #003c6c;
+  float: left;
+  padding-left: 5px;
+}
+
+#usermenu .subinfo li{
+  font-family:"Source Han Sans CN";
+  font-size: 15px;
+  font-weight: 520;
+  color: #003c6c;
+}
+
+#accounticonring{
+  height: 40px;
+  position: relative;
+  float: left;
+  margin: 10px;
+}
+
+#usermenu .control li{
+  font-family:"Source Han Sans CN";
   font-size: 18px;
   display: block;
+  font-weight: 350;
+  color: #003c6c;
+  float: left;
+  padding: 10px;
+}
+
+.nav-btn {
+  left: 1%;
+  color:white;
 }

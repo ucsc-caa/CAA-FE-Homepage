@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
-import { text } from '../../models/text';
 import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {RouterLinkActive} from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
@@ -26,6 +25,10 @@ export class HeaderNavComponent implements OnInit {
   showLoginForm = false;
   activeUrl: string;
   currentUser;
+  showxMark = false;
+  closeToggle = false;
+  openNav:Boolean = this.pageInfoService.getNowNav();
+
 
   langs:{};
   
@@ -33,7 +36,12 @@ export class HeaderNavComponent implements OnInit {
     private pageInfoService: PageInfoService,
     public route:ActivatedRoute,
     public router: Router,
+    
   ) {
+    console.log(this.openNav);
+    this.pageInfoService.getNav().subscribe(navStatus => {
+      this.openNav = navStatus;
+    });
     router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.activeUrl = event.url;
@@ -55,19 +63,26 @@ export class HeaderNavComponent implements OnInit {
       membership:{CN:'会员',EN:'Membership'},
       about:{CN:'关于',EN:'About'},
       join:{CN:'加入',EN:'Join'},
-      user:{CN:'用户',EN:'User'},
+      user:{CN:'账户',EN:'User'},
       myinfo:{CN:'我的信息',EN:'My infomation'},
       logout:{CN:'登出',EN:'Log out'},
+      welcome:{CN:'欢迎,',EN:'Welcome,'},
+      help:{CN:'帮助',EN:'Help'},
     }
   }
 
   logout(): void  {
     this.currentUser = null;
     localStorage.removeItem('currentUser');
+    this.closeToggle = !this.closeToggle
   }
 
   navigation(path: string): void{
     this.router.navigate([path]);
+  }
+
+  toggleMenu():void {
+    this.pageInfoService.toggleNav();
   }
 }
 

@@ -1,0 +1,44 @@
+<!--
+    navigater.component.html
+    2.1 modified by Yiyun Zheng
+    Create file
+-->
+<div class="mainNav">
+    <ul class="headerNav">
+        <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="5%" fxLayoutAlign="center center" class="headerTop">
+            <li>
+                <app-text [text]="navList['immigration']" (click)="navigation('/home')"></app-text>
+            </li>
+            <li>
+                <app-text [text]="navList['career']" (click)="navigation('/home')"></app-text>
+            </li>
+            <li>
+                <app-text [text]="navList['getinvolved']" (click)="navigation('/home')"></app-text>
+            </li>
+        </div>
+
+        <hr fxShow="true" fxHide.gt-sm="true" class="solid">
+        <li >
+            <app-text [text]="navList['give']" (click)="navigation('/home')"></app-text>
+        </li>
+        <li >
+            <app-text [text]="navList['newscenter']" (click)="navigation('/IDK')"></app-text>
+        </li>
+        <li >
+            <app-text [text]="navList['connect']" (click)="navigation('/article')"></app-text>
+        </li>
+        <li >
+            <app-text [text]="navList['community']" (click)="navigation('/event')"></app-text>
+        </li>
+        <li >
+            <app-text [text]="navList['merchandise']" (click)="navigation('/IDK')"></app-text>
+        </li>
+        <li >
+            <app-text [text]="navList['about']" (click)="navigation('/IDK')"></app-text>
+        </li>
+        <li >
+            <app-text [text]="navList['membership']" (click)="navigation('/IDK')"></app-text>
+        </li>
+    </ul>
+</div>
+
