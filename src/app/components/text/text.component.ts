@@ -18,7 +18,7 @@ import { Subscription } from 'rxjs';
 })
 export class TextComponent implements OnInit {
   @Input() text: text;
-  lang: String = this.pageInfoService.getCurLanguage();
+  lang: string = this.pageInfoService.getCurLanguage();
   subscription: Subscription;
   constructor(private pageInfoService: PageInfoService) { 
     this.subscription = this.pageInfoService.getLanguage().subscribe(language => {
