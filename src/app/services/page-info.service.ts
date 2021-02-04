@@ -19,7 +19,7 @@ import * as articleListInfo from './article-data.json';//
   providedIn: 'root'
 })
 export class PageInfoService { 
-  private langeuage = new BehaviorSubject<String>('CN');
+  private langeuage = new BehaviorSubject<string>('CN');
   private openNav = new BehaviorSubject<Boolean>(false);
   private screenSize = new BehaviorSubject<String>('xs');
   constructor() {
@@ -51,7 +51,7 @@ export class PageInfoService {
    * @param none
    * @return String
    */
-   getCurLanguage(): String {
+   getCurLanguage(): string {
     return this.langeuage.value;
    }
 
