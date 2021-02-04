@@ -49,13 +49,14 @@
         <li [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
+        <li>
+            <div *ngIf="!currentUser;else userTemplate">
+                <button id="btn_join"  (click)="showLoginForm = true">
+                    <app-text id="join_btn" [text]="langs['join']" ></app-text>
+                </button>
+            </div>
+        </li>
     </ul>
-    <div *ngIf="!currentUser;else userTemplate">
-        <button id="btn_join"  (click)="showLoginForm = true">
-            <app-text id="join_btn" [text]="langs['join']" ></app-text>
-        </button>
-
-    </div>
 
     <ng-template #userTemplate>
         <div *ngIf="!closeToggle; else closeTemplate">
@@ -69,6 +70,7 @@
     <ng-template #closeTemplate>
         <button id="xMark" #xMark (click)="closeToggle = !closeToggle">
             <img id="xMarkicon" src="/assets/image/Xmark.png" alt="">
+            <img id="whiteTriangle" src="/assets/image/white_triangle.png" alt="">
         </button>
     </ng-template>
 
@@ -94,8 +96,8 @@
 
     <ul class="control">
         <li>OPT</li>
-        <li><app-text [text]="langs['help']" ></app-text></li>
+        <li><app-text [text]="langs['help']" (click)="navigation('/article')"></app-text></li>
         <li>|</li>
-        <li (click)="logout()"><app-text [text]="langs['logout']" ></app-text></li>
+        <li (click)="logout()"><app-text [text]="langs['logout']"></app-text></li>
     </ul>
 </div>

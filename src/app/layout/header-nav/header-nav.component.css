@@ -109,7 +109,6 @@ border-radius: 50%;
 } */
 
 #btn_join{
-right: 5%;
 position: absolute;
 top: 30%;
 width: 85px;
@@ -126,7 +125,6 @@ font-size: 18px;
 }
 
 #btn_user{
-  right: 5%;
   position: absolute;
   top: 30%;
   width: 85px;
@@ -144,8 +142,8 @@ font-size: 18px;
 
 #xMark{
   width: 30px;
-  height: 30px;
-  background-color: #003c6c;
+  height: 90px;
+  background-color: transparent;
   color:white;
   text-align: center;
   line-height: 35px;
@@ -179,7 +177,14 @@ font-size: 18px;
 #xMarkicon{
   height: 25px;
   position: relative;
-  top: 20%;
+  top: 7%;
+}
+
+#whiteTriangle{
+  width: 30px;
+  position: relative;
+  top:4px;
+  right: 3px;
 }
 
 button:hover {
@@ -222,7 +227,7 @@ margin: 0px;
   width: 25%;
   position: relative;
   float: right;
-  right: 51%;
+  right: 61%;
 }
 
 #usermenu .subinfo{
