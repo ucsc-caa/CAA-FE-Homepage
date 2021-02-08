@@ -1,3 +1,4 @@
+import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './layout/main/main.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
   },
   {path:'content/:id', component:ArticleComponent},
   {path: 'staff', component: StaffComponent},
+  {path:'help',component:HelpPageComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

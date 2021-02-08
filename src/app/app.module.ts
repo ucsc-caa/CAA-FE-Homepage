@@ -30,6 +30,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { NavigaterComponent } from './pages/navigater/navigater.component';
 import { CommonModule } from '@angular/common';
+import { HelpPageComponent } from './pages/help-page/help-page.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CommonModule } from '@angular/common';
     RecentArticleComponent,
     StaffComponent,
     NavigaterComponent,
+    HelpPageComponent,
   ],
   imports: [
     CommonModule,

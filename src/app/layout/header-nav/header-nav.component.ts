@@ -1,8 +1,9 @@
-import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 import {PageInfoService} from '../../services/page-info.service';
 import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {RouterLinkActive} from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
+import {UserInfoService } from './../../services/user-info.service';
 
 /*
  * header-nav.component.ts
@@ -25,6 +26,7 @@ export class HeaderNavComponent implements OnInit {
   showLoginForm = false;
   activeUrl: string;
   currentUser;
+  userInfo = {};
   showxMark = false;
   closeToggle = false;
   openNav:Boolean = this.pageInfoService.getNowNav();
@@ -36,7 +38,8 @@ export class HeaderNavComponent implements OnInit {
     private pageInfoService: PageInfoService,
     public route:ActivatedRoute,
     public router: Router,
-    
+    private userInfoService: UserInfoService,
+
   ) {
     console.log(this.openNav);
     this.pageInfoService.getNav().subscribe(navStatus => {
@@ -45,10 +48,6 @@ export class HeaderNavComponent implements OnInit {
     router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.activeUrl = event.url;
-      }
-      const currentUser = localStorage.getItem('currentUser');
-      if (currentUser) {
-        this.currentUser = JSON.parse(currentUser);
       }
     })
   }
@@ -69,6 +68,13 @@ export class HeaderNavComponent implements OnInit {
       welcome:{CN:'欢迎,',EN:'Welcome,'},
       help:{CN:'帮助',EN:'Help'},
     }
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      this.currentUser = JSON.parse(currentUser);
+    }
+    this.userInfoService.getUserInfo(this.currentUser.email).subscribe((res: any) => {
+      this.userInfo = res[0];
+    })
   }
 
   logout(): void  {

@@ -49,6 +49,9 @@
         <li [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
+    </ul>
+
+    <ul>
         <li>
             <div *ngIf="!currentUser;else userTemplate">
                 <button id="btn_join"  (click)="showLoginForm = true">
@@ -57,7 +60,7 @@
             </div>
         </li>
     </ul>
-
+    
     <ng-template #userTemplate>
         <div *ngIf="!closeToggle; else closeTemplate">
             <button id="btn_user" mat-button (click)="closeToggle = !closeToggle">
@@ -83,20 +86,20 @@
         <li><img id="accounticonring" src="/assets/image/account_icon_ring.png" alt=""></li>
         <ul class="topinfo">
             <li><app-text [text]="langs['welcome']"></app-text></li>
-            <li>Username</li>
+            <li>{{userInfo.name}}</li>
         </ul>
 
         <ul class="subinfo">
-            <li>email</li>
+            <li>{{userInfo.email}}</li>
             <li>|</li>
             <li>ID:</li>
-            <li>idnumber</li>
+            <li>{{userInfo.id}}</li>
         </ul>
     </ul>
 
     <ul class="control">
         <li>OPT</li>
-        <li><app-text [text]="langs['help']" (click)="navigation('/article')"></app-text></li>
+        <li><app-text [text]="langs['help']" (click)="navigation('/help')"></app-text></li>
         <li>|</li>
         <li (click)="logout()"><app-text [text]="langs['logout']"></app-text></li>
     </ul>

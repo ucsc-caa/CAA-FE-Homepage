@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import userInfo from './user-data.json';
@@ -26,5 +26,9 @@ export class UserInfoService {
       email,
       password
     });
+  }
+
+  getUserInfo(email: string) {
+    return this.http.get(`http://localhost:3010/v0/user?email=${encodeURIComponent(email)}`)
   }
 }
