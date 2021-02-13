@@ -39,18 +39,18 @@
         </li>
     </ul>
 
-    <ul fxShow.gt-sm="true" fxHide="true" class="hr">
-        <li [class.active]="activeUrl === '/merchandise'">
+    <ul class="hr">
+        <li fxShow.gt-sm="true" fxHide="true"  [class.active]="activeUrl === '/merchandise'">
             <app-text [text]="langs['merchandise']" (click)="navigation('/merchandise')"></app-text>
         </li>
-        <li [class.active]="activeUrl === '/about'">
+        <li fxShow.gt-sm="true" fxHide="true"  [class.active]="activeUrl === '/about'">
             <app-text [text]="langs['about']" (click)="navigation('/about')"></app-text>
         </li>
-        <li [class.active]="activeUrl === '/membership'">
+        <li fxShow.gt-sm="true" fxHide="true"  [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
         
-        <li>
+        <li >
             <div *ngIf="!currentUser;else userTemplate">
                 <button id="btn_join"  (click)="showLoginForm = true">
                     <app-text id="join_btn" [text]="langs['join']" ></app-text>
