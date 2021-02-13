@@ -109,9 +109,6 @@ border-radius: 50%;
 } */
 
 #btn_join{
-right: 5%;
-position: absolute;
-top: 28px;
 width: 85px;
 height: 35px;
 background-color: white;
@@ -126,9 +123,6 @@ font-size: 18px;
 }
 
 #btn_user{
-  right: 5%;
-  position: absolute;
-  top: 28px;
   width: 85px;
   height: 35px;
   background-color: white;

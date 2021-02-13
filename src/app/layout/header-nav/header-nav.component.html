@@ -49,9 +49,7 @@
         <li [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
-    </ul>
-
-    <ul>
+        
         <li>
             <div *ngIf="!currentUser;else userTemplate">
                 <button id="btn_join"  (click)="showLoginForm = true">
@@ -60,7 +58,7 @@
             </div>
         </li>
     </ul>
-    
+
     <ng-template #userTemplate>
         <div *ngIf="!closeToggle; else closeTemplate">
             <button id="btn_user" mat-button (click)="closeToggle = !closeToggle">
