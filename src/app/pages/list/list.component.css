@@ -18,22 +18,23 @@
    Revised on 1/31/2021
    By Jiayin Liu
    Modified cards border and display on mobile
+
+   Revised on 2/6/2021
+   By Jiayin Liu
+   Modified margin left to percent
  */
 
 @media screen and (max-width: 2000px) {
       
         #list{
-                margin-top: 80px;
-                margin-bottom: 50px;
                 position: relative;
                 z-index: 1;
                 list-style-type: none;
                 border: none;
+                margin: 80px auto 50px 10%;
         }
 
         .card {
-                
-                margin-left: 150px;
                 margin-right: 150px;
                 color:#003c6c;
                 display: flex; 
@@ -71,16 +72,13 @@
  @media screen and (max-width: 1000px) {
       
         #list{
-                margin-top: 120px;
-                margin-bottom: 50px;
                 position: relative;
                 z-index: 1;
                 list-style-type: none;
+                margin: 80px auto 50px 10%;
         }
 
         .card {
-                
-                margin-left: 50px;
                 margin-right: 50px;
                 color:#003c6c;
                 display: flex;
