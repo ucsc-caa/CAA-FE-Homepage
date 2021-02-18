@@ -7,11 +7,14 @@
  * @author: Yiyun Zheng
  * Revised: 1/14/2020 add article data type
  *
+ * @author: Jiayin Liu
+ * Revised: 2/18/2021
  */
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { article } from 'src/app/models/article';
-import {SamplBackendService} from '../../services/sampl-backend.service';
+import {ArticleInfoService} from '../../services/article-info.service';
 
 @Component({
   selector: 'app-list',
@@ -21,28 +24,50 @@ import {SamplBackendService} from '../../services/sampl-backend.service';
 export class ListComponent implements OnInit {
 
   articles: article[];
-  pageType: String;
+  theCategory: String;
+  thePage: number;
+
+  article1= {
+    "author": "Jiayin",
+    "category": "event",
+    "content": "hihihi",
+    "id": 0,
+    "page": 66
+  }
+
+  article2= {
+    "author": "Lisa",
+    "category": "article",
+    "content": "hello",
+    "id": 1,
+    "page": 77
+  }
 
   constructor(
-    private samplInfoService: SamplBackendService, 
+    private articleService: ArticleInfoService, 
     private route: ActivatedRoute,
     private router: Router,
     ) { }
 
   ngOnInit(): void {
-    // Get which type of article we need from url.
-    this.pageType = this.route.snapshot.parent.url[0].path;
-    // return all events
-    this.samplInfoService.getSelectArticleList(this.pageType).subscribe(articles => {
+    
+    // post two articles
+    this.articleService.postNewArticle(this.article1).subscribe(articles => {
+      console.log('new article');
+    })
+
+    this.articleService.postNewArticle(this.article2).subscribe(articles => {
+      console.log('new article');
+    })
+
+    // get catogaory and page we need from url
+    let theCategory = this.route.snapshot.params.category;
+    let thePage = this.route.snapshot.params.page;
+
+    // return articles by category and page
+    this.articleService.getSelectArticleList(this.theCategory, this.thePage).subscribe(articles => {
       this.articles = articles;
-      console.log('All'+this.pageType);
       console.log(this.articles)
     })
   }
-
-  // return article's id when clicked
-  printId(articleId:string) {
-    this.router.navigate(['/content', articleId]);
-  }
-
 }
