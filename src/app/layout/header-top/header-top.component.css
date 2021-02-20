@@ -71,3 +71,23 @@ ul{
     text-decoration: none;
     color: #003c6c;
 }
+
+
+@media screen and (max-width:960px){
+    #headerTop .hr{
+        width: 60%;
+        left: 69%;
+        position: absolute;
+        top: 0;
+        height: 60px;
+        line-height: 43px;
+    }
+
+    #headerTop .hr li{
+        position: relative;
+        float: left;
+        font-size: 7pt;
+        padding: 0 1%;
+        font-weight: 350;
+    }
+}

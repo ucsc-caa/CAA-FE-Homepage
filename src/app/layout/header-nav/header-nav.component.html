@@ -24,29 +24,29 @@
         </ng-template>
     </div>
 
-    <ul fxShow.gt-sm="true" fxHide="true" class="hl">
-        <li [class.active]="activeUrl === '/give'">
+    <ul fxShow.gt-sm="true"  class="hl">
+        <li id="tag" [class.active]="activeUrl === '/give'">
             <app-text [text]="langs['give']" (click)="navigation('/give')"></app-text>
         </li>
-        <li  [class.active]="activeUrl === '/newscenter'">
+        <li id="tag"  [class.active]="activeUrl === '/newscenter'">
             <app-text [text]="langs['newscenter']" (click)="navigation('/newscenter')"></app-text>
         </li>
-        <li  [class.active]="activeUrl === '/article'">
+        <li id="tag"  [class.active]="activeUrl === '/article'">
             <app-text [text]="langs['connect']" (click)="navigation('/article')"></app-text>
         </li>
-        <li  [class.active]="activeUrl === '/event'">
+        <li id="tag" [class.active]="activeUrl === '/event'">
             <app-text [text]="langs['community']" (click)="navigation('/event')"></app-text>
         </li>
     </ul>
 
     <ul class="hr">
-        <li fxShow.gt-sm="true" fxHide="true"  [class.active]="activeUrl === '/merchandise'">
+        <li id="tag" fxShow.gt-sm="true"   [class.active]="activeUrl === '/merchandise'">
             <app-text [text]="langs['merchandise']" (click)="navigation('/merchandise')"></app-text>
         </li>
-        <li fxShow.gt-sm="true" fxHide="true"  [class.active]="activeUrl === '/about'">
+        <li id="tag" fxShow.gt-sm="true"   [class.active]="activeUrl === '/about'">
             <app-text [text]="langs['about']" (click)="navigation('/about')"></app-text>
         </li>
-        <li fxShow.gt-sm="true" fxHide="true"  [class.active]="activeUrl === '/membership'">
+        <li id="tag" fxShow.gt-sm="true"   [class.active]="activeUrl === '/membership'">
             <app-text [text]="langs['membership']" (click)="navigation('/membership')"></app-text>
         </li>
         

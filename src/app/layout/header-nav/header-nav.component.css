@@ -139,7 +139,7 @@ border-radius: 50%;
 #whiteTriangle{
   width: 30px;
   position: relative;
-  top:4px;
+  bottom:-4px;
   right: 3px;
 }
 
@@ -180,10 +180,10 @@ margin: 0px;
   }
 
 #usermenu .info{
-  width: 40%;
+  width: 55%;
   position: relative;
   float: right;
-  right: 55%;
+  right: 44%;
 }
 
 #usermenu .subinfo{
@@ -216,7 +216,7 @@ margin: 0px;
 
 #usermenu .subinfo li{
   font-family:"Source Han Sans CN";
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 520;
   color: #003c6c;
 }
@@ -241,10 +241,28 @@ margin: 0px;
 .nav-btn {
   left: 1%;
   color:white;
+  position: absolute;
 }
+
+
+/* Media Screen */
 
 @media screen and (min-width:960px){
   #btn_join{
+  width: 85px;
+  height: 35px;
+  background-color: white;
+  color: #003c6c;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  }
+  
+  #btn_user{
     width: 85px;
     height: 35px;
     background-color: white;
@@ -256,88 +274,263 @@ margin: 0px;
     outline: none;
     cursor: pointer;
     font-size: 18px;
-    }
-    
-    #btn_user{
-      width: 85px;
-      height: 35px;
-      background-color: white;
-      color: #003c6c;
-      border-radius: 50px;
-      text-align: center;
-      line-height: 35px;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      font-size: 18px;
-    }
-    
-    #xMark{
-      width: 30px;
-      height: 90px;
-      background-color: transparent;
-      color:white;
-      text-align: center;
-      line-height: 35px;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      font-size: 18px;
-      position: relative;
-    }
+  }
+  
+  #xMark{
+    width: 30px;
+    height: 90px;
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    line-height: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+  }
 }
 
+/* Media Screen */
 
 @media screen and (max-width:960px){
-#btn_join{
-  position: absolute;
-  margin-left: 3px;
-  bottom: 30px;
-  width: 85px;
-  height: 35px;
-  background-color: white;
-  color: #003c6c;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 35px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-#btn_user{
-  position: absolute;
-  margin-left: 3px;
-  bottom: 30px;
-  width: 85px;
-  height: 35px;
-  background-color: white;
-  color: #003c6c;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 35px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-#xMark{
-  position: absolute;
-  margin-left: 20px;
-  bottom: 90px;
-  width: 30px;
-  height: 90px;
-  background-color: transparent;
-  color:white;
-  text-align: center;
-  line-height: 35px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 18px;
-  position: relative;
+  #headerNav .hr li{
+    float: right;
+    padding-right: 40%;
+    font-size: 18px;
+    font-weight: 300;
+    font-family:"Source Han Sans CN";
   }
+
+  #tag{
+    position: absolute;
+    display: none;
+  }
+
+  #btn_join{
+    width: 55px;
+    height: 30px;
+    background-color: white;
+    color: #003c6c;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    }
+    
+  #btn_user{
+    width: 55px;
+    height: 30px;
+    background-color: white;
+    color: #003c6c;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #xMark{
+    width: 30px;
+    height: 90px;
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    line-height: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  #usermenu .info{
+    width: 50%;
+    position: relative;
+    float: right;
+    right: 46%;
+  }
+
+  #usermenu .subinfo{
+    position: absolute;
+    top: 32px;
+    left: 60px;
+  }
+  
+  #usermenu .topinfo{
+    position: absolute;
+    top: 38px;
+    left: -5px;
+  }
+  
+  #usermenu .control{
+    position: relative;
+    top: 8px;
+    float: left;
+    left: 70%;
+  }
+  
+  #usermenu .info li{
+    font-family:"Source Han Sans CN";
+    font-size: 5px;
+    font-weight: 550;
+    color: #003c6c;
+    float: left;
+    padding-left: 0px;
+  }
+  
+  #usermenu .subinfo li{
+    font-family:"Source Han Sans CN";
+    font-size: 0px;
+    font-weight: 520;
+    color: #003c6c;
+  }
+  
+  #accounticonring{
+    height: 25px;
+    position: relative;
+    float: left;
+    margin: 0px;
+    top: 8px;
+    left: 30px;
+  }
+  
+  #usermenu .control li{
+    font-family:"Source Han Sans CN";
+    font-size: 5px;
+    display: block;
+    font-weight: 350;
+    color: #003c6c;
+    float: left;
+    padding: 1px;
+    padding-top: 15px;
+  }
+
+}
+
+
+/* Galaxy Fold */
+
+@media screen and (max-width:280px){
+  #headerNav .hr li{
+    float: right;
+    padding-right: 40%;
+    font-size: 18px;
+    font-weight: 300;
+    font-family:"Source Han Sans CN";
+  }
+
+  #tag{
+    position: absolute;
+    display: none;
+  }
+
+  #btn_join{
+    width: 45px;
+    height: 25px;
+    background-color: white;
+    color: #003c6c;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+    }
+    
+  #btn_user{
+    width: 45px;
+    height: 25px;
+    background-color: white;
+    color: #003c6c;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  #xMark{
+    width: 30px;
+    height: 90px;
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    line-height: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  #usermenu .info{
+    width: 50%;
+    position: relative;
+    float: right;
+    right: 46%;
+  }
+
+  #usermenu .subinfo{
+    position: absolute;
+    top: 32px;
+    left: 60px;
+  }
+  
+  #usermenu .topinfo{
+    position: absolute;
+    top: 38px;
+    left: -5px;
+  }
+  
+  #usermenu .control{
+    position: relative;
+    top: 8px;
+    float: left;
+    left: 70%;
+  }
+  
+  #usermenu .info li{
+    font-family:"Source Han Sans CN";
+    font-size: 5px;
+    font-weight: 550;
+    color: #003c6c;
+    float: left;
+    padding-left: 0px;
+  }
+  
+  #usermenu .subinfo li{
+    font-family:"Source Han Sans CN";
+    font-size: 0px;
+    font-weight: 520;
+    color: #003c6c;
+  }
+  
+  #accounticonring{
+    height: 25px;
+    position: relative;
+    float: left;
+    margin: 0px;
+    top: 8px;
+    left: 30px;
+  }
+  
+  #usermenu .control li{
+    font-family:"Source Han Sans CN";
+    font-size: 5px;
+    display: block;
+    font-weight: 350;
+    color: #003c6c;
+    float: left;
+    padding: 1px;
+    padding-top: 15px;
+  }
+
 }
 
