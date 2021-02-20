@@ -4,8 +4,9 @@ Modified by Jiayin Liu on 1/17/2021
 Modified by Jiayin on 1/21/2021 fix button overlap
 
 Modified by Jiayin on 1/28/2021 fix z-index and button switch language
-*/
 
+Modified by Jiayin on 2/6/2021 fix button left margin
+*/
 
 .aParent div {
     float: left;
@@ -15,7 +16,7 @@ Modified by Jiayin on 1/28/2021 fix z-index and button switch language
 
 
 div.button1{
-    margin-left: 150px;
+    margin: auto auto auto 10%;
 }
 
 .button1 .gotoRecentButton:focus{
@@ -66,3 +67,5 @@ div.button2{
     border-color: #003C6C;
     border-radius: 50px;  
 }
+
+

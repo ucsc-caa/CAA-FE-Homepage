@@ -4,17 +4,61 @@
  * @author: Jiayin Liu
  * Revised: 11/8/2020 add comments.
  *
+ * Revised: 2/12/2021, modify footer css on different page size, by Jiayin Liu
  */
-.footer{
-  background-color: #003c6c;
-  color: #FFFFFF;
-  font-family: "Noto Sans SC";
-  font-weight: 100;
-  font-size: 10pt;
-  position: relative;
-  width: 100%;
-  bottom: 0px;
-  z-index: -50;
+@media screen and (max-width: 2000px){
+  .footer{
+    background-color: #003c6c;
+    color: #FFFFFF;
+    font-family: "Noto Sans SC";
+    font-weight: 100;
+    font-size: 10pt;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    z-index: -50;
+  }
+
+  .footer .footerBottom{
+    text-align: right;
+    margin: 30px 5% auto 5%;
+    line-height: 40px;
+  }
+
+  .footer .footerContent ul a{
+    float: left;
+    display: block;
+    color: #f5f1f1;
+    text-align: center;
+    padding: 11px; 
+    text-decoration: none;
+    list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .footer{
+    background-color: #003c6c;
+    color: #FFFFFF;
+    font-family: "Noto Sans SC";
+    font-weight: 100;
+    font-size: 2pt;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    z-index: -50;
+  }
+
+ .footer .footerBottom{
+    text-align: right;
+    margin: 5px 5% auto 5%;
+    line-height: 20px;
+  }
+
+  .footer .footerContent ul a{
+    padding: 3px; 
+  }
+
 }
 
 .footer .footerContent{
@@ -28,22 +72,6 @@
   margin: auto;
 }
 
-.footer .footerContent ul a{
-  float: left;
-  display: block;
-  color: #f5f1f1;
-  text-align: center;
-  padding: 11px;
-  text-decoration: none;
-  list-style-type: none;
-}
-
 .footer .footerContent ul a:hover {
-text-decoration: underline;
-}
-
-.footer .footerBottom{
-  text-align: right;
-  margin-right: 60px;
-  line-height: 40px;
+  text-decoration: underline;
 }
